@@ -1,0 +1,194 @@
+Dec 07 14:30:26,105  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : QueryOnDigitsParams [doubleDigit=true, tripleDigit=null, quadDigit=null, palindromic=true, paired=null]
+Dec 07 14:30:26,107  INFO QueryDaoImpl:74 - SQL : SELECT * FROM plate WHERE  doubledigit= TRUE  AND tripledigit= FALSE  AND quaddigit= FALSE  AND paired= FALSE  AND palindromic= TRUE 
+Dec 07 14:30:26,437  INFO QueryTestDigits:33 - Plate [id=12, prefix=W  , letter1=E, letter2= , number1=8, number2=8, number3= , number4= , suffix=   , regNo=WE 88, digit1=false, digit2=true, digit3=false, digit4=false, doubleDigit=true, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 07 14:30:26,438  INFO QueryTestDigits:33 - Plate [id=13, prefix=W  , letter1=X, letter2= , number1=8, number2=8, number3= , number4= , suffix=   , regNo=WX 88, digit1=false, digit2=true, digit3=false, digit4=false, doubleDigit=true, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 07 14:30:26,438  INFO QueryTestDigits:33 - Plate [id=14, prefix=P  , letter1=F, letter2=C, number1=1, number2=1, number3= , number4= , suffix=   , regNo=PFC 11, digit1=false, digit2=true, digit3=false, digit4=false, doubleDigit=true, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 07 14:30:26,438  INFO QueryTestDigits:33 - Plate [id=16, prefix=P  , letter1=M, letter2=L, number1=5, number2=5, number3= , number4= , suffix=   , regNo=PML 55, digit1=false, digit2=true, digit3=false, digit4=false, doubleDigit=true, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 07 14:30:26,438  INFO QueryTestDigits:33 - Plate [id=18, prefix=P  , letter1=K, letter2=R, number1=6, number2=6, number3= , number4= , suffix=   , regNo=PKR 66, digit1=false, digit2=true, digit3=false, digit4=false, doubleDigit=true, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 07 14:30:26,439  INFO QueryTestDigits:33 - Plate [id=19, prefix=P  , letter1=L, letter2=A, number1=6, number2=6, number3= , number4= , suffix=   , regNo=PLA 66, digit1=false, digit2=true, digit3=false, digit4=false, doubleDigit=true, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 07 14:30:26,439  INFO QueryTestDigits:33 - Plate [id=20, prefix=P  , letter1=L, letter2=P, number1=6, number2=6, number3= , number4= , suffix=   , regNo=PLP 66, digit1=false, digit2=true, digit3=false, digit4=false, doubleDigit=true, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 07 14:30:26,439  INFO QueryTestDigits:38 - Done
+Dec 07 14:33:51,370  INFO TestController:19 - Received request to test
+Dec 07 14:38:21,198  INFO TestController:19 - Received request to test
+Dec 07 14:46:09,568  INFO TestController:19 - Received request to test
+Dec 07 14:49:24,457  INFO TestController:19 - Received request to test
+Dec 07 15:01:54,485  INFO TestController:19 - Received request to test
+Dec 07 15:03:20,059  INFO TestController:19 - Received request to test
+Dec 07 15:07:46,660  INFO TestController:19 - Received request to test
+Dec 07 15:10:28,952  INFO TestController:19 - Received request to test
+Dec 07 15:11:14,443  INFO TestController:19 - Received request to test
+Dec 07 15:18:08,465  INFO TestController:19 - Received request to test
+Dec 07 15:18:27,382  INFO TestController:19 - Received request to test
+Dec 07 15:18:35,512  INFO TestController:19 - Received request to test
+Dec 07 15:21:16,577  INFO TestController:19 - Received request to test
+Dec 07 15:28:43,132  INFO TestController:19 - Received request to test
+Dec 07 15:28:45,977  INFO TestController:19 - Received request to test
+Dec 07 15:37:33,388  INFO TestController:19 - Received request to test
+Dec 07 15:44:18,619  INFO TestController:19 - Received request to test
+Dec 07 15:52:50,938  INFO TestController:19 - Received request to test
+Dec 07 15:55:18,525  INFO TestController:19 - Received request to test
+Dec 07 15:57:37,653  INFO TestController:19 - Received request to test
+Dec 07 16:01:23,639  INFO TestController:18 - Received request to test
+Dec 07 16:01:25,341  INFO TestController:18 - Received request to test
+Dec 07 16:05:31,007  INFO TestController:18 - Received request to test
+Dec 07 16:05:34,351  INFO TestController:18 - Received request to test
+Dec 07 16:05:35,270  INFO TestController:18 - Received request to test
+Dec 07 16:06:24,129  INFO TestController:18 - Received request to test
+Dec 07 16:08:50,721  INFO TestController:18 - Received request to test
+Dec 07 16:25:47,953  INFO TestController:18 - Received request to test
+Dec 07 16:26:18,127  INFO TestController:18 - Received request to test
+Dec 07 16:30:09,603  INFO TestController:18 - Received request to test
+Dec 07 16:30:11,819  INFO TestController:18 - Received request to test
+Dec 07 16:30:12,457  INFO TestController:18 - Received request to test
+Dec 08 08:10:33,854  INFO TestController:18 - Received request to test
+Dec 08 09:01:13,821  INFO TestController:18 - Received request to test
+Dec 08 09:03:22,010  INFO TestController:18 - Received request to test
+Dec 08 09:04:59,398  INFO TestController:18 - Received request to test
+Dec 08 09:05:42,621  INFO TestController:18 - Received request to test
+Dec 08 09:13:47,539  INFO TestController:18 - Received request to test
+Dec 08 09:14:19,480  INFO TestController:18 - Received request to test
+Dec 08 09:20:22,900  INFO TestController:18 - Received request to test
+Dec 08 09:22:41,646  INFO TestController:18 - Received request to test
+Dec 08 10:40:26,342  INFO TestController:18 - Received request to test
+Dec 08 11:08:27,598  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 11:08:28,178 ERROR RestServices:33 - org.springframework.beans.TypeMismatchException: Failed to convert property value of type [null] to required type [double] for property 'listPrice'; nested exception is java.lang.IllegalArgumentException: Cannot convert value of type [null] to required type [double] for property 'listPrice': PropertyEditor [org.springframework.beans.propertyeditors.CustomNumberEditor] returned inappropriate value of type [null]
+Dec 08 11:12:14,274  INFO PlateParseRule:21 - Parsing : W MH 2 55000
+Dec 08 11:12:14,677  INFO PlateImporter:35 - WMH 2 - 55000.0
+Dec 08 11:12:14,678  INFO PlateParseRule:21 - Parsing : A GB 7 40000
+Dec 08 11:12:14,681  INFO PlateImporter:35 - AGB 7 - 40000.0
+Dec 08 11:12:14,682  INFO PlateParseRule:21 - Parsing : K BT 7 45000
+Dec 08 11:12:14,692  INFO PlateImporter:35 - KBT 7 - 45000.0
+Dec 08 11:12:14,692  INFO PlateParseRule:21 - Parsing : W HR 9 70000
+Dec 08 11:12:14,703  INFO PlateImporter:35 - WHR 9 - 70000.0
+Dec 08 11:12:14,704  INFO PlateParseRule:21 - Parsing : P FR 9 60000
+Dec 08 11:12:14,714  INFO PlateImporter:35 - PFR 9 - 60000.0
+Dec 08 11:12:14,715  INFO PlateParseRule:21 - Parsing : P EN 9 90000
+Dec 08 11:12:14,725  INFO PlateImporter:35 - PEN 9 - 90000.0
+Dec 08 11:12:14,726  INFO PlateParseRule:21 - Parsing : W E 88 120000
+Dec 08 11:12:14,737  INFO PlateImporter:35 - WE 88 - 120000.0
+Dec 08 11:12:14,737  INFO PlateParseRule:21 - Parsing : W X 88 100000
+Dec 08 11:12:14,748  INFO PlateImporter:35 - WX 88 - 100000.0
+Dec 08 11:12:14,750  INFO PlateParseRule:21 - Parsing : P FC 11 22000
+Dec 08 11:12:14,759  INFO PlateImporter:35 - PFC 11 - 22000.0
+Dec 08 11:12:14,759  INFO PlateParseRule:21 - Parsing : W W 54 25000
+Dec 08 11:12:14,770  INFO PlateImporter:35 - WW 54 - 25000.0
+Dec 08 11:12:14,771  INFO PlateParseRule:21 - Parsing : P ML 55 15000
+Dec 08 11:12:14,781  INFO PlateImporter:35 - PML 55 - 15000.0
+Dec 08 11:12:14,782  INFO PlateParseRule:21 - Parsing : P ME 63 5500
+Dec 08 11:12:14,793  INFO PlateImporter:35 - PME 63 - 5500.0
+Dec 08 11:12:14,793  INFO PlateParseRule:21 - Parsing : P KR 66 13000
+Dec 08 11:12:14,804  INFO PlateImporter:35 - PKR 66 - 13000.0
+Dec 08 11:12:14,804  INFO PlateParseRule:21 - Parsing : P LA 66 13000
+Dec 08 11:12:14,815  INFO PlateImporter:35 - PLA 66 - 13000.0
+Dec 08 11:12:14,815  INFO PlateParseRule:21 - Parsing : P LP 66 15000
+Dec 08 11:12:14,826  INFO PlateImporter:35 - PLP 66 - 15000.0
+Dec 08 11:12:14,826  INFO PlateParseRule:21 - Parsing : P HF 68 6000
+Dec 08 11:12:14,837  INFO PlateImporter:35 - PHF 68 - 6000.0
+Dec 08 11:12:14,837  INFO PlateParseRule:21 - Parsing : P LA 98 6000
+Dec 08 11:12:14,848  INFO PlateImporter:35 - PLA 98 - 6000.0
+Dec 08 11:12:14,848  INFO PlateParseRule:21 - Parsing : W HF 999 15000
+Dec 08 11:12:14,859  INFO PlateImporter:35 - WHF 999 - 15000.0
+Dec 08 11:12:14,860  INFO PlateParseRule:21 - Parsing : P AB 999 18000
+Dec 08 11:12:14,870  INFO PlateImporter:35 - PAB 999 - 18000.0
+Dec 08 11:12:14,871  INFO PlateImporter:44 - 19 plates imported for : /home/pmk/repo/JPJ/support/premium/0307116.txt
+Dec 08 11:12:14,871  INFO PlateImporter:59 -  file successfully imported
+Dec 08 11:12:53,230  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 11:12:53,602  INFO RestServices:36 - Got Plates # 19
+Dec 08 11:18:54,906  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 11:18:54,922  INFO RestServices:36 - Got Plates # 19
+Dec 08 11:23:04,643  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 11:23:05,246  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 11:23:05,660  INFO RestServices:36 - Got Plates # 19
+Dec 08 11:27:11,153  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 11:27:12,190  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 11:27:12,206  INFO RestServices:36 - Got Plates # 19
+Dec 08 11:27:22,550  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 11:27:23,535  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 11:27:23,544  INFO RestServices:36 - Got Plates # 19
+Dec 08 11:30:25,335  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 11:30:26,342  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 11:30:26,348  INFO RestServices:36 - Got Plates # 19
+Dec 08 11:30:54,351  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 11:30:55,424  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 11:30:55,428  INFO RestServices:36 - Got Plates # 19
+Dec 08 11:35:23,772  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 11:35:24,860  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 11:35:24,866  INFO RestServices:36 - Got Plates # 19
+Dec 08 11:40:25,489  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 11:40:26,520  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 11:40:26,525  INFO RestServices:36 - Got Plates # 19
+Dec 08 11:47:57,075  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 11:47:58,023  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 11:47:58,027  INFO RestServices:36 - Got Plates # 19
+Dec 08 11:48:24,667  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 11:48:25,695  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 11:48:25,698  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:09:18,809  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:13:25,828  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:13:26,905  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:13:26,909  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:15:07,151  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:15:08,170  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:15:08,172  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:15:30,591  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:15:30,686  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:15:30,690  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:16:01,449  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:16:02,439  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:16:02,441  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:17:11,012  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:17:11,979  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:17:11,982  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:18:48,492  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:18:49,480  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:18:49,483  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:19:44,594  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:19:45,566  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:19:45,568  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:24:32,901  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:24:33,989  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:24:33,991  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:28:14,828  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:28:14,838  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:28:16,604  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:28:16,703  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:28:16,705  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:33:24,288  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:34:58,933  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:37:18,376  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:37:19,409  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:37:19,412  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:37:20,825  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:37:21,238  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:37:21,239  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:37:43,155  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:37:44,214  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:37:44,217  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:40:30,147  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:40:31,169  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:40:31,171  INFO RestServices:36 - Got Plates # 19
+Dec 08 12:51:03,139  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 12:51:04,145  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 12:51:04,147  INFO RestServices:36 - Got Plates # 19
+Dec 08 13:20:29,252  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 13:20:30,263  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 0
+Dec 08 13:20:30,588  INFO RestServices:36 - Got Plates # 0
+Dec 08 13:21:17,645  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 13:21:18,649  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 13:21:19,025  INFO RestServices:36 - Got Plates # 19
+Dec 08 13:26:30,991  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 13:26:31,010  INFO RestServices:36 - Got Plates # 19
+Dec 08 13:26:41,852  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 13:28:18,684  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 13:29:17,724  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 13:29:18,769  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 13:29:18,780  INFO RestServices:36 - Got Plates # 19
+Dec 08 13:29:46,677  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 13:29:47,752  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 13:29:47,756  INFO RestServices:36 - Got Plates # 19
+Dec 08 13:34:30,814  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 13:34:31,820  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 13:34:31,824  INFO RestServices:36 - Got Plates # 19
+Dec 08 13:36:09,546  INFO AnonController:25 - Received request to getAllPlates
+Dec 08 13:36:10,512  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 08 13:36:10,515  INFO RestServices:36 - Got Plates # 19
