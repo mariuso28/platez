@@ -6,11 +6,11 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.plate.domain.plate.Plate;
+import org.plate.json.QueryOnDigitsParamsJson;
+import org.plate.json.QueryOnPlateParamsJson;
 import org.plate.persistence.PersistenceRuntimeException;
 import org.plate.query.QueryException;
 import org.plate.query.QueryMgr;
-import org.plate.query.QueryOnDigitsParams;
-import org.plate.query.QueryOnPlateParams;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.PreparedStatementSetter;
@@ -22,7 +22,7 @@ public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryD
 	private QueryMgr queryMgr = new QueryMgr();
 	
 	@Override
-	public List<Plate> QueryOnPlate(QueryOnPlateParams params) throws PersistenceRuntimeException, QueryException{
+	public List<Plate> QueryOnPlate(QueryOnPlateParamsJson params) throws PersistenceRuntimeException, QueryException{
 		
 		log.info("Performing QueryOnPlate with : " + params);
 		queryMgr.validate(params);
@@ -44,7 +44,7 @@ public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryD
 		}
 	}
 
-	private String buildWhereStr(QueryOnPlateParams params) {
+	private String buildWhereStr(QueryOnPlateParamsJson params) {
 		String whereStr = "";
 		whereStr += addParam(whereStr,"prefix",params.getPrefix());
 		whereStr += addParam(whereStr,"letter1",params.getLetter1());
@@ -66,11 +66,10 @@ public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryD
 	}
 
 	@Override
-	public List<Plate> QueryOnDigits(QueryOnDigitsParams params) throws PersistenceRuntimeException {
-		log.info("Performing QueryOnDigits with : " + params);
-		String whereStr = buildDigitsWhereStr(params);
-		
-		String sql = "SELECT * FROM plate WHERE " + whereStr;
+	public List<Plate> QueryOnDigits(QueryOnDigitsParamsJson params) throws PersistenceRuntimeException {
+		log.info("Performing QueryOnDigits with : " + params.getCombo());
+	
+		String sql = "SELECT * FROM plate WHERE " + params.getCombo() + " = TRUE";
 		log.info("SQL : " + sql);
 		try
 		{
@@ -83,30 +82,6 @@ public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryD
 			log.error("Could not execute : " + e.getMessage(),e);
 			throw new PersistenceRuntimeException("Could not execute QueryOnDigits : " + e.getMessage());
 		}
-	}
-	
-	private String buildDigitsWhereStr(QueryOnDigitsParams params) {
-		String whereStr = "";
-		whereStr += addBooleanParam(whereStr,"doubledigit",params.getDoubleDigit());
-		whereStr += addBooleanParam(whereStr,"tripledigit",params.getTripleDigit());
-		whereStr += addBooleanParam(whereStr,"quaddigit",params.getQuadDigit());
-		whereStr += addBooleanParam(whereStr,"paired",params.getPaired());
-		whereStr += addBooleanParam(whereStr,"palindromic",params.getPalindromic());
-
-		return whereStr;
-	}
-
-	private String addBooleanParam(String whereStr, String column, Boolean value) {
-		String clause = " ";
-		if (value==null)
-			value=false;
-		if (!whereStr.isEmpty())
-			clause = " AND ";
-		if (value)
-			clause += column + "= TRUE ";  
-		else
-			clause += column + "= FALSE ";  
-		return clause;
 	}
 	
 	@Override

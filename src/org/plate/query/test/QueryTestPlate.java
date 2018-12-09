@@ -5,9 +5,9 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.plate.domain.plate.Plate;
 import org.plate.home.persistence.Home;
+import org.plate.json.QueryOnPlateParamsJson;
 import org.plate.persistence.PersistenceRuntimeException;
 import org.plate.query.QueryException;
-import org.plate.query.QueryOnPlateParams;
 import org.plate.query.persistence.QueryDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -24,7 +24,7 @@ public class QueryTestPlate {
 
 		Home home = (Home) context.getBean("home");
 		QueryDao qd = home.getQueryDao();
-		QueryOnPlateParams qpp = new QueryOnPlateParams();
+		QueryOnPlateParamsJson qpp = new QueryOnPlateParamsJson();
 		qpp.setPrefix("P");
 		qpp.setLetter1("E");
 		qpp.setLetter2("N");

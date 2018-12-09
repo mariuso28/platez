@@ -5,8 +5,8 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.plate.domain.plate.Plate;
 import org.plate.home.persistence.Home;
+import org.plate.json.QueryOnDigitsParamsJson;
 import org.plate.persistence.PersistenceRuntimeException;
-import org.plate.query.QueryOnDigitsParams;
 import org.plate.query.persistence.QueryDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -23,9 +23,8 @@ public class QueryTestDigits {
 
 		Home home = (Home) context.getBean("home");
 		QueryDao qd = home.getQueryDao();
-		QueryOnDigitsParams qpp = new QueryOnDigitsParams();
-		qpp.setDoubleDigit(true);
-		qpp.setPalindromic(true);
+		QueryOnDigitsParamsJson qpp = new QueryOnDigitsParamsJson();
+		qpp.setCombo("doubleDigit");
 		
 		try {
 			List<Plate> plates = qd.QueryOnDigits(qpp);

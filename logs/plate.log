@@ -192,3 +192,180 @@ Dec 08 13:34:31,824  INFO RestServices:36 - Got Plates # 19
 Dec 08 13:36:09,546  INFO AnonController:25 - Received request to getAllPlates
 Dec 08 13:36:10,512  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
 Dec 08 13:36:10,515  INFO RestServices:36 - Got Plates # 19
+Dec 09 09:45:52,891  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 09:45:54,423  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 09:45:54,841  INFO RestServices:36 - Got Plates # 19
+Dec 09 10:20:28,534  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 10:20:29,961  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 10:20:30,346  INFO RestServices:53 - Got Plates # 19
+Dec 09 10:23:30,967  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 10:23:31,813  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 10:23:31,826  INFO RestServices:53 - Got Plates # 19
+Dec 09 10:24:55,415  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 10:24:56,324  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 10:24:56,330  INFO RestServices:53 - Got Plates # 19
+Dec 09 10:26:54,940  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 10:26:55,853  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 10:26:55,860  INFO RestServices:53 - Got Plates # 19
+Dec 09 10:28:42,599  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 10:28:43,525  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 10:28:43,530  INFO RestServices:53 - Got Plates # 19
+Dec 09 10:39:04,808  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 10:41:04,134  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 10:41:04,870  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 10:41:05,372  INFO RestServices:53 - Got Plates # 19
+Dec 09 10:42:48,254  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 10:42:49,358  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 10:42:49,371  INFO RestServices:53 - Got Plates # 19
+Dec 09 10:53:09,426  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 10:53:10,242  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 10:53:10,251  INFO RestServices:53 - Got Plates # 19
+Dec 09 10:54:35,634  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 10:54:36,447  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 10:54:36,452  INFO RestServices:53 - Got Plates # 19
+Dec 09 10:57:18,072  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 10:57:18,807  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 10:57:18,813  INFO RestServices:53 - Got Plates # 19
+Dec 09 10:59:41,577  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 10:59:42,380  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 10:59:42,385  INFO RestServices:53 - Got Plates # 19
+Dec 09 11:01:04,719  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:01:05,607  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 11:01:05,613  INFO RestServices:53 - Got Plates # 19
+Dec 09 11:02:45,781  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:02:46,691  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 11:02:46,694  INFO RestServices:53 - Got Plates # 19
+Dec 09 11:04:32,822  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:04:33,722  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 11:04:33,726  INFO RestServices:53 - Got Plates # 19
+Dec 09 11:06:42,881  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:06:43,846  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 11:06:43,849  INFO RestServices:53 - Got Plates # 19
+Dec 09 11:28:56,676  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:28:58,146  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 11:28:58,653  INFO RestServices:54 - Got Plates # 19
+Dec 09 11:35:44,180  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:35:45,092  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 11:35:45,510  INFO RestServices:54 - Got Plates # 19
+Dec 09 11:39:13,114  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:39:14,505  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 11:39:14,519  INFO RestServices:54 - Got Plates # 19
+Dec 09 11:43:40,071  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:43:41,034  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 11:43:41,044  INFO RestServices:54 - Got Plates # 19
+Dec 09 11:43:59,834  INFO RestAnonControllerImpl:73 - in  queryPlate with : QueryOnPlateParams [prefix=W, letter1=H, letter2=R, number1=9, number2=9, number3=, number4=, suffix=]
+Dec 09 11:43:59,834  INFO QueryDaoImpl:27 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=W, letter1=H, letter2=R, number1=9, number2=9, number3=, number4=, suffix=]
+Dec 09 11:43:59,835  INFO QueryDaoImpl:33 - SQL : SELECT * FROM plate WHERE prefix = 'W'  AND letter1 = 'H'  AND letter2 = 'R'  AND number1 = '9'  AND number2 = '9' 
+Dec 09 11:43:59,836  INFO RestServices:82 - Got Plates # 0
+Dec 09 11:45:17,382  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:45:28,225  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:46:02,533  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:47:05,424  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:47:23,327  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:48:02,114  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:48:05,273  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:48:06,897  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:48:36,032  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:52:48,271  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:52:56,891  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 11:52:57,312  INFO RestServices:54 - Got Plates # 19
+Dec 09 11:53:13,537  INFO RestAnonControllerImpl:73 - in  queryPlate with : QueryOnPlateParams [prefix=W, letter1=H, letter2=R, number1=9, number2=, number3=, number4=, suffix=]
+Dec 09 11:53:13,537  INFO QueryDaoImpl:27 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=W, letter1=H, letter2=R, number1=9, number2=, number3=, number4=, suffix=]
+Dec 09 11:53:13,537  INFO QueryDaoImpl:33 - SQL : SELECT * FROM plate WHERE prefix = 'W'  AND letter1 = 'H'  AND letter2 = 'R'  AND number1 = '9' 
+Dec 09 11:53:13,540  INFO RestServices:82 - Got Plates # 1
+Dec 09 11:57:26,620  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 11:57:27,508  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 11:57:27,526  INFO RestServices:54 - Got Plates # 19
+Dec 09 11:57:32,316  INFO RestAnonControllerImpl:73 - in  queryPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=1, number2=, number3=, number4=, suffix=]
+Dec 09 11:57:32,317  INFO QueryDaoImpl:27 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=1, number2=, number3=, number4=, suffix=]
+Dec 09 11:57:32,318  INFO QueryDaoImpl:33 - SQL : SELECT * FROM plate WHERE prefix = 'W'  AND number1 = '1' 
+Dec 09 11:57:32,320  INFO RestServices:82 - Got Plates # 0
+Dec 09 11:57:48,396  INFO RestAnonControllerImpl:73 - in  queryPlate with : QueryOnPlateParams [prefix=P, letter1=, letter2=, number1=1, number2=, number3=, number4=, suffix=]
+Dec 09 11:57:48,399  INFO QueryDaoImpl:27 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=P, letter1=, letter2=, number1=1, number2=, number3=, number4=, suffix=]
+Dec 09 11:57:48,400  INFO QueryDaoImpl:33 - SQL : SELECT * FROM plate WHERE prefix = 'P'  AND number1 = '1' 
+Dec 09 11:57:48,404  INFO RestServices:82 - Got Plates # 1
+Dec 09 12:01:35,114  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 12:01:36,044  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 12:01:36,052  INFO RestServices:54 - Got Plates # 19
+Dec 09 12:03:59,075  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 12:04:00,008  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 12:04:00,016  INFO RestServices:54 - Got Plates # 19
+Dec 09 12:05:35,138  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 12:05:36,011  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 12:05:36,016  INFO RestServices:54 - Got Plates # 19
+Dec 09 12:06:41,865  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 12:06:42,673  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 12:06:42,677  INFO RestServices:54 - Got Plates # 19
+Dec 09 12:07:33,864  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 12:07:33,947  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 12:07:33,953  INFO RestServices:54 - Got Plates # 19
+Dec 09 12:10:06,358  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 12:10:07,139  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 12:10:07,142  INFO RestServices:54 - Got Plates # 19
+Dec 09 12:27:44,574  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 12:27:46,732  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 12:27:47,301  INFO RestServices:55 - Got Plates # 19
+Dec 09 12:32:19,167  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 12:32:20,117  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 12:32:20,131  INFO RestServices:55 - Got Plates # 19
+Dec 09 12:32:28,278  INFO RestAnonControllerImpl:92 - in queryDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:32:28,279  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:32:28,279  INFO QueryDaoImpl:74 - SQL : SELECT * FROM plate WHERE  doubledigit= FALSE  AND tripledigit= FALSE  AND quaddigit= FALSE  AND paired= FALSE  AND palindromic= FALSE 
+Dec 09 12:32:28,284  INFO RestServices:102 - Got Plates # 10
+Dec 09 12:32:33,228  INFO RestAnonControllerImpl:92 - in queryDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:32:33,229  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:32:33,230  INFO QueryDaoImpl:74 - SQL : SELECT * FROM plate WHERE  doubledigit= FALSE  AND tripledigit= FALSE  AND quaddigit= FALSE  AND paired= FALSE  AND palindromic= FALSE 
+Dec 09 12:32:33,239  INFO RestServices:102 - Got Plates # 10
+Dec 09 12:32:40,144  INFO RestAnonControllerImpl:92 - in queryDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:32:40,145  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:32:40,148  INFO QueryDaoImpl:74 - SQL : SELECT * FROM plate WHERE  doubledigit= FALSE  AND tripledigit= FALSE  AND quaddigit= FALSE  AND paired= FALSE  AND palindromic= FALSE 
+Dec 09 12:32:40,159  INFO RestServices:102 - Got Plates # 10
+Dec 09 12:33:01,378  INFO RestAnonControllerImpl:92 - in queryDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:33:01,379  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:33:01,379  INFO QueryDaoImpl:74 - SQL : SELECT * FROM plate WHERE  doubledigit= FALSE  AND tripledigit= FALSE  AND quaddigit= FALSE  AND paired= FALSE  AND palindromic= FALSE 
+Dec 09 12:33:01,389  INFO RestServices:102 - Got Plates # 10
+Dec 09 12:35:52,546  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 12:35:53,483  INFO QueryDaoImpl:136 - Performing QueryOnRating with : 0 - 3
+Dec 09 12:35:53,486  INFO RestServices:55 - Got Plates # 19
+Dec 09 12:35:58,819  INFO RestAnonControllerImpl:92 - in queryDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:35:58,820  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:35:58,820  INFO QueryDaoImpl:74 - SQL : SELECT * FROM plate WHERE  doubledigit= FALSE  AND tripledigit= FALSE  AND quaddigit= FALSE  AND paired= FALSE  AND palindromic= FALSE 
+Dec 09 12:35:58,822  INFO RestServices:102 - Got Plates # 10
+Dec 09 12:36:04,609  INFO RestAnonControllerImpl:92 - in queryDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:36:04,609  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:36:04,609  INFO QueryDaoImpl:74 - SQL : SELECT * FROM plate WHERE  doubledigit= FALSE  AND tripledigit= FALSE  AND quaddigit= FALSE  AND paired= FALSE  AND palindromic= FALSE 
+Dec 09 12:36:04,612  INFO RestServices:102 - Got Plates # 10
+Dec 09 12:36:28,990  INFO RestAnonControllerImpl:92 - in queryDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:36:28,991  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:36:28,991  INFO QueryDaoImpl:74 - SQL : SELECT * FROM plate WHERE  doubledigit= FALSE  AND tripledigit= FALSE  AND quaddigit= FALSE  AND paired= FALSE  AND palindromic= FALSE 
+Dec 09 12:36:28,999  INFO RestServices:102 - Got Plates # 10
+Dec 09 12:36:35,153  INFO RestAnonControllerImpl:92 - in queryDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:36:35,153  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : QueryOnDigitsParams [doubleDigit=null, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 09 12:36:35,154  INFO QueryDaoImpl:74 - SQL : SELECT * FROM plate WHERE  doubledigit= FALSE  AND tripledigit= FALSE  AND quaddigit= FALSE  AND paired= FALSE  AND palindromic= FALSE 
+Dec 09 12:36:35,157  INFO RestServices:102 - Got Plates # 10
+Dec 09 12:45:28,876  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 12:45:30,411  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
+Dec 09 12:45:30,898  INFO RestServices:55 - Got Plates # 19
+Dec 09 12:45:37,294  INFO RestAnonControllerImpl:92 - in queryDigits with : org.plate.json.QueryOnDigitsParamsJson@3c2a72ed
+Dec 09 12:45:37,295  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : digit2
+Dec 09 12:45:37,295  INFO QueryDaoImpl:73 - SQL : SELECT * FROM plate WHERE digit2 = TRUE
+Dec 09 12:45:37,304  INFO RestServices:102 - Got Plates # 11
+Dec 09 12:45:44,228  INFO RestAnonControllerImpl:92 - in queryDigits with : org.plate.json.QueryOnDigitsParamsJson@30d9098b
+Dec 09 12:45:44,228  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : digit1
+Dec 09 12:45:44,229  INFO QueryDaoImpl:73 - SQL : SELECT * FROM plate WHERE digit1 = TRUE
+Dec 09 12:45:44,234  INFO RestServices:102 - Got Plates # 6
+Dec 09 12:45:50,275  INFO RestAnonControllerImpl:92 - in queryDigits with : org.plate.json.QueryOnDigitsParamsJson@14607031
+Dec 09 12:45:50,276  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : doubleDigit
+Dec 09 12:45:50,276  INFO QueryDaoImpl:73 - SQL : SELECT * FROM plate WHERE doubleDigit = TRUE
+Dec 09 12:45:50,279  INFO RestServices:102 - Got Plates # 7
+Dec 09 12:45:58,257  INFO RestAnonControllerImpl:92 - in queryDigits with : org.plate.json.QueryOnDigitsParamsJson@bdc9183
+Dec 09 12:45:58,260  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : paired
+Dec 09 12:45:58,261  INFO QueryDaoImpl:73 - SQL : SELECT * FROM plate WHERE paired = TRUE
+Dec 09 12:45:58,263  INFO RestServices:102 - Got Plates # 0
+Dec 09 12:46:03,684  INFO RestAnonControllerImpl:92 - in queryDigits with : org.plate.json.QueryOnDigitsParamsJson@2c27d333
+Dec 09 12:46:03,685  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : tripleDigit
+Dec 09 12:46:03,685  INFO QueryDaoImpl:73 - SQL : SELECT * FROM plate WHERE tripleDigit = TRUE
+Dec 09 12:46:03,687  INFO RestServices:102 - Got Plates # 2
+Dec 09 12:48:46,843  INFO AnonController:25 - Received request to getAllPlates
+Dec 09 12:48:47,934  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
+Dec 09 12:48:47,940  INFO RestServices:55 - Got Plates # 19

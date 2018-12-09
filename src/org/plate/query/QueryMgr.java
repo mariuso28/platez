@@ -3,13 +3,15 @@ package org.plate.query;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.plate.json.QueryOnPlateParamsJson;
+
 public class QueryMgr {
 	
 	public QueryMgr()
 	{
 	}
 	
-	public void validate(QueryOnPlateParams params) throws QueryException
+	public void validate(QueryOnPlateParamsJson params) throws QueryException
 	{
 		List<String> invalid = new ArrayList<String>();
 		params.setPrefix(prepareChars(params.getPrefix()));

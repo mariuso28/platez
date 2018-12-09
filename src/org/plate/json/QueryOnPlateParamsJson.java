@@ -1,6 +1,6 @@
-package org.plate.query;
+package org.plate.json;
 
-public class QueryOnPlateParams{
+public class QueryOnPlateParamsJson{
 	private String prefix;
 	private String letter1;
 	private String letter2;
@@ -11,7 +11,7 @@ public class QueryOnPlateParams{
 	private String suffix;
 	
 	
-	public QueryOnPlateParams()
+	public QueryOnPlateParamsJson()
 	{
 	}
 

@@ -19,23 +19,9 @@
 
 		}
 
-		.headingPanelLeft {
-			float: left;
-			width: 150px;
-			height: 90px;
-			font-family: myFont;
-			font-size: 18px;
-			font-style: normal;
-			font-weight: bold;
-			line-height: 40px;
-			color: #d95c00;
-			vertical-align: middle;
-			margin-left: 0px;
-		}
-
 		.headingPanelMiddle {
 			float: left;
-			width: 930px;
+			width: 1100px;
 			height: 90px;
 			margin-left: 20px;
 			margin-bottom: 20px;
@@ -49,7 +35,7 @@
 
 		.headingPanelMiddleSearchHeader {
 			float: left;
-			width: 800px;
+			width: 1100px;
 			height: 20px;
 			font-family: myFont;
 			font-size: 120%;
@@ -78,7 +64,7 @@
 		.headingPanelMiddleSearch{
 			float: left;
 			height: 60px;
-			width: 950px;
+			width: 1100px;
 			font-family: myFont;
 			font-size: 20px;
 			font-style: normal;
@@ -92,6 +78,20 @@
 		.headingPanelMiddleSearchCell {
 			float: left;
 			width: 65px;
+			height: 50px;
+			margin-right: 5px;
+		}
+
+    .headingPanelMiddleSearchSpecialCell {
+			float: left;
+			width: 150px;
+			height: 50px;
+			margin-right: 5px;
+		}
+
+  .headingPanelMiddleSearchButton {
+			float: left;
+			width: 100px;
 			height: 50px;
 			margin-right: 5px;
 		}
@@ -114,7 +114,7 @@
 
 		.prodListEntry {
 			float: left;
-			height: 180px;
+			height: 140px;
 			width: 200px;
 			margin-left: 6px;
 			margin-top: 7px;
@@ -230,7 +230,85 @@
 
 <script>
 
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function doClearQuery()
+{
+  getAllPlates();
+  getQueryParams();
+}
+
+function doSpecialQuery()
+{
+  var special = document.getElementById('special');
+  var jsonData = {};
+  // alert("Cot special : " + special.value);
+  jsonData['combo'] = special.value;
+
+  queryPlates(jsonData,'/platez/api/anon/queryDigits');
+}
+
+function doParamQuery()
+{
+  var prefix = document.getElementById('prefix');
+  var letter1 = document.getElementById('letter1');
+  var letter2 = document.getElementById('letter2');
+  var number1 = document.getElementById('number1');
+  var number2 = document.getElementById('number2');
+  var number3 = document.getElementById('number3');
+  var number4 = document.getElementById('number4');
+  var suffix = document.getElementById('suffix');
+
+  var jsonData = {};
+//  alert(prefix.value+letter1.value+letter2.value+number1.value+number2.value
+//        +number3.value+number4.value+suffix.value);
+
+  jsonData['prefix'] = prefix.value;
+  jsonData['letter1'] = letter1.value;
+  jsonData['letter2'] = letter2.value;
+  jsonData['number1'] = number1.value;
+  jsonData['number2'] = number2.value;
+  jsonData['number3'] = number3.value;
+  jsonData['number4'] = number4.value;
+  jsonData['suffix'] = suffix.value;
+
+  queryPlates(jsonData,'/platez/api/anon/queryPlate');
+}
+
 var plates;
+
+function queryPlates(jsonData,targetUrl) {
+
+     $.ajax({
+
+    type: "POST",
+        url : targetUrl,
+        cache: false,
+        contentType: 'application/json;',
+        dataType: "json",
+        data:JSON.stringify(jsonData),
+         success: function(data) {
+        //    alert(JSON.stringify(data));
+	          if (data == '')
+            {
+               return;
+            }
+
+     	      var result = $.parseJSON(JSON.stringify(data));
+            if (result.status != 'OK')
+            {
+              alert(result.message);
+              return;
+            }
+            plates = result.result;
+          //  alert('Plates # ' + plates.length);
+            displayPlates();
+          }
+      })
+}
+
 
 function getAllPlates() {
 
@@ -238,6 +316,37 @@ function getAllPlates() {
 
     type: "GET",
          url : '/platez/api/anon/getAllPlates',
+    cache: false,
+ 	 contentType: 'application/json;',
+         dataType: "json",
+           success: function(data) {
+        //    alert(JSON.stringify(data));
+	          if (data == '')
+            {
+               return;
+            }
+
+     	      var result = $.parseJSON(JSON.stringify(data));
+            if (result.status != 'OK')
+            {
+              alert(result.message);
+              return;
+            }
+            plates = result.result;
+      //      alert('Plates # ' + plates.length);
+            displayPlates();
+          }
+      })
+}
+
+var queryParams;
+
+function getQueryParams() {
+
+     $.ajax({
+
+    type: "GET",
+         url : '/platez/api/anon/getQueryParams',
     cache: false,
  	 contentType: 'application/json;',
          dataType: "json",
@@ -256,19 +365,75 @@ function getAllPlates() {
               alert(result.message);
               return;
             }
-            plates = result.result;
-            alert('Plates # ' + plates.length);
-            displayPlates();
+            queryParams = result.result;
+            displayQueryParams();
           }
       })
 }
 
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+function displayQueryParams()
+{
+    var pf = document.getElementById('prefix');
+    queryParams.prefix.forEach((choice,i) => {
+      var option = createOption(choice);
+      pf.appendChild(option);
+    });
+    var l1 = document.getElementById('letter1');
+    queryParams.letter1.forEach((choice,i) => {
+      var option = createOption(choice);
+      l1.appendChild(option);
+    });
+    var l2 = document.getElementById('letter2');
+    queryParams.letter2.forEach((choice,i) => {
+      var option = createOption(choice);
+      l2.appendChild(option);
+    });
+    var n1 = document.getElementById('number1');
+    queryParams.number1.forEach((choice,i) => {
+      var option = createOption(choice);
+      n1.appendChild(option);
+    });
+    var n2 = document.getElementById('number2');
+    queryParams.number2.forEach((choice,i) => {
+      var option = createOption(choice);
+      n2.appendChild(option);
+    });
+    var n3 = document.getElementById('number3');
+    queryParams.number3.forEach((choice,i) => {
+      var option = createOption(choice);
+      n3.appendChild(option);
+    });
+    var n4 = document.getElementById('number4');
+    queryParams.number4.forEach((choice,i) => {
+      var option = createOption(choice);
+      n4.appendChild(option);
+    });
+    var sf = document.getElementById('suffix');
+    queryParams.suffix.forEach((choice,i) => {
+      var option = createOption(choice);
+      sf.appendChild(option);
+    });
+    var sp = document.getElementById('special');
+    queryParams.specials.forEach((choice,i) => {
+      var option = document.createElement('option');
+      option.value = choice[1];
+      option.text = choice[0];
+      sp.appendChild(option);
+    });
+}
+
+function createOption(choice)
+{
+  var option = document.createElement('option');
+  option.value = choice;
+  option.text = choice;
+  return option;
 }
 
 function displayPlates()
 {
+    document.getElementById('pc').innerHTML="";
+
     plates.forEach((plate, i) => {
     var pe = document.createElement('div');
     pe.className = 'prodListEntry';
@@ -319,97 +484,114 @@ function displayPlates()
 </script>
 
 <html>
-<head><table id="table0"></table>
+<head>
 </style>
 </head>
 <body>
   <div class="headingPanel">
-				<div class="headingPanelLeft">
-					<div style="line-height:110px; text-align:right;">Filter:</div>
-				</div>	<!-- headingPanelLeft -->
 				<div class="headingPanelMiddle">
-					<c:if test="${currCategory.code == 'platePre'}">
 					<div class="headingPanelMiddleSearchHeader">
-						<input type="hidden" name="command.queryNames[2]"
-												value="${pkfzSupplierHomeForm.queries[2].queryName}" />
-						<div class="headingPanelMiddleSearchHeaderCell"style="width:160px;">
-								${pkfzSupplierHomeForm.queries[2].queryName}
+            <div class="headingPanelMiddleSearchHeaderCell">
+								Prefix
 						</div>
-						<c:forEach items="${pkfzSupplierHomeForm.queries[0].parameters}" var="qp" varStatus="status" >
-							<div class="headingPanelMiddleSearchHeaderCell">
-								${qp.name}
-							</div>
-						</c:forEach>
+            <div class="headingPanelMiddleSearchHeaderCell">
+								Letter
+						</div>
+            <div class="headingPanelMiddleSearchHeaderCell">
+								Letter
+						</div>
+            <div class="headingPanelMiddleSearchHeaderCell">
+								Number
+						</div>
+            <div class="headingPanelMiddleSearchHeaderCell">
+								Number
+						</div>
+            <div class="headingPanelMiddleSearchHeaderCell">
+								Number
+						</div>
+            <div class="headingPanelMiddleSearchHeaderCell">
+								Number
+						</div>
+            <div class="headingPanelMiddleSearchHeaderCell">
+								Suffix
+						</div>
+          </div>
+          <div class="headingPanelMiddleSearchHeaderCell">
+          </div>
+        </div>
+        <div class="headingPanelMiddleSearchHeaderCell">
+            Specials
+        </div>
 					</div>  <!-- headingPanelMiddleSearchHeader -->
 					<div class="headingPanelMiddleSearch">
-						<c:set var="qp" value="${pkfzSupplierHomeForm.queries[2].parameters[0]}" />
-						<div class="headingPanelMiddleSearchCell" style="width:160px; text-align:left;">
-							<form:select path="command.queryValueList[2][0]" style="width: 160px;
-											height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;"
-											value="${qp.defaultValue}" onchange="submitSpecialQuery(value)">
-											<c:forEach items="${qp.values}"
-																		var="val">
-												<option value="${val[1]}"
-													 ${val[1] == qp.defaultValue ? 'selected' : ''}>
-													 ${val[0]}
-												</option>
-											</c:forEach>
-							</form:select>
+						<div class="headingPanelMiddleSearchCell">
+							<select name='prefixdd' id='prefix' style="width: 65px;
+											height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+							</select>
 						</div>
-						<input type="hidden" name="command.queryNames[0]" value="${pkfzSupplierHomeForm.queries[0].queryName}" />
-						<c:forEach items="${pkfzSupplierHomeForm.queries[0].parameters}" var="qp" varStatus="status" >
-							<div class="headingPanelMiddleSearchCell">
-								<form:select path="command.queryValueList[0][${status.index}]" style="width: 65px;
-												 	height: 50px; font-size: 16px; padding-left: 15px;"
-													value="${qp.defaultValue}" >
-													<c:forEach items="${qp.values}" var="val">
-														<option value="${val}"
-															 ${val == qp.defaultValue ? 'selected' : ''}>
-															 ${val}
-														</option>
-													</c:forEach>
-								</form:select>
-							</div>
-						</c:forEach>
-						<input name="query1" value="Search" type="submit" style="width:100px; height:50px; font-family: myFont; color: green; font-size:20px; font-weight:700;"/>
-						<input name="clearQuery" value="Clear" size="6px" type="submit" style="width:100px; height:50px; font-family: myFont; color: red; font-size:20px; font-weight:700;"/>
-					</div>
-					</c:if> <!-- headingPanelMiddleSearch -->
-					<c:if test="${currCategory.code == 'plateSpe'}">
-						<div class="headingPanelMiddleSearch">
-							<input type="hidden" name="command.queryNames[3]"
-													value="${pkfzSupplierHomeForm.queries[3].queryName}" />
-							<div class="headingPanelMiddleSearchHeader">
-								<div class="headingPanelMiddleSearchHeaderCell" style="width:160px;">
-										${pkfzSupplierHomeForm.queries[3].queryName}
-								</div>
-							</div>
-							<div class="headingPanelMiddleSearch">
-								<c:set var="qp" value="${pkfzSupplierHomeForm.queries[3].parameters[0]}" />
-								<div class="headingPanelMiddleSearchCell" style="width:160px; text-align:left;">
-									<form:select path="command.queryValueList[3][0]" style="width: 160px;
-													height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;"
-													value="${qp.defaultValue}" onchange="submitSpecialQuery3(value)">
-													<c:forEach items="${qp.values}"
-																				var="val">
-														<option value="${val}"
-															 ${val == qp.defaultValue ? 'selected' : ''}>
-															 ${val}
-														</option>
-													</c:forEach>
-									</form:select>
-								</div>
-							<input name="clearQuery" value="Clear" size="6px" type="submit" style="width:100px; height:50px; font-family: myFont; color: red; font-size:20px; font-weight:700;"/>
-							</div>
-						</div>	<!-- headingPanelMiddleSearch -->
-				</div>	<!-- headingPanelMiddle -->
-			</c:if>
-
+            <div class="headingPanelMiddleSearchCell">
+							<select name='letter1dd' id='letter1' style="width: 65px;
+											height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+							</select>
+						</div>
+            <div class="headingPanelMiddleSearchCell">
+							<select name='letter2dd' id='letter2' style="width: 65px;
+											height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+							</select>
+						</div>
+            <div class="headingPanelMiddleSearchCell">
+							<select name='number1dd' id='number1' style="width: 65px;
+											height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+							</select>
+						</div>
+            <div class="headingPanelMiddleSearchCell">
+							<select name='number2dd' id='number2' style="width: 65px;
+											height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+							</select>
+						</div>
+            <div class="headingPanelMiddleSearchCell">
+							<select name='number3dd' id='number3' style="width: 65px;
+											height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+							</select>
+						</div>
+            <div class="headingPanelMiddleSearchCell">
+							<select name='number4dd' id='number4' style="width: 65px;
+											height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+							</select>
+						</div>
+            <div class="headingPanelMiddleSearchCell">
+							<select name='suffix' id='suffix' style="width: 65px;
+											height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+							</select>
+						</div>
+          <div class="headingPanelMiddleSearchButton">
+          <input name="query1" value="Search" type="button"
+              onClick="return doParamQuery()" style=
+              "font-family: myFont; color: green; font-size:20px; font-weight:700;"/>
+          </div>
+          <div class="headingPanelMiddleSearchSpecialCell">
+            <select name='specialdd' id='special' style="width: 150px;
+                    height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+            </select>
+          </div>
+          <div class="headingPanelMiddleSearchButton">
+          <input name="query2" value="Search" type="button"
+              onClick="return doSpecialQuery()" style=
+              "font-family: myFont; color: green; font-size:20px; font-weight:700;"/>
+          </div>
+          <div class="headingPanelMiddleSearchButton">
+          <input name="clear" value="Clear" type="button"
+              onClick="return doClearQuery()" style="
+              font-family: myFont; color: green; font-size:20px; font-weight:700;"/>
+          </div>
+        </div>
 		</div>
+  </div>
   <div id='pc' class='prodListContainer'>
   </div>
 </body>
 <script>
   getAllPlates();
+  getQueryParams();
 </script>
 </html>
