@@ -1,4 +1,4 @@
-package org.plate.user.test;
+package org.plate.user.initialize;
 
 import org.apache.log4j.Logger;
 import org.plate.home.persistence.Home;
@@ -6,18 +6,18 @@ import org.plate.user.BaseUser;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class TestBaseUser 
+public class InitializeAgent 
 {
-	private static Logger log = Logger.getLogger(TestBaseUser.class);
+	private static Logger log = Logger.getLogger(InitializeAgent.class);
 	
-	private static BaseUser createBaseUser()
+	private static BaseUser createAgent()
 	{
 		BaseUser bu = new BaseUser();
-		bu.setContact("pmk");
-		bu.setEmail("pmk@test.com");
+		bu.setContact("des");
+		bu.setEmail("des88@test.com");
 		bu.setPassword("88888888");
-		bu.setPhone("0102202005");
-		bu.setRole(BaseUser.ROLE_PUNTER);
+		bu.setPhone("0102202006");
+		bu.setRole(BaseUser.ROLE_AGENT);
 		return bu;
 	}
 	
@@ -28,7 +28,7 @@ public class TestBaseUser
 				"plate-service.xml");
 
 		Home home = (Home) context.getBean("home");
-		BaseUser bu = createBaseUser();
+		BaseUser bu = createAgent();
 		try
 		{
 			home.getBaseUserDao().store(bu);
@@ -38,7 +38,7 @@ public class TestBaseUser
 			log.error(e.getMessage());
 			System.exit(1);
 		}
-		bu = home.getBaseUserDao().getByEmail("pmk@test.com");
+		bu = home.getBaseUserDao().getByEmail("des88@test.com");
 		
 		log.info(bu);
 		

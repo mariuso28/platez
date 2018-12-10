@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.UUID;
 
 import org.apache.log4j.Logger;
+import org.plate.persistence.PersistenceDuplicateKeyException;
 import org.plate.persistence.PersistenceRuntimeException;
 import org.plate.user.BaseUser;
 import org.springframework.dao.DataAccessException;
@@ -23,8 +24,8 @@ public class BaseUserDaoImpl extends NamedParameterJdbcDaoSupport implements Bas
 		bu.setId(UUID.randomUUID());
 		try
 		{
-			getJdbcTemplate().update("INSERT INTO baseuser (id,email,contact,phone,password,enabled) "
-										+ "VALUES (?,?,?,?,?,false)"
+			getJdbcTemplate().update("INSERT INTO baseuser (id,email,contact,phone,password,role,enabled) "
+										+ "VALUES (?,?,?,?,?,?,false)"
 			        , new PreparedStatementSetter() {
 						public void setValues(PreparedStatement ps) throws SQLException {
 			    	  	ps.setObject(1, bu.getId());
@@ -32,14 +33,20 @@ public class BaseUserDaoImpl extends NamedParameterJdbcDaoSupport implements Bas
 						ps.setString(3, bu.getContact());
 						ps.setString(4, bu.getPhone());
 						ps.setString(5, bu.getPassword());
+						ps.setString(6, bu.getRole());
 			      }
 			    });
 			
 		}
-		catch (DataAccessException e)
+		catch (org.springframework.dao.DuplicateKeyException e)
 		{
-			log.error("Could not execute : " + e.getMessage(),e);
-			throw new PersistenceRuntimeException("Could not execute store : " + e.getMessage());
+			log.warn("Could not execute : " + e.getMessage());
+			throw new PersistenceDuplicateKeyException("User with email:" + bu.getEmail() + " already exists");
+		}	
+		catch (DataAccessException e1)
+		{
+			log.error("Could not execute : " + e1.getMessage(),e1);
+			throw new PersistenceRuntimeException("Could not execute store : " + e1.getMessage());
 		}	
 	}
 
@@ -89,16 +96,15 @@ public class BaseUserDaoImpl extends NamedParameterJdbcDaoSupport implements Bas
 	public void update(final BaseUser bu) throws PersistenceRuntimeException {
 		try
 		{
-			getJdbcTemplate().update("UPDATE baseuser SET email=?,contact=?,phone=?,password=?,enabled=? "
+			getJdbcTemplate().update("UPDATE baseuser SET contact=?,phone=?,password=?,enabled=? "
 										+ "WHERE id=?"
 			        , new PreparedStatementSetter() {
 						public void setValues(PreparedStatement ps) throws SQLException {
-						ps.setString(1, bu.getEmail().toLowerCase());
-						ps.setString(2, bu.getContact());
-						ps.setString(3, bu.getPhone());
-						ps.setString(4, bu.getPassword());
-						ps.setBoolean(5, bu.isEnabled());
-						ps.setObject(6, bu.getId());
+						ps.setString(1, bu.getContact());
+						ps.setString(2, bu.getPhone());
+						ps.setString(3, bu.getPassword());
+						ps.setBoolean(4, bu.isEnabled());
+						ps.setObject(5, bu.getId());
 			      }
 			    });
 		}

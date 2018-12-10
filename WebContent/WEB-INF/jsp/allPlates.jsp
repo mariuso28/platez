@@ -19,7 +19,7 @@
 
 		}
 
-		.headingPanelMiddle {
+	.headingPanelMiddle {
 			float: left;
 			width: 1100px;
 			height: 90px;
@@ -27,13 +27,41 @@
 			margin-bottom: 20px;
 		}
 
-		.headingPanelRight {
+	.headingPanelRight {
 			float: left;
 			width: 100px;
 			height: 90px;
 		}
 
-		.headingPanelMiddleSearchHeader {
+		.headingPanelLogonHeader {
+				float: left;
+				width: 1000px;
+				height: 18px;
+				font-family: myFont;
+				font-size: 120%;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 30px;
+				color: #28166f;
+				margin-left: 0px;
+				margin-top: 10px;
+			}
+
+			.headingPanelLogonHeaderCell {
+					float: right;
+					width: 200px;
+					height: 12px;
+					margin-right: 5px;
+					font-family: Arial, Helvetica, sans-serif;
+					font-size: 12px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 18px;
+					color: #blue;
+					text-align: center;
+				}
+
+	.headingPanelMiddleSearchHeader {
 			float: left;
 			width: 1100px;
 			height: 20px;
@@ -47,7 +75,7 @@
 			margin-top: 10px;
 		}
 
-		.headingPanelMiddleSearchHeaderCell {
+	.headingPanelMiddleSearchHeaderCell {
 			float: left;
 			width: 65px;
 			height: 12px;
@@ -61,7 +89,7 @@
 			text-align: center;
 		}
 
-		.headingPanelMiddleSearch{
+	.headingPanelMiddleSearch{
 			float: left;
 			height: 60px;
 			width: 1100px;
@@ -75,14 +103,14 @@
 			margin-left: 0px;
 		}
 
-		.headingPanelMiddleSearchCell {
+	.headingPanelMiddleSearchCell {
 			float: left;
 			width: 65px;
 			height: 50px;
 			margin-right: 5px;
 		}
 
-    .headingPanelMiddleSearchSpecialCell {
+  .headingPanelMiddleSearchSpecialCell {
 			float: left;
 			width: 150px;
 			height: 50px;
@@ -488,6 +516,15 @@ function displayPlates()
 </style>
 </head>
 <body>
+	<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+	<div class="headingPanelLogonHeader">
+		<div class="headingPanelLogonHeaderCell">
+			Already a member?&nbsp&nbsp<a href="/platez/web/anon/signin">Sign in</a>
+		</div>
+		<div class="headingPanelLogonHeaderCell">
+			<a href="/platez/web/anon/register">Register to buy or sell</a>
+		</div>
+	</div>
   <div class="headingPanel">
 				<div class="headingPanelMiddle">
 					<div class="headingPanelMiddleSearchHeader">
@@ -515,15 +552,15 @@ function displayPlates()
             <div class="headingPanelMiddleSearchHeaderCell">
 								Suffix
 						</div>
-          </div>
-          <div class="headingPanelMiddleSearchHeaderCell">
-          </div>
-        </div>
-        <div class="headingPanelMiddleSearchHeaderCell">
-            Specials
-        </div>
-					</div>  <!-- headingPanelMiddleSearchHeader -->
-					<div class="headingPanelMiddleSearch">
+          	<div class="headingPanelMiddleSearchHeaderCell">
+          	</div>
+						<div class="headingPanelMiddleSearchHeaderCell">
+          	</div>
+        		<div class="headingPanelMiddleSearchHeaderCell">
+            	Specials
+        		</div>
+			</div>  <!-- headingPanelMiddleSearchHeader -->
+		<div class="headingPanelMiddleSearch">
 						<div class="headingPanelMiddleSearchCell">
 							<select name='prefixdd' id='prefix' style="width: 65px;
 											height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
@@ -584,7 +621,7 @@ function displayPlates()
               onClick="return doClearQuery()" style="
               font-family: myFont; color: green; font-size:20px; font-weight:700;"/>
           </div>
-        </div>
+      </div>
 		</div>
   </div>
   <div id='pc' class='prodListContainer'>

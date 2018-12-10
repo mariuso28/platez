@@ -6,12 +6,17 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.plate.domain.plate.Plate;
 import org.plate.json.PlateJson;
+import org.plate.json.ProfileJson;
 import org.plate.json.QueryOnDigitsParamsJson;
 import org.plate.json.QueryOnPlateParamsJson;
 import org.plate.json.QueryParamsJson;
+import org.plate.persistence.PersistenceDuplicateKeyException;
 import org.plate.query.QueryParams;
 import org.plate.query.persistence.QueryDao;
 import org.plate.services.Services;
+import org.plate.services.validator.BaseUserValidator;
+import org.plate.services.validator.ValidatorException;
+import org.plate.user.BaseUser;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class RestServices {
@@ -104,5 +109,35 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 		for (Plate p : plates)
 			pjs.add(createPlateJson(p));
 		return pjs;
+	}
+
+	public void register(ProfileJson profile) {
+		BaseUser bu = new BaseUser();
+		BaseUserValidator bv = new BaseUserValidator();
+		bu.setContact(profile.getContact());
+		bu.setEmail(profile.getEmail());
+		bu.setPhone(profile.getPhone());
+		bu.setPassword(profile.getPassword());
+		
+		bu.setRole(bu.getRole());
+		try
+		{
+			bv.validate(bu);
+			// do encryption here after validate
+			services.getHome().getBaseUserDao().store(bu);
+		}
+		catch (ValidatorException e2)
+		{
+			throw new RestServicesException(e2.getMessage());
+		}
+		catch (PersistenceDuplicateKeyException e1)
+		{
+			throw new RestServicesException(e1.getMessage());
+		}
+		catch (Exception e)
+		{
+			log.error(e);
+			throw new RestServicesException("Could not register user - contact support");
+		}
 	}
 }

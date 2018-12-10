@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.plate.json.PlateJson;
+import org.plate.json.ProfileJson;
 import org.plate.json.QueryOnDigitsParamsJson;
 import org.plate.json.QueryOnPlateParamsJson;
 import org.plate.json.QueryParamsJson;
@@ -30,6 +31,26 @@ public class RestAnonControllerImpl implements RestAnonController {
 	{
 		ResultJson result = new ResultJson();
 		result.success("SUCCESS");
+		return result;
+	}
+	
+	@Override
+	@RequestMapping(value = "/register")
+	// PkfzResultJson contains message if success, message if fail
+	public ResultJson register(@RequestBody() ProfileJson profile)
+	{
+		log.info("Doing registration for : " + profile);
+		ResultJson result = new ResultJson();
+		try
+		{
+			restServices.register(profile);
+			result.success("User : " + profile.getEmail() + " successfully registered - please check email and follow intructions.");
+		}
+		catch (RestServicesException e)
+		{
+			log.error("Registration failed : " + e.getMessage());
+			result.fail(e.getMessage());
+		}
 		return result;
 	}
 	

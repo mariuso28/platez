@@ -9,6 +9,10 @@ public class BaseUser {
 	private String phone;
 	private String password;
 	private boolean enabled;
+	public static String ROLE_PUNTER = "ROLE_PUNTER";
+	public static String ROLE_AGENT = "ROLE_AGENT";
+	public static String ROLE_AUCTIONEER = "ROLE_AUCTIONEER";
+	private String role;
 	
 	public BaseUser()
 	{
@@ -66,6 +70,14 @@ public class BaseUser {
 	public String toString() {
 		return "BaseUser [id=" + id + ", contact=" + contact + ", email=" + email + ", phone=" + phone + ", password="
 				+ password + ", enabled=" + enabled + "]";
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 	
 }

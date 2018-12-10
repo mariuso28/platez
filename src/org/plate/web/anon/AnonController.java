@@ -26,4 +26,20 @@ public class AnonController {
 			
 		return "allPlates";
 	}
+	
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public String register() {
+			
+		log.info("Received request to register");
+			
+		return "register";
+	}
+	
+	@RequestMapping(value = "/signin", method = RequestMethod.GET)
+	public String signin() {
+			
+		log.info("Received request to signin");
+			
+		return "signin";
+	}
 }

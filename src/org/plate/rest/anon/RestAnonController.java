@@ -1,5 +1,6 @@
 package org.plate.rest.anon;
 
+import org.plate.json.ProfileJson;
 import org.plate.json.QueryOnDigitsParamsJson;
 import org.plate.json.QueryOnPlateParamsJson;
 import org.plate.json.ResultJson;
@@ -12,6 +13,10 @@ public interface RestAnonController {
 	@RequestMapping(value = "/getSuccess")
 	// PkfzResultJson contains message if success, message if fail
 	public ResultJson getSuccess();
+	
+	@RequestMapping(value = "/register")
+	// PkfzResultJson contains message if success, message if fail
+	public ResultJson register(@RequestBody() ProfileJson profile);
 	
 	@RequestMapping(value = "/getAllPlates")
 	// PkfzResultJson contains List<PlateJson> if success, message if fail
