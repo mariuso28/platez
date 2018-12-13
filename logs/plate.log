@@ -697,3 +697,550 @@ Dec 10 14:59:29,833  INFO RestAnonControllerImpl:42 - Doing registration for : P
 Dec 10 14:59:52,814  INFO RestAnonControllerImpl:42 - Doing registration for : ProfileJson [contact=koko, email=momoko@test.com, phone=+60102202005]
 Dec 10 14:59:55,782  INFO AnonController:33 - Received request to register
 Dec 10 15:00:14,435  INFO RestAnonControllerImpl:42 - Doing registration for : ProfileJson [contact=coco, email=coco@test.com, phone=+60102202005]
+Dec 12 14:19:49,174 ERROR BaseUserDaoImpl:48 - Could not execute : PreparedStatementCallback; SQL [INSERT INTO baseuser (id,email,contact,phone,password,role,enabled) VALUES (?,?,?,?,?,?,false)]; ERROR: null value in column "phone" violates not-null constraint
+  Detail: Failing row contains (c20103c8-e5d8-4972-a779-5295e83cdc8b, koko@test.com, koko, null, $2a$10$E7DICV5o36g8apH8ZyhGxuSj9cJ3j2evvt/ClZ7NzQjvAM9FwR/cS, f, ROLE_PUNTER).; nested exception is org.postgresql.util.PSQLException: ERROR: null value in column "phone" violates not-null constraint
+  Detail: Failing row contains (c20103c8-e5d8-4972-a779-5295e83cdc8b, koko@test.com, koko, null, $2a$10$E7DICV5o36g8apH8ZyhGxuSj9cJ3j2evvt/ClZ7NzQjvAM9FwR/cS, f, ROLE_PUNTER).
+org.springframework.dao.DataIntegrityViolationException: PreparedStatementCallback; SQL [INSERT INTO baseuser (id,email,contact,phone,password,role,enabled) VALUES (?,?,?,?,?,?,false)]; ERROR: null value in column "phone" violates not-null constraint
+  Detail: Failing row contains (c20103c8-e5d8-4972-a779-5295e83cdc8b, koko@test.com, koko, null, $2a$10$E7DICV5o36g8apH8ZyhGxuSj9cJ3j2evvt/ClZ7NzQjvAM9FwR/cS, f, ROLE_PUNTER).; nested exception is org.postgresql.util.PSQLException: ERROR: null value in column "phone" violates not-null constraint
+  Detail: Failing row contains (c20103c8-e5d8-4972-a779-5295e83cdc8b, koko@test.com, koko, null, $2a$10$E7DICV5o36g8apH8ZyhGxuSj9cJ3j2evvt/ClZ7NzQjvAM9FwR/cS, f, ROLE_PUNTER).
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:243)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:645)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:866)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:927)
+	at org.plate.user.persistence.BaseUserDaoImpl.store(BaseUserDaoImpl.java:27)
+	at org.plate.user.initialize.CreateSampleUsers.main(CreateSampleUsers.java:51)
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "phone" violates not-null constraint
+  Detail: Failing row contains (c20103c8-e5d8-4972-a779-5295e83cdc8b, koko@test.com, koko, null, $2a$10$E7DICV5o36g8apH8ZyhGxuSj9cJ3j2evvt/ClZ7NzQjvAM9FwR/cS, f, ROLE_PUNTER).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2003)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:200)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:424)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:161)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:133)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:873)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:866)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:629)
+	... 4 more
+Dec 12 14:19:49,202 ERROR CreateSampleUsers:55 - Could not execute store : PreparedStatementCallback; SQL [INSERT INTO baseuser (id,email,contact,phone,password,role,enabled) VALUES (?,?,?,?,?,?,false)]; ERROR: null value in column "phone" violates not-null constraint
+  Detail: Failing row contains (c20103c8-e5d8-4972-a779-5295e83cdc8b, koko@test.com, koko, null, $2a$10$E7DICV5o36g8apH8ZyhGxuSj9cJ3j2evvt/ClZ7NzQjvAM9FwR/cS, f, ROLE_PUNTER).; nested exception is org.postgresql.util.PSQLException: ERROR: null value in column "phone" violates not-null constraint
+  Detail: Failing row contains (c20103c8-e5d8-4972-a779-5295e83cdc8b, koko@test.com, koko, null, $2a$10$E7DICV5o36g8apH8ZyhGxuSj9cJ3j2evvt/ClZ7NzQjvAM9FwR/cS, f, ROLE_PUNTER).
+Dec 12 14:20:17,999  WARN BaseUserDaoImpl:43 - Could not execute : PreparedStatementCallback; SQL [INSERT INTO baseuser (id,email,contact,phone,password,role,enabled) VALUES (?,?,?,?,?,?,false)]; ERROR: duplicate key value violates unique constraint "baseuser_uq_email"
+  Detail: Key (email)=(des88@test.com) already exists.; nested exception is org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "baseuser_uq_email"
+  Detail: Key (email)=(des88@test.com) already exists.
+Dec 12 14:20:18,000 ERROR CreateSampleUsers:56 - User with email:des88@test.com already exists
+Dec 12 14:20:36,760  INFO CreateSampleUsers:60 - BaseUser [id=fefbcad7-4836-4b7f-bbfa-ba4b0bd896b7, contact=des, email=des88@test.com, phone=0102202006, password=$2a$10$Aj5xp8nNYIj4d9RNjAtD5.OBIDS/A8FAMx9i5PfHEuoDKbhxIsqlO, enabled=false]
+Dec 12 14:20:36,763  INFO CreateSampleUsers:63 - BaseUser [id=e8c9bd0a-bea8-4f6a-ad75-f4d227f0ebc2, contact=koko, email=koko@test.com, phone=0102202007, password=$2a$10$a12tWhqyv45AP2jvU0pkTu13B4ERBXMDQbQkkjF9GowNyVARmgUoe, enabled=false]
+Dec 12 14:20:36,763  INFO CreateSampleUsers:65 - Done
+Dec 13 16:07:31,793  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:08:42,976  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:09:19,813  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:09:19,849 ERROR RestPunterControllerImpl:36 - 
+java.lang.NullPointerException
+	at org.plate.rest.services.RestServices.populatePunter(RestServices.java:199)
+	at org.plate.rest.services.RestServices.getPunter(RestServices.java:191)
+	at org.plate.rest.punter.RestPunterControllerImpl.getPunter(RestPunterControllerImpl.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:832)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:743)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:895)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:858)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.plate.config.CrossScriptingFilter.doFilter(CrossScriptingFilter.java:25)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:112)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:169)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:176)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:121)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:106)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.multipart.support.MultipartFilter.doFilterInternal(MultipartFilter.java:118)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Dec 13 16:10:46,527  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:16:23,417  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:16:23,482 ERROR RestPunterControllerImpl:36 - 
+java.lang.NullPointerException
+	at org.plate.rest.services.RestServices.populatePunter(RestServices.java:199)
+	at org.plate.rest.services.RestServices.getPunter(RestServices.java:191)
+	at org.plate.rest.punter.RestPunterControllerImpl.getPunter(RestPunterControllerImpl.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:832)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:743)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:895)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:858)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.plate.config.CrossScriptingFilter.doFilter(CrossScriptingFilter.java:25)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:112)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:169)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:176)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:121)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:106)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.multipart.support.MultipartFilter.doFilterInternal(MultipartFilter.java:118)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Dec 13 16:21:54,746  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:21:54,803 ERROR RestPunterControllerImpl:36 - 
+java.lang.NullPointerException
+	at org.plate.rest.services.RestServices.populatePunter(RestServices.java:199)
+	at org.plate.rest.services.RestServices.getPunter(RestServices.java:191)
+	at org.plate.rest.punter.RestPunterControllerImpl.getPunter(RestPunterControllerImpl.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:832)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:743)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:895)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:858)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.plate.config.CrossScriptingFilter.doFilter(CrossScriptingFilter.java:25)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:112)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:169)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:176)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:121)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:106)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.multipart.support.MultipartFilter.doFilterInternal(MultipartFilter.java:118)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Dec 13 16:23:00,656  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:25:37,349  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:26:48,611  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:27:08,678  INFO WebAnonController:85 - Received invalidSession
+Dec 13 16:27:12,116  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:27:17,055  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:27:17,057  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:27:17,084  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:27:23,484  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 16:27:23,568  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:27:23,587  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:27:26,136  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 16:27:26,137  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 16:27:26,333  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 16:27:26,334  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 16:27:26,335  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 16:27:26,550  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:27:28,138  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:27:28,147  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:27:28,169  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:29:24,288  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 16:29:24,473  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:29:24,994  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:29:29,405  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 16:29:29,411  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 16:29:29,602  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 16:29:29,604  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 16:29:29,605  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 16:29:29,784  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:29:32,097  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:29:32,115  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:29:32,137  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:31:51,673  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 16:31:51,760  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:31:51,780  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:31:55,931  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 16:31:55,937  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 16:31:55,953  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 16:31:55,956  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 16:31:55,957  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 16:31:56,093  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:31:58,633  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:31:58,637  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:31:58,658  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:32:40,228  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 16:32:40,305  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:32:40,322  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:32:42,987  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 16:32:42,991  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 16:32:43,009  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 16:32:43,014  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 16:32:43,015  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 16:32:43,156  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:32:44,985  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:32:44,987  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:32:44,998  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:34:47,135  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 16:34:47,209  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:34:47,223  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:34:50,328  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 16:34:50,331  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 16:34:50,345  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 16:34:50,347  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 16:34:50,348  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 16:34:50,481  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:34:52,247  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:34:52,248  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:34:52,268  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:39:28,499  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 16:39:28,576  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:39:28,587  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:39:34,079  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 16:39:34,082  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 16:39:34,093  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 16:39:34,095  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 16:39:34,096  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 16:39:34,236  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:39:34,367  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:39:34,381  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:41:03,825  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:42:33,915  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:42:33,925  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:44:51,619  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 16:44:51,697  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:44:51,703  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:44:55,341  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 16:44:55,342  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 16:44:55,345  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 16:44:55,346  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 16:44:55,346  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 16:44:55,485  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:44:55,639  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:44:55,649  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:45:50,360  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:45:59,168  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:45:59,178  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:46:35,830  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:46:36,755  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:46:36,764  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:46:39,995  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 16:46:40,127  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:46:40,135  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:46:43,327  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 16:46:43,329  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 16:46:43,338  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 16:46:43,340  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 16:46:43,340  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 16:46:43,476  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:46:43,613  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:46:43,620  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:47:17,139  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:47:17,993  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:47:17,999  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:47:27,880  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 16:47:27,968  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:47:27,974  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:47:30,818  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 16:47:30,820  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 16:47:30,829  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 16:47:30,831  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 16:47:30,832  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 16:47:30,968  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:47:31,033  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:47:31,040  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:49:02,080  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 16:49:02,149  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:49:02,156  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:49:04,580  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 16:49:04,582  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 16:49:04,590  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 16:49:04,592  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 16:49:04,592  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 16:49:04,742  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:49:04,892  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:49:04,899  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:49:37,377  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 16:49:37,449  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:49:37,455  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:49:42,124  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 16:49:42,126  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 16:49:42,134  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 16:49:42,136  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 16:49:42,137  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 16:49:42,352  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:49:42,430  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:49:42,436  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:52:55,849  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 16:52:55,930  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:52:55,935  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:52:58,070  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 16:52:58,072  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 16:52:58,076  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 16:52:58,076  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 16:52:58,076  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 16:52:58,197  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:52:59,991  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:52:59,995  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:53:00,010  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:56:58,503  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:57:01,142  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 16:57:01,144  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 16:57:01,155  INFO RestServices:70 - Got Plates # 19
+Dec 13 16:59:21,785  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 16:59:24,396  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:05:44,028  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 17:05:44,971  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 17:05:45,509  INFO RestServices:70 - Got Plates # 19
+Dec 13 17:05:49,589  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 17:05:49,594  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 17:05:49,746  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 17:05:49,747  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 17:05:49,748  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 17:05:49,921  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 17:05:52,228  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:07:49,068  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 17:07:50,149  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:07:50,150  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 17:07:50,174  INFO RestServices:70 - Got Plates # 19
+Dec 13 17:07:50,197  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:07:52,413  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 17:07:52,496  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 17:07:52,498  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:07:52,514  INFO RestServices:70 - Got Plates # 19
+Dec 13 17:07:52,540  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:07:54,276  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 17:07:54,346  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 17:07:54,348  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:07:54,359  INFO RestServices:70 - Got Plates # 19
+Dec 13 17:07:54,383  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:07:58,667  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 17:07:58,742  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 17:07:58,753  INFO RestServices:70 - Got Plates # 19
+Dec 13 17:08:04,577  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 17:08:04,581  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 17:08:04,594  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 17:08:04,596  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 17:08:04,597  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 17:08:04,742  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 17:08:04,814  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:08:04,814  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 17:08:04,827  INFO RestServices:70 - Got Plates # 19
+Dec 13 17:08:04,855  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:08:57,925  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 17:09:09,125  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 17:09:09,129  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:09:09,138  INFO RestServices:70 - Got Plates # 19
+Dec 13 17:09:30,133  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:16:29,759  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 17:16:29,940  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 17:16:29,948  INFO RestServices:70 - Got Plates # 19
+Dec 13 17:16:34,210  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 17:16:34,213  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 17:16:34,223  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 17:16:34,224  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 17:16:34,225  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 17:16:34,375  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 17:16:34,637  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:16:42,788  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 17:16:42,866  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 17:16:42,871  INFO RestServices:70 - Got Plates # 19
+Dec 13 17:16:45,736  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 17:16:45,738  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 17:16:45,748  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 17:16:45,750  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 17:16:45,751  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 17:16:45,881  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 17:16:45,949  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:17:51,469  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 17:17:52,473  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:18:54,346  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 17:18:55,333  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:19:29,915  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 17:19:44,206  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:19:55,844  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 17:19:55,851  INFO RestServices:70 - Got Plates # 19
+Dec 13 17:19:59,179  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:20:38,910  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 17:20:39,025  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 17:20:39,030  INFO RestServices:70 - Got Plates # 19
+Dec 13 17:20:43,289  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 17:20:43,290  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 17:20:43,299  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 17:20:43,300  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 17:20:43,301  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 17:20:43,443  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 17:20:43,537  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:30:44,028  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 13 17:30:44,263  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 17:30:44,268  INFO RestServices:70 - Got Plates # 19
+Dec 13 17:30:46,995  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 13 17:30:46,996  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 13 17:30:47,005  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 13 17:30:47,006  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 13 17:30:47,007  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 13 17:30:47,167  INFO WebAnonController:77 - Received goPunterHome
+Dec 13 17:30:47,396  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:30:47,396  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 13 17:30:47,402  INFO RestServices:70 - Got Plates # 19
+Dec 13 17:30:47,566  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 13 17:31:06,408  INFO RestAnonControllerImpl:113 - in queryDigits with : org.plate.json.QueryOnDigitsParamsJson@3e660527
+Dec 13 17:31:06,410  INFO QueryDaoImpl:76 - Performing QueryOnDigits with : digit2
+Dec 13 17:31:06,410  INFO QueryDaoImpl:79 - SQL : SELECT * FROM plate WHERE digit2 = TRUE
+Dec 13 17:31:06,427  INFO RestServices:150 - Got Plates # 11
+Dec 13 17:31:06,445  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com

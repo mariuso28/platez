@@ -7,11 +7,14 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.plate.domain.plate.Plate;
+import org.plate.domain.plate.sell.PlateSell;
 import org.plate.home.persistence.Home;
+import org.plate.user.punter.Punter;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -22,6 +25,9 @@ public class PlateImporter
 	
 	private static void importPlates(File file,Home ph) throws Exception
 	{
+		Punter punter = ph.getPunterDao().getByEmail("jpj@test.com");
+		GregorianCalendar gc = new GregorianCalendar();
+		
 		InputStream fis = new FileInputStream(file);
 		InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
 		BufferedReader br = new BufferedReader(isr);
@@ -32,6 +38,12 @@ public class PlateImporter
 					PlateParseRule pr = new PlateParseRule(line);
 					ph.getPlateDao().store(pr.getPlate());
 					Plate plate = pr.getPlate(); 
+					PlateSell ps = new PlateSell();
+					ps.setPlate(plate);
+					ps.setSellDate(gc.getTime());
+					ps.setSellerEmail(punter.getEmail());
+					ph.getPlateSellDao().storePlateSell(ps);
+					
 					log.info(plate.getRegNo() + " - " + plate.getListPrice());
 					plates.add(plate);
 					fcnt++;

@@ -6,11 +6,13 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.plate.domain.plate.Plate;
+import org.plate.domain.plate.sell.persistence.PlateSellDao;
 import org.plate.json.QueryOnDigitsParamsJson;
 import org.plate.json.QueryOnPlateParamsJson;
 import org.plate.persistence.PersistenceRuntimeException;
 import org.plate.query.QueryException;
 import org.plate.query.QueryMgr;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.PreparedStatementSetter;
@@ -18,6 +20,8 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcDaoSupport;
 
 public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryDao {
 	private static Logger log = Logger.getLogger(QueryDaoImpl.class);
+	@Autowired
+	private PlateSellDao plateSellDao;
 	
 	private QueryMgr queryMgr = new QueryMgr();
 	
@@ -35,6 +39,8 @@ public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryD
 		{
 			List<Plate> plates = getJdbcTemplate().query(sql, 
 					BeanPropertyRowMapper.newInstance(Plate.class));
+			for (Plate p : plates)
+				p.setPlateSell(plateSellDao.getPlateSell(p));
 			return plates;
 		}
 		catch (DataAccessException e)
@@ -75,6 +81,8 @@ public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryD
 		{
 			List<Plate> plates = getJdbcTemplate().query(sql, 
 					BeanPropertyRowMapper.newInstance(Plate.class));
+			for (Plate p : plates)
+				p.setPlateSell(plateSellDao.getPlateSell(p));
 			return plates;
 		}
 		catch (DataAccessException e)
@@ -97,6 +105,8 @@ public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryD
 			          preparedStatement.setDouble(2,max);
 			        }
 			      }, BeanPropertyRowMapper.newInstance(Plate.class));
+			for (Plate p : plates)
+				p.setPlateSell(plateSellDao.getPlateSell(p));
 			return plates;
 		}
 		catch (DataAccessException e)
@@ -119,6 +129,8 @@ public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryD
 			          preparedStatement.setInt(2,max);
 			        }
 			      }, BeanPropertyRowMapper.newInstance(Plate.class));
+			for (Plate p : plates)
+				p.setPlateSell(plateSellDao.getPlateSell(p));
 			return plates;
 		}
 		catch (DataAccessException e)

@@ -254,6 +254,161 @@
     			background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
     			background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
     		}
+
+				.modal-content {
+					width: 544px;
+					height: 144px;
+					background-color: #fff;
+					/*margin: auto;*/
+					padding: 10px;
+					border: 1px solid #888;
+				}
+
+			/* The Close Button */
+			.closeP {
+			color: #333;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+			line-height: 20px;
+	}
+
+	.closeP:hover,
+	.closeP:focus {
+	    color: #000;
+	    text-decoration: none;
+	    cursor: pointer;
+	}
+
+			.topBar {
+						margin-left: auto;
+						margin-right: auto;
+						width: 600px;
+						height: 104px;
+					}
+
+			.headingLogon {
+					width: 500px;
+					height: 44px;
+					/*margin-left: auto;
+					margin-right: auto;*/
+				}
+
+		.headingTopBar2 {
+				width: 500px;
+				height: 4px;
+				background-color: #129c94;
+			}
+
+			.headingTopBar {
+				width: 500px;
+				height: 44px;
+				background-color: #129c94;
+				color: #666;
+				font-size: 14px;
+				line-height: 16px;
+				font-weight: 900;
+			}
+
+			.headingTopBarMiddle {
+			float: left;
+			width: 495px;
+			height: 40px;
+			text-align: left;
+			padding-left: 5px;
+		}
+
+		.topHiddenBar {
+			width: 500px;
+			height: 120px;
+			background-color: #129c94;
+		}
+		.headingLoginPanel{
+					float: left;
+					width: 475px;
+					height: 120px;
+					text-align: left;
+					line-height: 22px;
+					padding-left: 5px;
+				}
+
+				.headingLoginUsernameLine {
+					float: left;
+					width: 500px;
+					height: 28px;
+					padding-left: 0px;
+					margin-top: 10px;
+					margin-bottom: 5px;
+				}
+
+				.headingLoginUsernamePrompt {
+					float: left;
+					width: 95px;
+					height: 24px;
+					text-align: left;
+					font-family: myFont;
+				  font-size: 14px;
+				  font-weight: 700;
+					color: #fff;
+					text-shadow: 1px 1px 1px #666;
+					line-height: 28px;
+					padding-left: 0px;
+				}
+
+				.headingLoginUsernameInput {
+					float: left;
+					width: 280px;
+					height: 28px;
+					text-align: left;
+					padding-left: 5px;
+				}
+
+				.headingLoginPasswordLine {
+					float: left;
+					width: 500px;
+					height: 28px;
+					padding-left: 0px;
+				}
+
+				.headingLoginPasswordPrompt {
+					float: left;
+					width: 95px;
+					height: 24px;
+					text-align: left;
+					font-family: myFont;
+				  font-size: 14px;
+				  font-weight: 700;
+					color: #fff;
+					text-shadow: 1px 1px 1px #666;
+					line-height: 28px;
+				}
+
+				.headingLoginPasswordInput {
+					float: left;
+					width: 280px;
+					height: 28px;
+					text-align: left;
+					padding-left: 5px;
+					padding-right: 10px;
+				}
+
+				.headingLoginSubmitButton {
+					float: left;
+					width: 70px;
+					height: 26px;
+					text-align: left;
+					padding-left: 5px;
+				}
+
+				.headingLoginErrorMessage {
+					float: left;
+					width: 500px;
+					height: 20px;
+					text-align: left;
+					padding-left: 0px;
+				   font-size: 18px;
+				}
+
 </style>
 
 <script>
@@ -261,6 +416,81 @@
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+function setUpModal()
+{
+	var modalP = document.getElementById('myModalP');
+	var btnP = document.getElementById("modalOpener");
+	var spanP = document.getElementsByClassName("closeP")[0];
+// When the user clicks the button, open the modal
+
+	refreshOn = false;
+	modalP.style.display = "none";
+
+	btnP.onclick = function() {
+		refreshOn = false;
+		modalP.style.display = "block";
+		return false;
+	}
+
+// When the user clicks on <span> (x), close the modal
+	spanP.onclick = function() {
+		refreshOn = true;
+		modalP.style.display = "none";
+		return false;
+	}
+
+// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modalP) {
+				refreshOn = true;
+				modalP.style.display = "none";
+		}
+	}
+}
+
+function login() {
+
+
+ 	var email = document.getElementById('email');
+  var password = document.getElementById('password');
+
+	var jsonData = {};
+	  jsonData['username'] = email.value;
+	  jsonData['password'] = password.value;
+
+	$.ajax({
+
+     type: "POST",
+        url : "/platez/api/a/authorize1",
+        cache: false,
+        contentType: 'application/json;',
+        dataType: "json",
+        data:JSON.stringify(jsonData),
+         success: function(data) {
+           var result = $.parseJSON(JSON.stringify(data));
+           if (result.status != 'OK')
+           {
+             alert(result.message);
+             return;
+           }
+           var authorized = result.result;
+  //         alert(authorized.body.access_token + " : " + authorized.role);
+           var access_token = authorized.body.access_token;
+           sessionStorage.setItem("access_token",access_token);
+           at = sessionStorage.getItem("access_token");
+  //         alert(at);
+           if (authorized.role=='ROLE_AGENT')
+              window.location.replace("/platez/web/anon/goAgentHome");
+            else
+						if (authorized.role=='ROLE_AUCTIONEER')
+							 window.location.replace("/platez/web/anon/goActioneerHome");
+            else
+						if (authorized.role=='ROLE_PUNTER')
+              	window.location.replace("/platez/web/anon/goPunterHome");
+        }
+     });
+ }
 
 function doClearQuery()
 {
@@ -519,12 +749,49 @@ function displayPlates()
 	<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 	<div class="headingPanelLogonHeader">
 		<div class="headingPanelLogonHeaderCell">
-			Already a member?&nbsp&nbsp<a href="/platez/web/anon/signin">Sign in</a>
+			Already a member?&nbsp&nbsp<a id='modalOpener' href="#">Sign in</a>
 		</div>
 		<div class="headingPanelLogonHeaderCell">
 			<a href="/platez/web/anon/register">Register to buy or sell</a>
 		</div>
 	</div>
+	<div id="myModalP" class="modal">
+			<div class="modal-content">
+				<span class="closeP">&times;</span>
+
+						<div id="#129c94r2P" class="topHiddenBar">
+							<div class="headingLoginPanel">
+								<div class="headingLoginUsernameLine">
+									<div class="headingLoginUsernamePrompt">
+										Email:
+									</div>
+									<div class="headingLoginUsernameInput">
+											<input id="email" type="text" name="email"
+																	value="jpj@test.com" style="height: 26px; width: 240px; font-size: 14px; "/>
+									</div>
+								</div>
+								<div class="headingLoginPasswordLine">
+									<div class="headingLoginPasswordPrompt">
+													Password:
+									</div>
+									<div class="headingLoginPasswordInput">
+												<input id="password" type="text" name="email"
+																									value="88888888" style="height: 26px; width: 240px; font-size: 14px; "/>
+									</div>
+								</div>
+								<div class="headingLoginSubmitButton">
+										<input type="button" id="logon" value="Logon"
+											onClick="return login()"
+											class="btn btn-primary"
+											style="height: 26px; line-height:0px; font-weight:700; text-shadow:1px 1px 1px #666;" />
+								</div>
+								<div class="headingLoginErrorMessage">
+								</div>
+							</div>  <!-- headingLoginPanel -->
+						</div>  <!-- topHiddenBar -->
+					</div>  <!-- topBar  -->
+				</div>  <!-- modal-content  -->
+			</div>  <!-- modalP  -->
   <div class="headingPanel">
 				<div class="headingPanelMiddle">
 					<div class="headingPanelMiddleSearchHeader">
@@ -628,6 +895,7 @@ function displayPlates()
   </div>
 </body>
 <script>
+	setUpModal();
   getAllPlates();
   getQueryParams();
 </script>

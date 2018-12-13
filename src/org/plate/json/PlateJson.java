@@ -11,6 +11,7 @@ public class PlateJson {
 	private String regNo;
 	private int rating;
 	private double listPrice;
+	private PlateSellJson plateSell;
 	
 	public PlateJson()
 	{
@@ -46,6 +47,14 @@ public class PlateJson {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public PlateSellJson getPlateSell() {
+		return plateSell;
+	}
+
+	public void setPlateSell(PlateSellJson plateSell) {
+		this.plateSell = plateSell;
 	}
 	
 	

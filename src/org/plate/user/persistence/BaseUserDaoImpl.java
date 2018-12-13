@@ -20,7 +20,7 @@ public class BaseUserDaoImpl extends NamedParameterJdbcDaoSupport implements Bas
 	private static Logger log = Logger.getLogger(BaseUserDaoImpl.class);
 
 	@Override
-	public void store(final BaseUser bu) throws PersistenceRuntimeException {
+	public void store(final BaseUser bu) {
 		bu.setId(UUID.randomUUID());
 		try
 		{
@@ -51,7 +51,7 @@ public class BaseUserDaoImpl extends NamedParameterJdbcDaoSupport implements Bas
 	}
 
 	@Override
-	public BaseUser getByEmail(final String email) throws PersistenceRuntimeException {
+	public BaseUser getByEmail(final String email){
 		try
 		{
 			final String sql = "SELECT * FROM baseUser WHERE email=?";
@@ -72,7 +72,7 @@ public class BaseUserDaoImpl extends NamedParameterJdbcDaoSupport implements Bas
 	}
 
 	@Override
-	public BaseUser getById(final UUID id) throws PersistenceRuntimeException {
+	public BaseUser getById(final UUID id){
 		try
 		{
 			final String sql = "SELECT * FROM baseUser WHERE id=?";
@@ -93,7 +93,7 @@ public class BaseUserDaoImpl extends NamedParameterJdbcDaoSupport implements Bas
 	}
 
 	@Override
-	public void update(final BaseUser bu) throws PersistenceRuntimeException {
+	public void update(final BaseUser bu){
 		try
 		{
 			getJdbcTemplate().update("UPDATE baseuser SET contact=?,phone=?,password=?,enabled=? "

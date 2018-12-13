@@ -7,7 +7,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.plate.domain.plate.Plate;
+import org.plate.domain.plate.sell.persistence.PlateSellDao;
 import org.plate.persistence.PersistenceRuntimeException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.PreparedStatementCreator;
@@ -18,9 +20,11 @@ import org.springframework.jdbc.support.KeyHolder;
 
 public class PlateDaoImpl extends NamedParameterJdbcDaoSupport implements PlateDao {
 	private static Logger log = Logger.getLogger(PlateDaoImpl.class);
-
+	@Autowired
+	private PlateSellDao plateSellDao;
+	
 	@Override
-	public void store(final Plate plate) throws PersistenceRuntimeException {
+	public void store(final Plate plate){
 		try
 		{
 			KeyHolder keyHolder = new GeneratedKeyHolder();
@@ -72,7 +76,7 @@ public class PlateDaoImpl extends NamedParameterJdbcDaoSupport implements PlateD
 	}
 
 	@Override
-	public Plate getByRegNo(final String regNo) throws PersistenceRuntimeException {
+	public Plate getByRegNo(final String regNo){
 		try
 		{
 			final String sql = "SELECT * FROM plate WHERE regno=?";
@@ -83,7 +87,9 @@ public class PlateDaoImpl extends NamedParameterJdbcDaoSupport implements PlateD
 				      }, BeanPropertyRowMapper.newInstance(Plate.class));
 			if (bus.isEmpty())
 				return null;
-			return bus.get(0);
+			Plate plate = bus.get(0);
+			plate.setPlateSell(plateSellDao.getPlateSell(plate));
+			return plate;
 		}
 		catch (DataAccessException e)
 		{
@@ -93,7 +99,7 @@ public class PlateDaoImpl extends NamedParameterJdbcDaoSupport implements PlateD
 	}
 
 	@Override
-	public Plate getById(final long id) throws PersistenceRuntimeException {
+	public Plate getById(final long id){
 		try
 		{
 			final String sql = "SELECT * FROM plate WHERE id=?";
@@ -104,7 +110,9 @@ public class PlateDaoImpl extends NamedParameterJdbcDaoSupport implements PlateD
 				      }, BeanPropertyRowMapper.newInstance(Plate.class));
 			if (bus.isEmpty())
 				return null;
-			return bus.get(0);
+			Plate plate = bus.get(0);
+			plate.setPlateSell(plateSellDao.getPlateSell(plate));
+			return plate;
 		}
 		catch (DataAccessException e)
 		{
@@ -112,5 +120,6 @@ public class PlateDaoImpl extends NamedParameterJdbcDaoSupport implements PlateD
 			throw new PersistenceRuntimeException("Could not execute getById : " + e.getMessage());
 		}
 	}
+	
 
 }

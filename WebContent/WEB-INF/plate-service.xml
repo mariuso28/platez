@@ -12,6 +12,12 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
 		<context:annotation-config />
+		<bean class="org.plate.config.SecurityConfiguration" />
+		<bean class="org.plate.config.OAuth2AuthorizationServerConfig" />
+		<bean class="org.plate.config.OAuth2ResourceServerConfig" />
+		<bean class="org.plate.config.service.CustomUserDetailsService" />
+		<bean class="org.plate.config.service.CustomAuthenticationSuccessHandler" />
+		<bean class="org.plate.config.service.CustomAuthenticationFailureHandler" />
 
 		<import resource="plate-persistence.xml"/>
 		

@@ -2,6 +2,8 @@ package org.plate.domain.plate;
 
 import java.io.Serializable;
 
+import org.plate.domain.plate.sell.PlateSell;
+
 public class Plate implements Serializable{
 
 	private static final long serialVersionUID = 6408530664952977270L;
@@ -34,6 +36,7 @@ public class Plate implements Serializable{
 	private Boolean paired;
 	private int rating;
 	private double listPrice;
+	private PlateSell plateSell;
 	
 	public Plate()
 	{
@@ -297,16 +300,6 @@ public class Plate implements Serializable{
 				+ ", palindromic=" + palindromic + ", paired=" + paired + "]";
 	}
 
-	@Override
-	public String toString() {
-		return "Plate [id=" + id + ", prefix=" + prefix + ", letter1=" + letter1 + ", letter2=" + letter2 + ", number1="
-				+ number1 + ", number2=" + number2 + ", number3=" + number3 + ", number4=" + number4 + ", suffix="
-				+ suffix + ", regNo=" + regNo + ", digit1=" + digit1 + ", digit2=" + digit2 + ", digit3=" + digit3
-				+ ", digit4=" + digit4 + ", doubleDigit=" + doubleDigit + ", tripleDigit=" + tripleDigit
-				+ ", quadDigit=" + quadDigit + ", palindromic=" + palindromic + ", paired=" + paired + ", rating="
-				+ rating + "]";
-	}
-
 	public double getListPrice() {
 		return listPrice;
 	}
@@ -323,5 +316,24 @@ public class Plate implements Serializable{
 		if (listPrice>=0.0)
 			setRating(Plate.RATINGBRONZE);
 	}
+
+	public PlateSell getPlateSell() {
+		return plateSell;
+	}
+
+	public void setPlateSell(PlateSell plateSell) {
+		this.plateSell = plateSell;
+	}
+
+	@Override
+	public String toString() {
+		return "Plate [id=" + id + ", prefix=" + prefix + ", letter1=" + letter1 + ", letter2=" + letter2 + ", number1="
+				+ number1 + ", number2=" + number2 + ", number3=" + number3 + ", number4=" + number4 + ", suffix="
+				+ suffix + ", regNo=" + regNo + ", digit1=" + digit1 + ", digit2=" + digit2 + ", digit3=" + digit3
+				+ ", digit4=" + digit4 + ", doubleDigit=" + doubleDigit + ", tripleDigit=" + tripleDigit
+				+ ", quadDigit=" + quadDigit + ", palindromic=" + palindromic + ", paired=" + paired + ", rating="
+				+ rating + ", listPrice=" + listPrice + ", plateSell=" + plateSell + "]";
+	}
+	
 
 }

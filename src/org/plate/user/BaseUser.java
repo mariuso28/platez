@@ -17,6 +17,16 @@ public class BaseUser {
 	public BaseUser()
 	{
 	}
+	
+	public void copyValues(BaseUser bu)
+	{
+		setId(bu.getId());
+		setContact(bu.getContact());
+		setEmail(bu.getEmail());
+		setPhone(bu.getPhone());
+		setEnabled(bu.isEnabled());
+		setRole(bu.getRole());
+	}
 
 	public UUID getId() {
 		return id;
