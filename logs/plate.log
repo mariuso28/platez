@@ -1244,3 +1244,1920 @@ Dec 13 17:31:06,410  INFO QueryDaoImpl:76 - Performing QueryOnDigits with : digi
 Dec 13 17:31:06,410  INFO QueryDaoImpl:79 - SQL : SELECT * FROM plate WHERE digit2 = TRUE
 Dec 13 17:31:06,427  INFO RestServices:150 - Got Plates # 11
 Dec 13 17:31:06,445  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 14 08:06:31,025  INFO WebAnonController:85 - Received invalidSession
+Dec 14 08:06:47,782  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 08:06:47,878  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:06:48,375  INFO RestServices:70 - Got Plates # 19
+Dec 14 08:06:53,255  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 08:06:53,260  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 08:06:53,435  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 08:06:53,436  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 08:06:53,436  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 08:06:53,610  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:08:58,969  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 08:08:59,066  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:08:59,092  INFO RestServices:70 - Got Plates # 19
+Dec 14 08:09:03,126  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 08:09:03,129  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 08:09:03,144  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 08:09:03,149  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 08:09:03,150  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 08:09:03,293  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:13:00,717  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 08:13:00,856  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:13:00,876  INFO RestServices:70 - Got Plates # 19
+Dec 14 08:13:05,234  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 08:13:05,235  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 08:13:05,239  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 08:13:05,240  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 08:13:05,240  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 08:13:05,387  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:13:05,710  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:13:05,714  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 14 08:13:05,739  INFO RestServices:70 - Got Plates # 19
+Dec 14 08:13:05,947  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 14 08:15:01,562  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 08:15:01,753  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:15:01,770  INFO RestServices:70 - Got Plates # 19
+Dec 14 08:15:06,060  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 08:15:06,062  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 08:15:06,066  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 08:15:06,067  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 08:15:06,067  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 08:15:06,207  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:15:06,479  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:15:06,480  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 14 08:15:06,501  INFO RestServices:70 - Got Plates # 19
+Dec 14 08:15:06,623  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 14 08:17:45,965  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 08:17:46,044  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:17:46,053  INFO RestServices:70 - Got Plates # 19
+Dec 14 08:19:08,656  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 08:19:09,511  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:19:09,521  INFO RestServices:70 - Got Plates # 19
+Dec 14 08:19:14,090  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 08:19:14,093  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 08:19:14,104  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 08:19:14,106  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 08:19:14,107  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 08:19:14,240  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:19:14,422  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 14 08:19:14,425  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:19:14,440  INFO RestServices:70 - Got Plates # 19
+Dec 14 08:19:14,467  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 14 08:21:10,648  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:21:11,547  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:21:11,547  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 14 08:21:11,554  INFO RestServices:70 - Got Plates # 19
+Dec 14 08:21:11,588  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 14 08:23:12,955  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:23:13,856  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 14 08:23:13,857  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:23:13,864  INFO RestServices:70 - Got Plates # 19
+Dec 14 08:23:13,897  INFO RestPunterControllerImpl:26 - Received getPunter for : jpj@test.com
+Dec 14 08:53:22,775  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 08:53:23,040  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:53:23,583  INFO RestServices:72 - Got Plates # 19
+Dec 14 08:53:27,367  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 08:53:27,375  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 08:53:27,552  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 08:53:27,554  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 08:53:27,554  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 08:53:27,734  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:54:17,193  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:55:04,913  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 08:55:05,160  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:55:05,189  INFO RestServices:72 - Got Plates # 19
+Dec 14 08:55:08,561  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 08:55:08,565  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 08:55:08,578  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 08:55:08,583  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 08:55:08,583  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 08:55:08,727  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:55:21,721  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:55:54,239  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 08:55:54,312  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:55:54,333  INFO RestServices:72 - Got Plates # 19
+Dec 14 08:55:57,274  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 08:55:57,278  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 08:55:57,291  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 08:55:57,293  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 08:55:57,294  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 08:55:57,439  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:57:23,246  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 08:57:23,319  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:57:23,333  INFO RestServices:72 - Got Plates # 19
+Dec 14 08:57:27,916  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 08:57:27,919  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 08:57:27,930  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 08:57:27,933  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 08:57:27,934  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 08:57:28,088  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:59:28,156  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:59:28,991  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:59:28,998  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 08:59:29,010  INFO RestServices:72 - Got Plates # 19
+Dec 14 08:59:29,032  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 08:59:31,720  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 08:59:31,797  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:59:31,815  INFO RestServices:72 - Got Plates # 19
+Dec 14 08:59:37,305  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 08:59:37,306  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 08:59:37,310  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 08:59:37,312  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 08:59:37,313  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 08:59:37,452  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 08:59:37,530  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 08:59:37,532  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 08:59:37,543  INFO RestServices:72 - Got Plates # 19
+Dec 14 08:59:37,568  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 09:07:39,410  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 09:07:39,480  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 09:07:39,489  INFO RestServices:72 - Got Plates # 19
+Dec 14 09:07:41,832  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 09:07:41,835  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 09:07:41,848  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 09:07:41,851  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 09:07:41,851  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 09:07:41,986  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 09:07:42,121  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 09:07:42,124  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 09:07:42,140  INFO RestServices:72 - Got Plates # 19
+Dec 14 09:07:42,162  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 09:09:03,571  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 09:09:04,477  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 09:09:04,477  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 09:09:04,489  INFO RestServices:72 - Got Plates # 19
+Dec 14 09:09:04,527  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 09:12:56,884  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 09:12:57,835  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 09:12:57,835  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 09:12:57,846  INFO RestServices:72 - Got Plates # 19
+Dec 14 09:12:57,878  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 09:15:18,320  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 09:15:18,472  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 09:15:19,002  INFO RestServices:72 - Got Plates # 19
+Dec 14 09:15:25,554  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 09:15:25,559  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 09:15:25,710  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 09:15:25,712  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 09:15:25,713  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 09:15:25,884  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 09:15:25,963  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 09:15:25,976  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 09:15:26,000  INFO RestServices:72 - Got Plates # 19
+Dec 14 09:15:26,021  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 09:19:57,958  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 09:19:58,920  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 09:19:58,923  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 09:19:58,933  INFO RestServices:72 - Got Plates # 19
+Dec 14 09:19:58,959  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 09:49:40,810  INFO RestAnonControllerImpl:114 - in queryDigits with : org.plate.json.QueryOnDigitsParamsJson@619baec0
+Dec 14 09:49:40,811  INFO QueryDaoImpl:76 - Performing QueryOnDigits with : digit2
+Dec 14 09:49:40,811  INFO QueryDaoImpl:79 - SQL : SELECT * FROM plate WHERE digit2 = TRUE
+Dec 14 09:49:40,825  INFO RestServices:152 - Got Plates # 11
+Dec 14 09:49:40,836  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:01:09,913  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 10:01:10,788  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:01:10,801  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:01:16,572  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 10:01:16,573  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 10:01:16,579  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 10:01:16,580  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 10:01:16,580  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 10:01:16,715  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 10:01:16,888  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:01:16,889  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:01:16,903  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:01:16,941  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:01:27,634  INFO RestPunterControllerImpl:54 - Received updateProfile for : jpj@test.com
+Dec 14 10:01:27,639 ERROR RestPunterControllerImpl:64 - Invalid password - (at least 8 chars and contains 1 number and 1 uppercase character).
+org.plate.rest.services.RestServicesException: Invalid password - (at least 8 chars and contains 1 number and 1 uppercase character).
+	at org.plate.rest.services.RestServices.updateProfile(RestServices.java:241)
+	at org.plate.rest.punter.RestPunterControllerImpl.updateProfile(RestPunterControllerImpl.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:832)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:743)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:895)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:869)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.plate.config.CrossScriptingFilter.doFilter(CrossScriptingFilter.java:25)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:112)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:169)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:176)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:121)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:106)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.multipart.support.MultipartFilter.doFilterInternal(MultipartFilter.java:118)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Dec 14 10:01:50,093  INFO RestPunterControllerImpl:54 - Received updateProfile for : jpj@test.com
+Dec 14 10:10:28,168  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 10:10:28,360  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:10:28,371  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:10:32,528  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 10:10:32,533  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 10:10:32,537  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 10:10:32,538  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 10:10:32,538  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 10:10:32,660  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 10:10:32,799  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:10:32,803  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:10:32,818  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:10:32,851  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:10:48,468  INFO RestPunterControllerImpl:54 - Received updateProfile for : jpj@test.com
+Dec 14 10:10:53,341  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 10:10:54,085  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:10:54,085  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:10:54,093  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:10:54,126  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:22,750  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 10:12:22,828  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:12:22,835  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:12:25,891  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 10:12:25,892  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 10:12:25,903  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 10:12:25,906  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 10:12:25,907  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 10:12:26,046  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 10:12:26,188  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,189  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:12:26,198  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:12:26,235  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,239  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,266  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,287  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,306  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,324  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,342  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,357  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,373  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,389  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,405  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,420  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,433  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,447  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,465  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,479  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,495  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,511  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,526  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,543  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,559  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,573  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,587  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,600  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,614  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,626  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,639  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,650  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,664  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,675  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,688  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,700  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,713  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,724  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,736  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,747  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,760  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,772  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,786  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,799  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,812  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,824  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,838  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,850  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,862  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,876  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,888  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,901  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,913  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,926  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,941  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,955  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,967  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,982  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:26,994  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,006  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,017  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,030  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,042  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,055  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,068  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,079  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,090  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,101  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,118  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,133  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,145  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,157  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,169  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,181  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,193  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,204  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,215  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,229  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,243  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,253  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,264  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,275  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,286  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,298  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,309  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,323  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,337  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,347  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,359  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,369  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,379  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,389  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,399  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,410  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,423  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,434  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,448  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,458  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,467  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,478  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,488  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,503  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,515  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,527  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,538  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,552  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,565  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,578  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,588  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,599  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,610  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,621  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,631  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,641  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,652  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,666  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,678  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,689  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,702  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,713  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,724  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,734  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,744  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,754  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,767  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,780  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,791  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,802  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,813  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,826  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,836  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,847  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,857  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,868  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,879  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,889  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,901  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,912  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,923  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,936  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,946  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,957  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,966  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,976  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,986  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:27,995  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,006  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,016  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,025  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,035  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,046  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,056  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,066  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,076  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,085  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,095  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,105  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,117  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,128  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,139  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,149  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,161  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,171  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,181  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,195  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,207  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,219  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,230  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,243  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,254  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,264  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,273  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,284  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,294  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,306  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,318  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,329  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,341  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,354  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,365  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,377  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,387  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,399  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,411  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,423  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,435  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,446  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,456  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,469  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,482  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,492  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,504  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,514  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,524  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,533  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,542  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,551  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,561  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,571  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,581  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,590  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,600  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,611  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,622  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,632  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,642  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,651  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,660  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,672  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,682  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,692  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,702  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,712  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,721  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,730  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,740  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,751  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,761  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,771  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,781  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,791  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,800  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,810  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,820  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,831  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,840  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,850  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,860  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,869  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,880  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,891  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,900  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,910  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,919  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,928  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,939  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,948  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,958  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,967  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,976  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:28,985  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,000  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,010  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,019  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,028  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,040  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,051  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,061  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,072  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,083  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,093  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,103  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,112  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,121  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,132  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,143  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,153  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,163  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,171  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,181  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,189  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,198  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,208  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,217  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,226  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,234  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,242  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,252  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,261  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,271  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,279  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,289  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,298  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,308  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,319  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,330  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,340  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,350  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,361  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,370  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,380  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,389  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,398  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,406  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,417  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,427  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,436  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,445  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,454  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,463  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,471  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,480  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,488  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,497  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,505  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,514  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,523  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,532  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,542  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,552  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,560  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,569  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,579  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,587  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,596  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,605  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,614  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,624  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,632  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,642  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,651  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,660  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,670  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,678  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,688  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,698  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,708  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,717  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,726  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,734  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,743  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,753  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,761  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,770  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,778  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,787  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,797  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,806  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,815  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,824  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,833  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,841  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,851  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,862  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,872  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,882  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,890  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,899  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,908  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,917  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,925  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,934  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,942  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,953  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,962  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,971  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,980  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,989  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:29,997  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,006  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,014  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,023  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,032  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,042  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,052  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,062  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,072  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,081  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,091  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,099  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,109  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,119  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,130  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,140  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,149  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,157  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,168  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,177  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,187  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,196  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,205  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,214  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,224  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,232  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,241  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,250  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,260  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,269  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,282  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,292  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,303  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,313  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,323  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,333  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,342  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,351  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,360  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,369  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,378  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,388  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,398  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,407  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,417  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,426  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,436  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,445  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,456  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,467  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,476  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,485  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,494  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,503  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,513  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,521  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,530  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,538  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,546  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,557  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,565  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,574  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,583  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,591  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,600  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,609  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,618  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,626  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,634  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,642  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,650  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,659  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,668  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,678  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,686  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,695  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,703  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,712  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,720  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,728  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,737  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,745  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,753  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,762  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,771  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,788  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,800  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,810  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,820  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,829  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,838  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,861  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,872  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,882  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,892  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,902  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,910  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,919  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,928  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,936  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,945  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,954  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,962  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,973  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,983  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:30,994  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,005  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,015  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,024  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,033  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,043  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,052  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,061  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,070  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,080  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,089  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,099  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,109  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,120  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,129  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,138  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,147  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,156  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,166  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,176  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,186  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,194  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,203  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,213  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,222  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,231  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,241  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,251  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,261  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,271  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,280  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,291  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,300  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,309  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,317  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,326  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,335  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,344  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,352  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,361  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,370  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,379  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,390  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,399  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,408  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,419  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,427  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,437  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,447  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,456  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,465  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,474  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,484  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,492  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,502  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,511  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,519  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,529  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,538  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,547  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,556  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,566  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,575  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,584  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,593  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,601  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,610  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,619  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,629  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,639  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,648  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,658  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,667  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,675  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,685  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,694  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,703  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,711  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,720  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,730  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,739  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,750  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,758  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,767  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,775  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,785  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,794  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,803  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,812  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,821  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,832  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,840  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,849  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,858  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,866  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,874  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,882  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,891  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,899  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,906  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,914  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,923  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,933  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,942  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,957  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,966  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,974  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,982  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:31,991  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,000  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,009  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,018  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,026  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,034  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,043  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,054  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,063  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,077  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,087  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,098  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,107  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,115  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,124  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,133  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,142  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,149  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,157  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,165  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,173  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:12:32,181  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:53,828  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 10:13:54,047  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:13:54,576  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:13:57,817  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 10:13:57,822  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 10:13:57,986  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 10:13:57,987  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 10:13:57,988  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 10:13:58,165  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 10:13:58,271  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:13:58,292  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,314  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:13:58,338  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,366  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,417  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,456  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,493  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,529  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,555  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,580  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,604  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,631  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,652  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,672  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,695  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,721  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,744  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,763  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,781  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,801  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,822  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,840  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,858  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,872  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,887  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,904  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,937  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,953  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,972  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:58,990  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,004  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,021  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,038  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,052  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,071  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,088  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,104  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,119  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,134  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,149  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,164  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,184  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,199  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,213  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,230  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,247  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,260  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,274  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,288  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,302  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,319  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,334  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,349  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,364  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,378  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,392  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,406  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,419  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,433  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,448  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,462  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,476  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,488  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,499  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,510  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,521  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,533  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,545  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,559  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,574  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,589  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,608  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,622  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,635  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,649  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,662  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,675  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,688  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,701  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,718  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,732  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,745  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,758  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,771  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,783  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,795  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,806  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,819  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,831  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,843  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,856  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,866  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,881  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,898  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,911  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,925  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,938  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,951  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,964  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,975  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,988  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:13:59,999  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,010  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,023  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,036  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,048  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,061  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,072  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,084  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,098  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,111  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,125  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,137  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,149  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,161  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,172  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,185  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,197  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,211  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,224  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,236  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,249  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,261  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,277  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,290  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,301  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,314  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,326  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,337  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,347  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,356  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,366  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,377  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,387  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,397  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,407  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,416  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,425  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,435  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,444  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,455  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,466  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,480  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,490  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,501  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,511  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,521  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,531  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,541  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,553  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,565  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,575  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,585  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,595  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,605  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,616  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,627  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,638  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,649  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,660  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,672  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,684  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,694  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,705  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,715  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,725  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,735  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,747  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,759  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,771  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,781  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,791  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,801  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,812  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,823  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,833  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,847  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,859  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,871  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,884  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,895  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,906  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,917  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,928  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,940  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,951  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,965  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,976  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:00,987  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,000  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,012  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,023  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,032  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,042  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,052  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,062  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,072  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,083  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,093  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,104  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,115  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,128  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,138  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,150  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,160  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,170  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,183  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,194  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,205  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,214  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,225  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,236  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,249  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,263  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,272  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,282  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,293  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,303  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,313  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,323  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,333  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,344  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,355  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,365  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,375  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,387  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,398  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,423  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,434  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,445  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,458  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,471  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,482  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,492  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,503  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,514  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,525  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,536  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,547  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,557  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,568  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,578  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,588  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,597  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,607  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,619  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,632  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,642  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,652  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,663  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,675  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,687  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,712  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,721  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,730  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,739  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,748  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,757  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,765  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,776  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,785  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,795  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,804  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,814  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,823  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,833  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,843  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,853  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,862  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,871  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,882  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,891  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,900  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,909  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,917  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,927  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,938  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,948  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,958  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,967  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,975  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,985  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:01,994  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,004  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,013  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,022  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,031  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,039  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,049  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,059  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,070  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,081  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,091  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,100  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,110  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,119  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,129  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,138  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,149  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,158  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,167  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,176  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,185  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,194  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,203  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,211  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,221  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,230  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,238  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,248  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,257  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,265  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,276  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,285  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,293  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,302  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,312  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,320  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,329  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,337  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,346  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,354  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,362  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,371  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,379  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,388  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,398  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,409  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,418  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,427  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,435  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,444  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,452  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,460  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,469  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,477  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,486  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,494  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,503  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,512  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,521  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,530  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,538  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,547  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,555  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,564  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,572  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,581  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,589  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,599  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,608  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,618  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,627  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,635  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,644  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,652  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,661  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,671  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,682  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,692  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,701  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,709  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,719  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,728  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,737  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,747  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,756  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,765  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,773  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,783  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,792  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,801  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,809  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,818  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,826  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,836  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,844  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,854  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,863  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,871  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,881  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,890  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,899  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,908  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,917  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,926  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,935  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,945  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,953  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,962  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,970  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,978  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,987  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:02,995  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,005  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,015  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,026  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,036  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,045  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,054  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,066  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,075  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,083  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,091  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,101  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,111  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,120  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,128  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:03,136  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:42,178  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 10:14:42,320  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:14:42,813  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:14:45,463  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 10:14:45,469  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 10:14:45,646  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 10:14:45,647  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 10:14:45,648  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 10:14:45,819  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 10:14:46,708  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:14:46,720  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:46,747  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:14:46,765  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:14:57,000  INFO RestPunterControllerImpl:54 - Received updateProfile for : jpj@test.com
+Dec 14 10:14:57,120  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:48:46,275  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 10:48:46,446  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:48:46,461  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:48:50,417  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 10:48:50,420  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 10:48:50,436  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 10:48:50,439  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 10:48:50,440  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 10:48:50,636  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 10:48:50,821  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:48:50,823  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:48:50,840  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:48:50,884  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:55:14,084  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 10:55:14,181  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:55:14,194  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:55:16,915  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 10:55:16,916  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 10:55:16,920  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 10:55:16,921  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 10:55:16,921  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 10:55:17,066  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 10:55:17,216  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 10:55:17,219  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:55:17,234  INFO RestServices:72 - Got Plates # 19
+Dec 14 10:55:17,257  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 10:55:31,098  INFO RestPunterControllerImpl:54 - Received updateProfile for : jpj@test.com
+Dec 14 10:55:31,251  INFO RestPunterControllerImpl:28 - Received getPunter for : jpj@test.com
+Dec 14 11:15:06,262  INFO BaseUserDaoImpl:123 - UPDATE baseuser SET password = '$2a$10$4IRR7MyCZ9xXJmEuy0Oe1eDLLwVwMnxzIyqhcdz5HxmI2h2HgtBbG'
+Dec 14 11:15:06,730  INFO SetAllBaseUserPasswordDefault:33 - matches : true
+Dec 14 11:15:43,532  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 11:15:44,337  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 11:15:44,892  INFO RestServices:72 - Got Plates # 19
+Dec 14 11:15:48,613  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
+Dec 14 11:15:48,618  INFO RestAuthController:83 - Got baseuser : koko@test.com
+Dec 14 11:15:48,875  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
+Dec 14 11:15:48,876  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
+Dec 14 11:15:48,877  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
+Dec 14 11:15:49,061  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 11:15:49,149  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 11:15:49,158  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:15:49,176  INFO RestServices:72 - Got Plates # 19
+Dec 14 11:15:49,196  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:23:16,772  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 11:23:16,845  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 11:23:16,860  INFO RestServices:72 - Got Plates # 19
+Dec 14 11:23:20,893  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
+Dec 14 11:23:20,896  INFO RestAuthController:83 - Got baseuser : koko@test.com
+Dec 14 11:23:20,908  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
+Dec 14 11:23:20,911  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
+Dec 14 11:23:20,912  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
+Dec 14 11:23:21,085  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 11:24:23,845  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 11:24:24,785  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 11:24:24,797  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:24:24,817  INFO RestServices:72 - Got Plates # 19
+Dec 14 11:24:25,061  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:27:51,835  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 11:27:52,687  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 11:27:52,691  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:27:52,707  INFO RestServices:72 - Got Plates # 19
+Dec 14 11:27:52,724  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:31:27,890  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 11:31:28,752  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:31:28,753  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 11:31:28,767  INFO RestServices:72 - Got Plates # 19
+Dec 14 11:31:28,792  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:35:04,315  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 11:35:05,537  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 11:35:05,538  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:35:05,551  INFO RestServices:72 - Got Plates # 19
+Dec 14 11:35:05,569  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:38:39,309  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 11:38:40,271  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 11:38:40,271  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:38:40,286  INFO RestServices:72 - Got Plates # 19
+Dec 14 11:38:40,308  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:39:44,747  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 11:39:45,671  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:39:45,672  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 11:39:45,688  INFO RestServices:72 - Got Plates # 19
+Dec 14 11:39:45,705  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:42:03,889  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 11:43:08,058  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 11:43:09,019  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 11:43:09,029  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 11:43:09,040  INFO RestServices:72 - Got Plates # 19
+Dec 14 11:43:09,101  INFO RestPunterControllerImpl:28 - Received getPunter for : koko@test.com
+Dec 14 12:11:48,769  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 12:11:49,059  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:11:49,656  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:11:53,086  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
+Dec 14 12:11:53,094  INFO RestAuthController:83 - Got baseuser : koko@test.com
+Dec 14 12:11:53,262  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
+Dec 14 12:11:53,264  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
+Dec 14 12:11:53,265  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
+Dec 14 12:11:53,481  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 12:11:54,399  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:11:54,407  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:11:54,436  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:11:54,665  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:13:32,517  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 12:13:33,431  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:13:33,442  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:13:33,466  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:13:33,483  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:13:48,636  INFO RestPunterControllerImpl:80 - Received makeOffer for : koko@test.com
+Dec 14 12:13:48,639 ERROR RestPunterControllerImpl:90 - Invalid offer - please resubmit
+org.plate.rest.services.RestServicesException: Invalid offer - please resubmit
+	at org.plate.rest.services.RestServices.makeOffer(RestServices.java:262)
+	at org.plate.rest.punter.RestPunterControllerImpl.makeOffer(RestPunterControllerImpl.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:832)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:743)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:895)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:869)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.plate.config.CrossScriptingFilter.doFilter(CrossScriptingFilter.java:25)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:112)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:169)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:176)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:121)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:106)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.multipart.support.MultipartFilter.doFilterInternal(MultipartFilter.java:118)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Dec 14 12:14:42,902  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 12:14:43,240  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:14:43,869  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:14:47,200  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
+Dec 14 12:14:47,212  INFO RestAuthController:83 - Got baseuser : koko@test.com
+Dec 14 12:14:55,375  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
+Dec 14 12:14:55,377  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
+Dec 14 12:14:55,378  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
+Dec 14 12:14:55,604  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 12:14:55,684  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:14:55,691  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:14:55,710  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:14:55,745  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:15:10,479  INFO RestPunterControllerImpl:80 - Received makeOffer for : koko@test.com
+Dec 14 12:16:22,629 ERROR RestPunterControllerImpl:90 - Invalid offer - please resubmit
+org.plate.rest.services.RestServicesException: Invalid offer - please resubmit
+	at org.plate.rest.services.RestServices.makeOffer(RestServices.java:262)
+	at org.plate.rest.punter.RestPunterControllerImpl.makeOffer(RestPunterControllerImpl.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:832)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:743)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:895)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:869)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.plate.config.CrossScriptingFilter.doFilter(CrossScriptingFilter.java:25)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:112)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:169)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:176)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:121)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:106)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.multipart.support.MultipartFilter.doFilterInternal(MultipartFilter.java:118)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Dec 14 12:16:31,035  INFO RestPunterControllerImpl:80 - Received makeOffer for : koko@test.com
+Dec 14 12:16:52,576 ERROR RestPunterControllerImpl:90 - Invalid offer - please resubmit
+org.plate.rest.services.RestServicesException: Invalid offer - please resubmit
+	at org.plate.rest.services.RestServices.makeOffer(RestServices.java:262)
+	at org.plate.rest.punter.RestPunterControllerImpl.makeOffer(RestPunterControllerImpl.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:832)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:743)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:895)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:869)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.plate.config.CrossScriptingFilter.doFilter(CrossScriptingFilter.java:25)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:112)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:169)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:176)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:121)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:106)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.multipart.support.MultipartFilter.doFilterInternal(MultipartFilter.java:118)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Dec 14 12:16:56,473  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 12:16:57,981  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:16:57,981  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:16:58,005  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:16:58,020  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:17:01,347  INFO RestPunterControllerImpl:80 - Received makeOffer for : koko@test.com
+Dec 14 12:17:07,560  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:17:07,561  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:17:07,589  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:17:07,600  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:19:33,661  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 12:19:34,550  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:19:34,554  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:19:34,572  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:19:34,594  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:44:05,097  INFO WebAnonController:85 - Received invalidSession
+Dec 14 12:44:09,382  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 12:44:10,165  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:44:10,693  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:44:10,730  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:44:10,751  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:44:12,080  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 12:44:12,168  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:44:12,200  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:44:15,898  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
+Dec 14 12:44:15,899  INFO RestAuthController:83 - Got baseuser : koko@test.com
+Dec 14 12:44:16,054  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
+Dec 14 12:44:16,055  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
+Dec 14 12:44:16,056  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
+Dec 14 12:44:16,547  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 12:44:16,684  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:44:16,685  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:44:16,716  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:44:16,733  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:45:18,050  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 12:45:18,976  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:45:18,976  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:45:18,997  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:45:19,019  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:47:06,283  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 12:47:07,160  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:47:07,166  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:47:07,178  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:47:07,194  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:47:58,299  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 12:47:59,225  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:47:59,225  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:47:59,242  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:47:59,269  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:49:03,231  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 12:49:04,547  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 12:49:04,548  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 12:49:04,561  INFO RestServices:74 - Got Plates # 19
+Dec 14 12:49:04,583  INFO RestPunterControllerImpl:29 - Received getPunter for : koko@test.com
+Dec 14 13:15:09,177  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 13:15:09,339  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 13:15:09,825  INFO RestServices:75 - Got Plates # 19
+Dec 14 13:15:12,718  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
+Dec 14 13:15:12,722  INFO RestAuthController:83 - Got baseuser : koko@test.com
+Dec 14 13:15:12,877  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
+Dec 14 13:15:12,878  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
+Dec 14 13:15:12,879  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
+Dec 14 13:15:13,099  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:15:13,188  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 13:15:13,200  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:15:13,232  INFO RestServices:75 - Got Plates # 19
+Dec 14 13:15:13,247  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:15:30,819  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:15:31,626  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 13:15:31,628  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:15:31,647  INFO RestServices:75 - Got Plates # 19
+Dec 14 13:15:31,666  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:15:52,174  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:17:03,881  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:17:05,060  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 13:17:05,062  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:17:05,081  INFO RestServices:75 - Got Plates # 19
+Dec 14 13:17:05,101  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:20:16,784  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:20:17,691  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 13:20:17,691  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:20:17,706  INFO RestServices:75 - Got Plates # 19
+Dec 14 13:20:17,728  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:21:36,964  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:21:37,857  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:21:37,858  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 13:21:37,872  INFO RestServices:75 - Got Plates # 19
+Dec 14 13:21:37,890  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:24:18,138  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:25:25,245  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:25:26,009  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 13:25:26,009  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:25:26,026  INFO RestServices:75 - Got Plates # 19
+Dec 14 13:25:26,045  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:33:41,548  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 13:33:41,632  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 13:33:41,645  INFO RestServices:75 - Got Plates # 19
+Dec 14 13:33:50,980  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
+Dec 14 13:33:50,986  INFO RestAuthController:83 - Got baseuser : koko@test.com
+Dec 14 13:33:51,001  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
+Dec 14 13:33:51,004  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
+Dec 14 13:33:51,005  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
+Dec 14 13:33:51,691  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:33:51,820  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 13:33:51,820  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:33:51,832  INFO RestServices:75 - Got Plates # 19
+Dec 14 13:33:51,852  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:36:32,112  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:36:33,162  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:36:33,166  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 13:36:33,179  INFO RestServices:75 - Got Plates # 19
+Dec 14 13:36:33,367  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:42:27,922  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:43:33,443  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:45:13,437  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:49:30,835  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:52:33,009  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:52:34,115  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:52:34,116  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 13:52:34,129  INFO RestServices:75 - Got Plates # 19
+Dec 14 13:52:34,245  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:54:54,767  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:54:55,844  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:54:55,844  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 13:54:55,857  INFO RestServices:75 - Got Plates # 19
+Dec 14 13:54:55,988  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:57:09,182  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 13:57:10,098  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 13:57:10,099  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 13:57:10,110  INFO RestServices:75 - Got Plates # 19
+Dec 14 13:57:10,148  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:01:49,518  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 14:01:49,596  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:01:49,614  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:01:53,825  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
+Dec 14 14:01:53,827  INFO RestAuthController:83 - Got baseuser : koko@test.com
+Dec 14 14:01:53,837  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
+Dec 14 14:01:53,838  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
+Dec 14 14:01:53,839  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
+Dec 14 14:01:54,018  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 14:01:54,119  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:01:54,119  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:01:54,128  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:01:54,145  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:03:19,214  INFO RestPunterControllerImpl:106 - Received cancelOffer for : jpj@test.com
+Dec 14 14:04:21,835  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 14:04:22,584  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:04:22,584  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:04:22,597  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:04:22,618  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:04:25,725  INFO RestPunterControllerImpl:106 - Received cancelOffer for : koko@test.com
+Dec 14 14:05:26,756  INFO RestPunterControllerImpl:106 - Received cancelOffer for : koko@test.com
+Dec 14 14:07:43,356  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 14:07:44,239  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:07:44,239  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:07:44,247  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:07:44,269  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:07:48,440  INFO RestPunterControllerImpl:106 - Received cancelOffer for : koko@test.com
+Dec 14 14:08:31,678  INFO RestPunterControllerImpl:106 - Received cancelOffer for : koko@test.com
+Dec 14 14:10:33,950  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 14:10:34,903  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:10:34,910  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:10:34,917  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:10:34,951  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:10:54,209  INFO RestPunterControllerImpl:81 - Received makeOffer for : koko@test.com
+Dec 14 14:10:54,284  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:10:54,288  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:10:54,307  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:10:54,318  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:11:03,987  INFO RestPunterControllerImpl:106 - Received cancelOffer for : koko@test.com
+Dec 14 14:11:04,095  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:11:04,096  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:11:04,104  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:11:04,112  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:11:15,468  INFO RestPunterControllerImpl:81 - Received makeOffer for : koko@test.com
+Dec 14 14:11:15,591  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:11:15,591  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:11:15,608  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:11:15,619  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:11:22,114  INFO RestPunterControllerImpl:106 - Received cancelOffer for : koko@test.com
+Dec 14 14:11:22,172  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:11:22,174  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:11:22,181  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:11:22,193  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:12:44,755  INFO RestPunterControllerImpl:81 - Received makeOffer for : koko@test.com
+Dec 14 14:12:44,817  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:12:44,826  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:12:44,840  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:12:44,854  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:12:47,188  INFO RestPunterControllerImpl:81 - Received makeOffer for : koko@test.com
+Dec 14 14:12:47,242  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:12:47,244  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:12:47,251  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:12:47,258  INFO RestPunterControllerImpl:30 - Received getPunter for : koko@test.com
+Dec 14 14:12:50,954  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 14:12:51,160  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:12:51,169  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:13:43,805  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 14:13:44,777  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:13:44,786  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:13:47,571  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
+Dec 14 14:13:47,574  INFO RestAuthController:83 - Got baseuser : des88@test.com
+Dec 14 14:13:47,584  INFO CustomUserDetailsService:28 - loadUserByUsername email : des88@test.com
+Dec 14 14:13:47,585  INFO CustomUserDetailsService:43 - User : des88@test.com found with role :ROLE_AGENT
+Dec 14 14:13:47,586  INFO CustomUserDetailsService:49 - Using User : des88@test.com with authorities :[ROLE_AGENT]
+Dec 14 14:13:47,795  INFO WebAnonController:61 - Received goAgentHome
+Dec 14 14:13:49,583  INFO RestAgentController:25 - Received getDetails for : des88@test.com
+Dec 14 14:13:49,583  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:13:49,602  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:14:13,578  INFO WebAnonController:61 - Received goAgentHome
+Dec 14 14:14:17,509  INFO RestAgentController:25 - Received getDetails for : des88@test.com
+Dec 14 14:14:17,512  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:14:17,520  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:14:21,399  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 14:14:21,545  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:14:21,551  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:14:39,079  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 14:14:40,025  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:14:40,030  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:14:43,948  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 14:14:43,950  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 14:14:43,958  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 14:14:43,959  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 14:14:43,960  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 14:14:44,089  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 14:14:44,238  INFO RestPunterControllerImpl:30 - Received getPunter for : jpj@test.com
+Dec 14 14:14:44,241  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:14:44,247  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:14:44,303  INFO RestPunterControllerImpl:30 - Received getPunter for : jpj@test.com
+Dec 14 14:38:12,284  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 14:38:12,562  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:38:13,131  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:38:21,195  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
+Dec 14 14:38:21,201  INFO RestAuthController:83 - Got baseuser : koko@test.com
+Dec 14 14:38:21,370  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
+Dec 14 14:38:21,372  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
+Dec 14 14:38:21,373  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
+Dec 14 14:38:21,629  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 14:38:21,783  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:38:21,794  INFO RestPunterControllerImpl:31 - Received getPunter for : koko@test.com
+Dec 14 14:38:21,819  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:38:21,909  INFO RestPunterControllerImpl:31 - Received getPunter for : koko@test.com
+Dec 14 14:38:34,354  INFO RestPunterControllerImpl:104 - Received cancelOffer for : koko@test.com
+Dec 14 14:38:34,427  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:38:34,433  INFO RestPunterControllerImpl:31 - Received getPunter for : koko@test.com
+Dec 14 14:38:34,454  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:38:34,465  INFO RestPunterControllerImpl:31 - Received getPunter for : koko@test.com

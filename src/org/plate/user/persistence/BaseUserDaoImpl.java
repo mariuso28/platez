@@ -114,5 +114,19 @@ public class BaseUserDaoImpl extends NamedParameterJdbcDaoSupport implements Bas
 			throw new PersistenceRuntimeException("Could not execute update : " + e.getMessage());
 		}	
 	}
+
+	@Override
+	public void setDefaultPasswordForAll(String encoded) {
+		String sql = "UPDATE baseuser SET password = '" + encoded + "'";
+		try
+		{
+			log.info(sql);
+			getJdbcTemplate().update(sql);
+		}
+		catch (Exception e)
+		{
+			log.error("Could not execute : " + sql + " - " + e.getMessage());
+		}
+	}
 	
 }

@@ -1,29 +1,16 @@
 package org.plate.json;
 
-import java.util.List;
 import java.util.Map;
 
 public class PunterJson {
 	private ProfileJson profile;
 	private Map<String,PlateSellJson> plateSells;
-	private Map<String,List<PlateOfferJson>> offers;
+	private Map<String,PlateOfferJson> offers;
 	
 	public PunterJson()
 	{
 	}
-
-	public Map<String, List<PlateOfferJson>> getOffers() {
-		return offers;
-	}
-
-
-
-	public void setOffers(Map<String, List<PlateOfferJson>> offers) {
-		this.offers = offers;
-	}
-
-
-
+	
 	public ProfileJson getProfile() {
 		return profile;
 	}
@@ -38,6 +25,14 @@ public class PunterJson {
 
 	public void setPlateSells(Map<String,PlateSellJson> plateSells) {
 		this.plateSells = plateSells;
+	}
+
+	public Map<String,PlateOfferJson> getOffers() {
+		return offers;
+	}
+
+	public void setOffers(Map<String,PlateOfferJson> offers) {
+		this.offers = offers;
 	}
 	
 	

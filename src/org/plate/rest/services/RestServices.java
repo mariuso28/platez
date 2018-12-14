@@ -1,6 +1,7 @@
 package org.plate.rest.services;
 
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -13,12 +14,14 @@ import org.plate.domain.plate.sell.PlateOffer;
 import org.plate.domain.plate.sell.PlateSell;
 import org.plate.json.PlateJson;
 import org.plate.json.PlateOfferJson;
+import org.plate.json.PlateOfferStatusJson;
 import org.plate.json.PlateSellJson;
 import org.plate.json.ProfileJson;
 import org.plate.json.PunterJson;
 import org.plate.json.QueryOnDigitsParamsJson;
 import org.plate.json.QueryOnPlateParamsJson;
 import org.plate.json.QueryParamsJson;
+import org.plate.json.SendPlateOfferJson;
 import org.plate.persistence.PersistenceDuplicateKeyException;
 import org.plate.query.QueryParams;
 import org.plate.query.persistence.QueryDao;
@@ -28,6 +31,8 @@ import org.plate.services.validator.ValidatorException;
 import org.plate.user.BaseUser;
 import org.plate.user.punter.Punter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 public class RestServices {
 private static final Logger log = Logger.getLogger(RestServices.class);
@@ -154,19 +159,12 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 		return pjs;
 	}
 
-	public void register(ProfileJson profile) {
+	public void register(ProfileJson profile,String role) {
 		BaseUser bu = new BaseUser();
-		BaseUserValidator bv = new BaseUserValidator();
-		bu.setContact(profile.getContact());
-		bu.setEmail(profile.getEmail());
-		bu.setPhone(profile.getPhone());
-		bu.setPassword(profile.getPassword());
-		
-		bu.setRole(bu.getRole());
+		bu.setRole(role);
 		try
 		{
-			bv.validate(bu);
-			// do encryption here after validate
+			copyProfile(bu,profile);
 			services.getHome().getBaseUserDao().store(bu);
 		}
 		catch (ValidatorException e2)
@@ -184,6 +182,18 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 		}
 	}
 
+	private void copyProfile(BaseUser bu,ProfileJson profile) throws ValidatorException
+	{
+		BaseUserValidator bv = new BaseUserValidator();
+		bu.setContact(profile.getContact());
+		bu.setEmail(profile.getEmail());
+		bu.setPhone(profile.getPhone());
+		bu.setPassword(profile.getPassword());
+		bv.validate(bu);
+		PasswordEncoder encoder = new BCryptPasswordEncoder();
+		bu.setPassword(encoder.encode(bu.getPassword()));
+	}
+	
 	public PunterJson getPunter(String email) {
 		Punter punter = services.getHome().getPunterDao().getByEmail(email);
 		if (punter == null)
@@ -198,17 +208,11 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 		for (PlateSell ps : punter.getPlateSells())
 			plateSells.put(ps.getPlate().getRegNo(),createPlateSell(ps));
 		pj.setPlateSells(plateSells);
-		Map<String,List<PlateOfferJson>> plateOffers = new HashMap<String,List<PlateOfferJson>>();
+		Map<String,PlateOfferJson> plateOffers = new HashMap<String,PlateOfferJson>();
 		List<PlateOfferJson> pos = createPlateOffers(punter.getOffers(),null);
 		for (PlateOfferJson po : pos)
 		{
-			List<PlateOfferJson> pls = plateOffers.get(po.getRegNo());
-			if (pls == null)
-			{
-				pls = new ArrayList<PlateOfferJson>();
-				plateOffers.put(po.getRegNo(),pls);
-			}
-			pls.add(po);
+			plateOffers.put(po.getRegNo(),po);					// just get latest
 		}
 		pj.setOffers(plateOffers);
 		return pj;
@@ -220,5 +224,66 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 		pf.setEmail(bu.getEmail());
 		pf.setPhone(bu.getPhone());
 		return pf;
+	}
+
+	public void updateProfile(ProfileJson profile) {
+		try
+		{
+			BaseUser bu = services.getHome().getBaseUserDao().getByEmail(profile.getEmail());
+			copyProfile(bu,profile);
+			services.getHome().getBaseUserDao().update(bu);
+		}
+		catch (ValidatorException e2)
+		{
+			throw new RestServicesException(e2.getMessage());
+		}
+		catch (Exception e)
+		{
+			log.error(e);
+			throw new RestServicesException("Could not register user - contact support");
+		}
+	}
+
+	public void makeOffer(String buyerEmail, SendPlateOfferJson joffer) {
+		double offer = 0;
+		try
+		{
+			offer = Double.parseDouble(joffer.getOffer().replace(",",""));
+			if (offer<=0)
+				throw new RestServicesException("Invalid offer - please resubmit");
+		}
+		catch (Exception e)
+		{
+			throw new RestServicesException("Invalid offer - please resubmit");
+		}
+		try
+		{
+			Plate plate = services.getHome().getPlateDao().getById(joffer.getPlateId());
+			PlateOffer plateOffer = new PlateOffer();
+			plateOffer.setBuyerEmail(buyerEmail);
+			plateOffer.setOffer(offer);
+			plateOffer.setPlateSell(plate.getPlateSell());
+			plateOffer.setOfferedOn((new GregorianCalendar()).getTime());
+			plateOffer.setRegNo(plate.getRegNo());
+			services.getHome().getPlateSellDao().storePlateOffer(plateOffer);
+		}
+		catch (Exception e)
+		{
+			log.error(e);
+			throw new RestServicesException("Could not make offer - contact support");
+		}
+	}
+
+	public void changeOfferStatus(String offerIdStr,PlateOfferStatusJson status) {
+		Long offerId = 0L;
+		try
+		{
+			offerId = Long.parseLong(offerIdStr);
+		}
+		catch (Exception e)
+		{
+			throw new RestServicesException("Invalid offerId - contact support");
+		}
+		services.getHome().getPlateSellDao().setPlateOfferStatus(offerId,status);
 	}
 }

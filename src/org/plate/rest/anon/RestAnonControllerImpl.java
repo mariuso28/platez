@@ -11,6 +11,7 @@ import org.plate.json.QueryParamsJson;
 import org.plate.json.ResultJson;
 import org.plate.rest.services.RestServices;
 import org.plate.rest.services.RestServicesException;
+import org.plate.user.BaseUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,7 +44,7 @@ public class RestAnonControllerImpl implements RestAnonController {
 		ResultJson result = new ResultJson();
 		try
 		{
-			restServices.register(profile);
+			restServices.register(profile,BaseUser.ROLE_PUNTER);
 			result.success("User : " + profile.getEmail() + " successfully registered - please check email and follow intructions.");
 		}
 		catch (RestServicesException e)

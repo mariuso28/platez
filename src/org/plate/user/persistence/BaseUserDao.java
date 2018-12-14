@@ -10,4 +10,5 @@ public interface BaseUserDao {
 	public void update(BaseUser bu);
 	public BaseUser getByEmail(String email);
 	public BaseUser getById(UUID id);
+	public void setDefaultPasswordForAll(String encoded);
 }

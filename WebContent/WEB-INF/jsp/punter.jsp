@@ -12,6 +12,8 @@
 
 <style>
 
+
+
 .headingPanel {
 			float: left;
 			width: 1100px;
@@ -255,14 +257,251 @@
     			background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
     		}
 
+				.modal-content {
+					width: 544px;
+					height: 300px;
+					background-color: #fff;
+					/*margin: auto;*/
+					padding: 10px;
+					border: 1px solid #888;
+				}
+
+				/* The Close Button */
+				.closeP {
+				color: #333;
+				float: right;
+				font-size: 28px;
+				font-weight: bold;
+				line-height: 20px;
+				}
+
+				.closeP:hover,
+				.closeP:focus {
+				color: #000;
+				text-decoration: none;
+				cursor: pointer;
+				}
+
+				.topBar {
+						margin-left: auto;
+						margin-right: auto;
+						width: 600px;
+						height: 104px;
+					}
+
+				.profileLogon {
+					width: 500px;
+					height: 44px;
+					/*margin-left: auto;
+					margin-right: auto;*/
+				}
+
+				.profileTopBar2 {
+				width: 500px;
+				height: 4px;
+				background-color: #129c94;
+				}
+
+				.profileTopBar {
+				width: 500px;
+				height: 44px;
+				background-color: #129c94;
+				color: #666;
+				font-size: 14px;
+				line-height: 16px;
+				font-weight: 900;
+				}
+
+				.profileTopBarMiddle {
+				float: left;
+				width: 495px;
+				height: 40px;
+				text-align: left;
+				padding-left: 5px;
+				}
+
+				.topHiddenBar {
+				width: 500px;
+				height: 280px;
+				background-color: #129c94;
+				}
+
+				.profileEntryPanel{
+					float: left;
+					width: 475px;
+					height: 280px;
+					text-align: left;
+					line-height: 22px;
+					padding-left: 5px;
+				}
+
+				.profileEntryLine {
+					float: left;
+					width: 500px;
+					height: 28px;
+					padding-left: 0px;
+					margin-top: 10px;
+					margin-bottom: 5px;
+				}
+
+				.profileEntryPrompt {
+					float: left;
+					width: 180px;
+					height: 24px;
+					text-align: left;
+					font-family: myFont;
+					font-size: 14px;
+					font-weight: 700;
+					color: #fff;
+					text-shadow: 1px 1px 1px #666;
+					line-height: 28px;
+					padding-left: 0px;
+				}
+
+				.profileEntryInput {
+					float: left;
+					width: 280px;
+					height: 28px;
+					text-align: left;
+					padding-left: 5px;
+				}
+
+				.profileEntryPasswordLine {
+					float: left;
+					width: 500px;
+					height: 28px;
+					padding-left: 0px;
+				}
+
+				.profileEntryPasswordPrompt {
+					float: left;
+					width: 180px;
+					height: 24px;
+					text-align: left;
+					font-family: myFont;
+					font-size: 14px;
+					font-weight: 700;
+					color: #fff;
+					text-shadow: 1px 1px 1px #666;
+					line-height: 28px;
+				}
+
+				.profileEntryPasswordInput {
+					float: left;
+					width: 280px;
+					height: 28px;
+					text-align: left;
+					padding-left: 5px;
+					padding-right: 10px;
+				}
+
+				.profileEntrySubmitButton {
+					float: left;
+					width: 70px;
+					height: 26px;
+					text-align: left;
+					padding-left: 5px;
+				}
+
+				.profileEntryErrorMessage {
+					float: left;
+					width: 500px;
+					height: 20px;
+					text-align: left;
+					padding-left: 0px;
+					 font-size: 18px;
+				}
+
+
 
 </style>
 
 <script>
 
+function saveProfile()
+{
+	err = document.getElementById('profileError');
+	err.innerHTML="";
+
+	var email = document.getElementById('email-input');
+	var contact = document.getElementById('contact-input');
+	var password = document.getElementById('password-input');
+	var vpassword = document.getElementById('vpassword-input');
+	var phone = document.getElementById('phone-input');
+
+	if (password.value != vpassword.value)
+	{
+			err.appendChild(document.createTextNode('Password/verify password should match'));
+			return;
+	}
+
+	var jsonData = {};
+	jsonData['email'] = email.value;
+	jsonData['contact'] = contact.value;
+	jsonData['phone'] = phone.value;
+	jsonData['password'] = password.value;
+
+	access_token = sessionStorage.getItem("access_token");
+	var bearerHeader = 'Bearer ' + access_token;
+
+
+	$.ajax({
+
+		type: "POST",
+			 url : "/platez/api/punter/updateProfile",
+			 headers: { 'Authorization': bearerHeader },
+			 cache: false,
+			 contentType: 'application/json;',
+			 dataType: "json",
+			 data:JSON.stringify(jsonData),
+				success: function(data) {
+					var result = $.parseJSON(JSON.stringify(data));
+					if (result.status != 'OK')
+					{
+						err = document.getElementById('profileError');
+						err.appendChild(document.createTextNode(result.message));
+						return;
+					}
+					getPunter();
+		}
+	});
+}
+
+function setUpModal()
+{
+	var modalP = document.getElementById('myModalP');
+	var btnP = document.getElementById("editProfile");
+	var spanP = document.getElementsByClassName("closeP")[0];
+// When the user clicks the button, open the modal
+
+	refreshOn = false;
+	modalP.style.display = "none";
+
+	btnP.onclick = function() {
+		refreshOn = false;
+		modalP.style.display = "block";
+		return false;
+	}
+
+// When the user clicks on <span> (x), close the modal
+	spanP.onclick = function() {
+		refreshOn = true;
+		modalP.style.display = "none";
+		return false;
+	}
+
+// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modalP) {
+				refreshOn = true;
+				modalP.style.display = "none";
+		}
+	}
+}
+
 var punter;
 
-function getPunterProfile() {
+function getPunter() {
 
 	access_token = sessionStorage.getItem("access_token");
 //	alert(access_token);
@@ -331,23 +570,126 @@ function getPunterProfile() {
 function displayPunterProfile()
 {
 	// alert(punter.profile.email);
-	contact = document.getElementById('contact')
-	contact.appendChild(document.createTextNode('Hi ' + punter.profile.contact + ' Your Plates Home Page'));
-	email = document.getElementById('email')
-	email.appendChild(document.createTextNode(punter.profile.email));
-	phone = document.getElementById('phone')
-	phone.appendChild(document.createTextNode(punter.profile.phone));
+	contact = document.getElementById('contact');
+	contact.innerHTML='Hi ' + punter.profile.contact + ' Your Plates Home Page';
+	email = document.getElementById('email');
+	email.innerHTML=punter.profile.email;
+	phone = document.getElementById('phone');
+	phone.innerHTML=punter.profile.phone;
+
+	document.getElementById('email-input').value = punter.profile.email;
+	document.getElementById('contact-input').value = punter.profile.contact;
+	document.getElementById('phone-input').value = punter.profile.phone;
+	document.getElementById('password-input').value = 'Coco2828';
+	document.getElementById('vpassword-input').value = 'Coco2828';
+
+	setUpModal();
 }
 
-function makeOffer(plateId)
+function makeOffer(regNo,plateId,listPrice)
 {
-	alert("Offer on : " + plateId);
+	var msg = "Please enter your offer for "
+								+ regNo + " RM";
+	var offer = prompt(msg,listPrice);
+	if (offer==null)
+		return;
+
+	sendOffer(plateId,offer);
+}
+
+function sendOffer(plateId,offer)
+{
+	var jsonData = {};
+  jsonData['plateId'] = plateId;
+  jsonData['offer'] = offer;
+
+	access_token = sessionStorage.getItem("access_token");
+	var bearerHeader = 'Bearer ' + access_token;
+
+	$.ajax({
+		type: "POST",
+			 url : "/platez/api/punter/makeOffer",
+			 headers: { 'Authorization': bearerHeader },
+			cache: false,
+			contentType: 'application/json;',
+			dataType: "json",
+			data:JSON.stringify(jsonData),
+			 success: function(data) {
+			//    alert(JSON.stringify(data));
+					if (data == '')
+					{
+						 alert('Offer couldnt be made - contact support');
+						 return;
+					}
+					var result = $.parseJSON(JSON.stringify(data));
+					if (result.status != 'OK')
+					{
+						alert(result.message);
+						return;
+					}
+					getPunter();
+					getAllPlates();
+				}
+		})
+}
+
+function viewOffer(regNo)
+{
+//	 getPunter();
+	offer = punter.offers[regNo];
+	if (offer.status == 'ACCEPTED')
+	{
+			alert("Offer status : for " + offer.regNo
+							+ " RM" + offer.offer
+							+ " - " + offer.status + ' contact agent.');
+	}
+	else
+	if (offer.status == 'REJECTED' || offer.status == 'OFFERED')
+	{
+		cancel = confirm("Offer status : for " + offer.regNo
+						+ " RM" + offer.offer
+						+ " - " + offer.status
+						+ "\nPRESS OK TO CANCEL AND MAKE ANOTHER?");
+		if (cancel)
+			cancelOffer(offer.id);
+	}
+}
+
+function cancelOffer(offerId)
+{
+	access_token = sessionStorage.getItem("access_token");
+	var bearerHeader = 'Bearer ' + access_token;
+
+	$.ajax({
+		type: "POST",
+		 url : "/platez/api/punter/cancelOffer?offerId="+offerId.toString(),
+		 headers: { 'Authorization': bearerHeader },
+		cache: false,
+		contentType: 'application/json;',
+		dataType: "text",
+//		data:JSON.stringify(jsonData),
+		 success: function(data) {
+		//    alert(JSON.stringify(data));
+				if (data == '')
+				{
+					 alert('Offer couldnt be cancelled - contact support');
+					 return;
+				}
+				var result = $.parseJSON(data);
+				if (result.status != 'OK')
+				{
+					alert(result.message);
+					return;
+				}
+				getPunter();
+				getAllPlates();
+			}
+	})
 }
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-
 
 function doClearQuery()
 {
@@ -587,19 +929,35 @@ function displayPlates()
 			pp.appendChild(document.createTextNode("Offers : " + sell.offersDistinctCount));
 		}
 		else {
-			var offers = punter.offers[plate.regNo];
-			if (offers!=null)
+			var offer = punter.offers[plate.regNo];
+			if (offer!=null)
 			{
-				last = arr[offers.length - 1];
-				pp.appendChild(document.createTextNode("Offer : " + last.offer + " " + last.status));
+			//	pp.appendChild(document.createTextNode("Offer : " + offer.offer));
+				var aTag = document.createElement('a');
+				aTag.setAttribute('href',"#");
+				funct = "return viewOffer('" + plate.regNo + "');"
+				aTag.setAttribute("onclick",funct);
+				if (offer.status == 'REJECTED')
+					aTag.style.color = 'RED';
+				else
+				if (offer.status == 'ACCEPTED')
+					aTag.style.color = 'GREEN';
+				else
+				if (offer.status == 'OFFERED')
+					aTag.style.color = 'ORANGE';
+
+				aTag.innerHTML = "Offer : " + offer.offer;
+				pp.appendChild(aTag);
 			}
-			pp.appendChild(document.createElement('br'));
+			else {
 			var aTag = document.createElement('a');
 			aTag.setAttribute('href',"#");
-			msg = "makeOffer(" + plate.id + ");"
-			aTag.setAttribute("onclick",msg);
+			funct = "return makeOffer('" + plate.regNo + "',"
+								+ plate.id + "," + plate.listPrice + ");"
+			aTag.setAttribute("onclick",funct);
 			aTag.innerHTML = "Make An Offer";
 			pp.appendChild(aTag);
+		  }
 		}
     if (!(i % 5)) {
         pl = document.createElement('div');
@@ -626,19 +984,85 @@ function displayPlates()
 	<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 	<div class="headingPanelLogonHeader">
 		<div class="headingPanelLogonHeaderCell" id='contact'>
+			contact
 		</div>
 		<div class="headingPanelLogonHeaderCell" id='email'>
+			email
 		</div>
 		<div class="headingPanelLogonHeaderCell" id='phone'>
+			123456789
 		</div>
 		<div class="headingPanelLogonHeaderCell">
-			<a href="/platez/web/anon/editProfile">Edit Profile</a>
+			<a id='editProfile' href="#">Edit Profile</a>
 		</div>
 		<div class="headingPanelLogonHeaderCell">
 			<a href="/platez/web/anon/getAllPlates">Home</a>
 		</div>
 	</div>
-
+	<div id="myModalP" class="modal">
+			<div class="modal-content">
+				<span class="closeP">&times;</span>
+						<div id="#129c94r2P" class="topHiddenBar">
+							<div class="profileEntryPanel">
+								<div class="profileEntryLine">
+									<div class="profileEntryPrompt">
+										Email:
+									</div>
+									<div class="profileEntryInput">
+											<input id="email-input" type="text" readonly
+																	value="" style="height: 26px; width: 240px; font-size: 14px; "/>
+									</div>
+								</div>
+								<div class="profileEntryLine">
+									<div class="profileEntryPrompt">
+										Contact:
+									</div>
+									<div class="profileEntryInput">
+											<input id="contact-input" type="text"
+																	value="" style="height: 26px; width: 240px; font-size: 14px; "/>
+									</div>
+								</div>
+								<div class="profileEntryPasswordLine">
+									<div class="profileEntryPasswordPrompt">
+													Password:
+									</div>
+									<div class="profileEntryPasswordInput">
+												<input id="password-input" type="password"
+													 style="height: 26px; width: 240px; font-size: 14px; "/>
+									</div>
+								</div>
+								<div class="profileEntryPasswordLine">
+									<div class="profileEntryPasswordPrompt">
+													Verify Password:
+									</div>
+									<div class="profileEntryPasswordInput">
+												<input id="vpassword-input" type="password"
+													 style="height: 26px; width: 240px; font-size: 14px; "/>
+									</div>
+								</div>
+								<div class="profileEntryLine">
+									<div class="profileEntryPrompt">
+										Phone:
+									</div>
+									<div class="profileEntryInput">
+											<input id="phone-input" type="text"
+																	value="" style="height: 26px; width: 240px; font-size: 14px; "/>
+									</div>
+								</div>
+								<div class="profileEntrySubmitButton">
+										<input type="button" id="profile" value="Save Profile"
+											onClick="return saveProfile()"
+											class="btn btn-primary"
+											style="height: 26px; line-height:0px; font-weight:700; text-shadow:1px 1px 1px #666;" />
+								</div>
+							</br>
+								<div class="profileEntryErrorMessage" id='profileError'>
+								</div>
+							</div>  <!-- profileEntryPanel -->
+						</div>  <!-- topHiddenBar -->
+					</div>  <!-- topBar  -->
+				</div>  <!-- modal-content  -->
+			</div>  <!-- modalP  -->
   <div class="headingPanel">
 				<div class="headingPanelMiddle">
 					<div class="headingPanelMiddleSearchHeader">
@@ -674,6 +1098,7 @@ function displayPlates()
             	Specials
         		</div>
 			</div>  <!-- headingPanelMiddleSearchHeader -->
+
 		<div class="headingPanelMiddleSearch">
 						<div class="headingPanelMiddleSearchCell">
 							<select name='prefixdd' id='prefix' style="width: 65px;
@@ -742,7 +1167,7 @@ function displayPlates()
   </div>
 </body>
 <script>
-	getPunterProfile();
+	getPunter();
   getAllPlates();
   getQueryParams();
 </script>

@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import org.plate.domain.plate.Plate;
 import org.plate.domain.plate.sell.PlateOffer;
 import org.plate.domain.plate.sell.PlateSell;
+import org.plate.json.PlateOfferStatusJson;
 import org.plate.persistence.PersistenceRuntimeException;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -115,7 +116,8 @@ public class PlateSellDaoImpl extends NamedParameterJdbcDaoSupport implements Pl
 	{
 		try
 		{
-			final String sql = "SELECT * FROM plateoffer WHERE platesellid=? ORDER BY offer asc";
+			final String sql = "SELECT * FROM plateoffer WHERE platesellid=? "
+					+ " AND STATUS <> 'CANCELLED' ORDER BY offer asc";
 			List<PlateOffer> pos = getJdbcTemplate().query(sql,new PreparedStatementSetter() {
 				        public void setValues(PreparedStatement preparedStatement) throws SQLException {
 				          preparedStatement.setLong(1,ps.getId());
@@ -168,7 +170,7 @@ public class PlateSellDaoImpl extends NamedParameterJdbcDaoSupport implements Pl
 	public List<PlateOffer> getPlateOffers(String buyerEmail) {
 		try
 		{
-			final String sql = "SELECT * FROM plateoffer WHERE buyerEmail=? ORDER BY offeredon";
+			final String sql = "SELECT * FROM plateoffer WHERE buyerEmail=? AND STATUS <> 'CANCELLED' ORDER BY offeredon";
 			List<PlateOffer> pos = getJdbcTemplate().query(sql,new PreparedStatementSetter() {
 				        public void setValues(PreparedStatement preparedStatement) throws SQLException {
 				          preparedStatement.setString(1,buyerEmail);
@@ -181,5 +183,26 @@ public class PlateSellDaoImpl extends NamedParameterJdbcDaoSupport implements Pl
 			log.error("Could not execute : " + e.getMessage(),e);
 			throw new PersistenceRuntimeException("Could not execute getById : " + e.getMessage());
 		}
+	}
+
+	@Override
+	public void setPlateOfferStatus(Long offerId, PlateOfferStatusJson status) {
+		final String sql = "UPDATE plateoffer SET status=? WHERE id=?";
+		try
+		{
+			getJdbcTemplate().update( sql, new PreparedStatementSetter() {
+				public void setValues(PreparedStatement preparedStatement) throws SQLException {
+					preparedStatement.setString(1,status.name());
+					preparedStatement.setLong(2,offerId);
+				}
+			});
+
+		}
+		catch (DataAccessException e)
+		{
+			log.error("Could not execute : " + e.getMessage(),e);
+			throw new PersistenceRuntimeException("Could not execute store : " + e.getMessage());
+		}	
+
 	}
 }

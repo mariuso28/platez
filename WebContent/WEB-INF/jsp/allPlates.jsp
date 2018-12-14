@@ -766,7 +766,7 @@ function displayPlates()
 										Email:
 									</div>
 									<div class="headingLoginUsernameInput">
-											<input id="email" type="text" name="email"
+											<input id="email" type="text"
 																	value="jpj@test.com" style="height: 26px; width: 240px; font-size: 14px; "/>
 									</div>
 								</div>
@@ -775,8 +775,8 @@ function displayPlates()
 													Password:
 									</div>
 									<div class="headingLoginPasswordInput">
-												<input id="password" type="text" name="email"
-																									value="88888888" style="height: 26px; width: 240px; font-size: 14px; "/>
+												<input id="password" type="password"
+																									value="Coco2828" style="height: 26px; width: 240px; font-size: 14px; "/>
 									</div>
 								</div>
 								<div class="headingLoginSubmitButton">
