@@ -3161,3 +3161,267 @@ Dec 14 14:38:34,427  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 -
 Dec 14 14:38:34,433  INFO RestPunterControllerImpl:31 - Received getPunter for : koko@test.com
 Dec 14 14:38:34,454  INFO RestServices:75 - Got Plates # 19
 Dec 14 14:38:34,465  INFO RestPunterControllerImpl:31 - Received getPunter for : koko@test.com
+Dec 14 14:47:57,200  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 14:47:57,339  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:47:57,828  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:48:18,925  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 14:48:18,931  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 14:48:19,086  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 14:48:19,087  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 14:48:19,087  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 14:48:19,261  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 14:48:20,303  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:48:20,313  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 14 14:48:20,357  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:48:20,380  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 14 14:49:02,738  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 14:49:02,821  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:49:02,847  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:49:09,500  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
+Dec 14 14:49:09,503  INFO RestAuthController:83 - Got baseuser : koko@test.com
+Dec 14 14:49:09,517  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
+Dec 14 14:49:09,520  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
+Dec 14 14:49:09,521  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
+Dec 14 14:49:09,969  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 14:49:10,083  INFO RestPunterControllerImpl:31 - Received getPunter for : koko@test.com
+Dec 14 14:49:10,083  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:49:10,100  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:49:10,118  INFO RestPunterControllerImpl:31 - Received getPunter for : koko@test.com
+Dec 14 14:49:15,820  INFO RestPunterControllerImpl:76 - Received makeOffer for : koko@test.com
+Dec 14 14:49:15,894  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:49:15,896  INFO RestPunterControllerImpl:31 - Received getPunter for : koko@test.com
+Dec 14 14:49:15,913  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:49:15,923  INFO RestPunterControllerImpl:31 - Received getPunter for : koko@test.com
+Dec 14 14:49:28,241  INFO RestPunterControllerImpl:104 - Received cancelOffer for : koko@test.com
+Dec 14 14:49:28,297  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:49:28,299  INFO RestPunterControllerImpl:31 - Received getPunter for : koko@test.com
+Dec 14 14:49:28,326  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:49:28,336  INFO RestPunterControllerImpl:31 - Received getPunter for : koko@test.com
+Dec 14 14:50:29,804  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 14:50:29,901  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:50:29,913  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:50:32,678  INFO WebAnonController:37 - Received request to register
+Dec 14 14:50:36,223  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 14 14:50:36,290  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:50:36,303  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:50:40,399  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 14 14:50:40,401  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 14 14:50:40,412  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 14 14:50:40,414  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 14 14:50:40,415  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 14 14:50:40,623  INFO WebAnonController:77 - Received goPunterHome
+Dec 14 14:50:40,705  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 14 14:50:40,705  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 14 14:50:40,723  INFO RestServices:75 - Got Plates # 19
+Dec 14 14:50:40,752  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 09:42:00,318  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 09:43:56,684  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 09:43:57,707  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 09:43:58,224  INFO RestServices:75 - Got Plates # 19
+Dec 15 09:48:42,976  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 09:48:43,791  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 09:48:43,821  INFO RestServices:75 - Got Plates # 19
+Dec 15 09:48:51,514  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 09:48:52,000  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 09:48:52,019  INFO RestServices:75 - Got Plates # 19
+Dec 15 09:50:47,493  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 09:50:48,426  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 09:50:48,443  INFO RestServices:75 - Got Plates # 19
+Dec 15 09:50:58,088  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 09:50:58,685  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 09:50:58,704  INFO RestServices:75 - Got Plates # 19
+Dec 15 09:54:11,348  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 09:57:42,324  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 09:58:45,902  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 10:02:05,527  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 10:02:06,364  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 10:02:06,379  INFO RestServices:75 - Got Plates # 19
+Dec 15 10:07:30,607  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 10:07:31,547  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 10:07:31,561  INFO RestServices:75 - Got Plates # 19
+Dec 15 10:09:57,936  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 10:09:58,763  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 10:09:58,776  INFO RestServices:75 - Got Plates # 19
+Dec 15 10:10:04,044  INFO RestAnonControllerImpl:43 - Doing registration for : ProfileJson [contact=, email=, phone=]
+Dec 15 10:10:04,045 ERROR RestAnonControllerImpl:52 - Registration failed : Please supply a valid email.
+Dec 15 10:10:40,550  INFO RestAnonControllerImpl:43 - Doing registration for : ProfileJson [contact=momo, email=momo@test.com, phone=018272726]
+Dec 15 10:13:15,207  INFO RestAnonControllerImpl:43 - Doing registration for : ProfileJson [contact=jomo, email=jomo@test.com, phone=018272726]
+Dec 15 10:13:18,483  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 10:13:19,325  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 10:13:19,340  INFO RestServices:75 - Got Plates # 19
+Dec 15 10:14:21,501  INFO RestAnonControllerImpl:43 - Doing registration for : ProfileJson [contact=mimi@test.com, email=mimi@test.com, phone=0128272662]
+Dec 15 10:15:07,910  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 15 10:15:07,917  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 15 10:15:08,056  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 15 10:15:08,057  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 15 10:15:08,057  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 15 10:15:08,215  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 10:15:08,385  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 10:15:08,391  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 10:15:08,412  INFO RestServices:75 - Got Plates # 19
+Dec 15 10:15:08,433  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 10:28:24,518  INFO RestAnonControllerImpl:96 - in  queryPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=D, number1=2, number2=, number3=4, number4=, suffix=]
+Dec 15 10:28:24,519  INFO QueryDaoImpl:31 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=D, number1=2, number2=, number3=4, number4=, suffix=]
+Dec 15 10:28:24,520  INFO QueryDaoImpl:37 - SQL : SELECT * FROM plate WHERE prefix = 'W'  AND letter2 = 'D'  AND number1 = '2'  AND number3 = '4' 
+Dec 15 10:28:24,529  INFO RestServices:136 - Got Plates # 0
+Dec 15 10:28:24,540  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 10:42:08,964  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 10:42:09,101  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 10:42:09,571  INFO RestServices:75 - Got Plates # 19
+Dec 15 10:42:15,828  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 15 10:42:15,837  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 15 10:42:16,000  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 15 10:42:16,002  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 15 10:42:16,002  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 15 10:42:16,162  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 10:42:16,248  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 10:42:16,259  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 10:42:16,295  INFO RestServices:75 - Got Plates # 19
+Dec 15 10:42:16,311  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 10:42:29,390  INFO RestAnonControllerImpl:96 - in  queryPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=, number2=, number3=, number4=2, suffix=]
+Dec 15 10:42:29,391  INFO QueryDaoImpl:31 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=2, number2=, number3=, number4=, suffix=]
+Dec 15 10:42:29,392  INFO QueryDaoImpl:37 - SQL : SELECT * FROM plate WHERE prefix = 'W'  AND number1 = '2' 
+Dec 15 10:42:29,401  INFO RestServices:137 - Got Plates # 1
+Dec 15 10:42:29,425  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 10:42:34,457  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 10:42:34,494  INFO RestServices:75 - Got Plates # 19
+Dec 15 10:42:34,506  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:00:08,102  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 11:00:09,746  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 11:00:09,746  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:00:09,762  INFO RestServices:75 - Got Plates # 19
+Dec 15 11:00:09,785  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:05:09,968  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 11:05:10,877  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:05:10,879  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 11:05:10,907  INFO RestServices:75 - Got Plates # 19
+Dec 15 11:05:10,967  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:05:34,634  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 11:05:35,600  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 11:05:35,603  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:05:35,612  INFO RestServices:75 - Got Plates # 19
+Dec 15 11:05:35,667  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:08:23,658  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 11:08:24,621  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 11:08:25,111  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:08:25,147  INFO RestServices:75 - Got Plates # 19
+Dec 15 11:08:25,181  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:08:28,513  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 11:08:28,830  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 11:08:28,833  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:08:28,852  INFO RestServices:75 - Got Plates # 19
+Dec 15 11:08:28,878  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:10:03,249  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 11:10:04,115  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 11:10:04,117  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:10:04,131  INFO RestServices:75 - Got Plates # 19
+Dec 15 11:10:04,159  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:15:04,712  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 11:15:04,993  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 11:15:05,524  INFO RestServices:75 - Got Plates # 19
+Dec 15 11:15:11,521  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 15 11:15:11,526  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 15 11:15:11,693  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 15 11:15:11,695  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 15 11:15:11,696  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 15 11:15:11,881  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 11:15:12,711  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 11:15:12,720  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:15:12,744  INFO RestServices:75 - Got Plates # 19
+Dec 15 11:15:12,785  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:25:12,952  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 11:25:13,161  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 11:25:13,754  INFO RestServices:75 - Got Plates # 19
+Dec 15 11:25:17,760  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 15 11:25:17,766  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 15 11:25:17,947  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 15 11:25:17,950  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 15 11:25:17,950  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 15 11:25:18,142  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 11:25:19,146  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 11:25:19,156  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:25:19,211  INFO RestServices:75 - Got Plates # 19
+Dec 15 11:25:19,264  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:57:44,368  INFO WebAnonController:29 - Received request to getAllPlates
+Dec 15 11:57:44,505  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 11:57:44,523  INFO RestServices:75 - Got Plates # 19
+Dec 15 11:57:48,067  INFO RestAuthController:75 - Attempting to authorize : jpj@test.com
+Dec 15 11:57:48,070  INFO RestAuthController:83 - Got baseuser : jpj@test.com
+Dec 15 11:57:48,085  INFO CustomUserDetailsService:28 - loadUserByUsername email : jpj@test.com
+Dec 15 11:57:48,090  INFO CustomUserDetailsService:43 - User : jpj@test.com found with role :ROLE_PUNTER
+Dec 15 11:57:48,091  INFO CustomUserDetailsService:49 - Using User : jpj@test.com with authorities :[ROLE_PUNTER]
+Dec 15 11:57:48,252  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 11:57:48,505  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 11:57:48,513  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 11:57:48,531  INFO RestServices:75 - Got Plates # 19
+Dec 15 11:57:48,585  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:01:49,580  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 12:01:50,554  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 12:01:50,555  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:01:50,573  INFO RestServices:75 - Got Plates # 19
+Dec 15 12:01:50,599  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:03:39,232  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 12:03:40,143  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 12:03:40,144  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:03:40,154  INFO RestServices:75 - Got Plates # 19
+Dec 15 12:03:40,182  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:07:04,903  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 12:07:05,881  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 12:07:05,881  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:07:05,892  INFO RestServices:75 - Got Plates # 19
+Dec 15 12:07:05,923  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:08:13,404  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 12:08:14,351  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:08:14,352  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 12:08:14,360  INFO RestServices:75 - Got Plates # 19
+Dec 15 12:08:14,391  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:17:49,607  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 12:17:50,534  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 12:17:50,534  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:17:50,542  INFO RestServices:75 - Got Plates # 19
+Dec 15 12:17:50,566  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:19:44,188  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 12:19:45,180  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:19:45,181  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 12:19:45,188  INFO RestServices:75 - Got Plates # 19
+Dec 15 12:19:45,239  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:20:26,965  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 12:20:27,787  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:20:27,788  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 12:20:27,794  INFO RestServices:75 - Got Plates # 19
+Dec 15 12:20:27,988  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:23:10,475  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 12:23:11,289  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:23:11,290  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 12:23:11,299  INFO RestServices:75 - Got Plates # 19
+Dec 15 12:23:11,347  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:24:50,290  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 12:24:51,225  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:24:51,228  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 12:24:51,236  INFO RestServices:75 - Got Plates # 19
+Dec 15 12:24:51,294  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:25:45,927  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 12:25:46,785  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:25:46,787  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 12:25:46,798  INFO RestServices:75 - Got Plates # 19
+Dec 15 12:25:46,852  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:26:41,433  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 12:26:42,302  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:26:42,304  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 12:26:42,312  INFO RestServices:75 - Got Plates # 19
+Dec 15 12:26:42,361  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:26:55,776  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 12:26:56,649  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:26:56,652  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 12:26:56,661  INFO RestServices:75 - Got Plates # 19
+Dec 15 12:26:56,712  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:27:41,511  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 12:27:42,422  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:27:42,423  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 12:27:42,431  INFO RestServices:75 - Got Plates # 19
+Dec 15 12:27:42,475  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:28:22,550  INFO WebAnonController:77 - Received goPunterHome
+Dec 15 12:28:23,444  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com
+Dec 15 12:28:23,446  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Dec 15 12:28:23,453  INFO RestServices:75 - Got Plates # 19
+Dec 15 12:28:23,504  INFO RestPunterControllerImpl:31 - Received getPunter for : jpj@test.com

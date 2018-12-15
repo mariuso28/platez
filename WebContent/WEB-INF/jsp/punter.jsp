@@ -51,7 +51,7 @@
 
 			.headingPanelLogonHeaderCell {
 					float: left;
-					width: 210px;
+					width: 170px;
 					height: 12px;
 					margin-right: 5px;
 					font-family: Arial, Helvetica, sans-serif;
@@ -256,6 +256,47 @@
     			background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
     			background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
     		}
+
+/*-- Publish Plate Modal */
+
+				.modal-publish-content {
+					width: 730px;
+					height: 200px;
+					background-color: #fff;
+					/*margin: auto;*/
+					padding: 10px;
+					border: 1px solid #888;
+				}
+
+				/* The Close Button */
+				.closePublish {
+				color: #333;
+				float: right;
+				font-size: 28px;
+				font-weight: bold;
+				line-height: 20px;
+				}
+
+				.closePublish:hover,
+				.closePublish:focus {
+				color: #000;
+				text-decoration: none;
+				cursor: pointer;
+				}
+
+				.headingPublishPanel {
+							float: left;
+							width: 710px;
+							height: 150px;
+
+						}
+
+				.topHiddenPublishBar {
+						width: 710px;
+						height: 150px;
+						background-color: #129c94;
+						}
+/*-- End Publish Plate Modal */
 
 				.modal-content {
 					width: 544px;
@@ -499,6 +540,38 @@ function setUpModal()
 	}
 }
 
+function setUpPublishModal()
+{
+	var modalPP = document.getElementById('myModalPublish');
+	var btnPP = document.getElementById("publishPlate");
+	var spanPP = document.getElementsByClassName("closePublish")[0];
+// When the user clicks the button, open the modal
+
+	refreshOn = false;
+	modalPP.style.display = "none";
+
+	btnPP.onclick = function() {
+		refreshOn = false;
+		modalPP.style.display = "block";
+		return false;
+	}
+
+// When the user clicks on <span> (x), close the modal
+	spanPP.onclick = function() {
+		refreshOn = true;
+		modalPP.style.display = "none";
+		return false;
+	}
+
+// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modalPP) {
+				refreshOn = true;
+				modalPP.style.display = "none";
+		}
+	}
+}
+
 var punter;
 
 function getPunter() {
@@ -571,7 +644,7 @@ function displayPunterProfile()
 {
 	// alert(punter.profile.email);
 	contact = document.getElementById('contact');
-	contact.innerHTML='Hi ' + punter.profile.contact + ' Your Plates Home Page';
+	contact.innerHTML='Hi ' + punter.profile.contact + ' Your Plates Home';
 	email = document.getElementById('email');
 	email.innerHTML=punter.profile.email;
 	phone = document.getElementById('phone');
@@ -878,6 +951,49 @@ function displayQueryParams()
       option.text = choice[0];
       sp.appendChild(option);
     });
+
+/* PUBLISH CONTENT */
+
+		var pf = document.getElementById('prefixP');
+    queryParams.prefix.forEach((choice,i) => {
+      var option = createOption(choice);
+      pf.appendChild(option);
+    });
+    var l1 = document.getElementById('letter1P');
+    queryParams.letter1.forEach((choice,i) => {
+      var option = createOption(choice);
+      l1.appendChild(option);
+    });
+    var l2 = document.getElementById('letter2P');
+    queryParams.letter2.forEach((choice,i) => {
+      var option = createOption(choice);
+      l2.appendChild(option);
+    });
+    var n1 = document.getElementById('number1P');
+    queryParams.number1.forEach((choice,i) => {
+      var option = createOption(choice);
+      n1.appendChild(option);
+    });
+    var n2 = document.getElementById('number2P');
+    queryParams.number2.forEach((choice,i) => {
+      var option = createOption(choice);
+      n2.appendChild(option);
+    });
+    var n3 = document.getElementById('number3P');
+    queryParams.number3.forEach((choice,i) => {
+      var option = createOption(choice);
+      n3.appendChild(option);
+    });
+    var n4 = document.getElementById('number4P');
+    queryParams.number4.forEach((choice,i) => {
+      var option = createOption(choice);
+      n4.appendChild(option);
+    });
+    var sf = document.getElementById('suffixP');
+    queryParams.suffix.forEach((choice,i) => {
+      var option = createOption(choice);
+      sf.appendChild(option);
+    });
 }
 
 function createOption(choice)
@@ -892,93 +1008,106 @@ function displayPlates()
 {
     document.getElementById('pc').innerHTML="";
 
+		pl = document.createElement('div');
+		pl.className = 'prodList'
+		document.getElementById('pc').appendChild(pl);
+		var pe = document.createElement('div');
+		pe.className = 'prodListEntry';
+		var aImg = document.createElement('img');
+		aImg.src = '../../img/add.png';
+		funct = "return publishPlate();";
+		aImg.setAttribute("onclick",funct);
+		pe.appendChild(aImg);
+		pl.appendChild(pe);
+
     plates.forEach((plate, i) => {
-    var pe = document.createElement('div');
-    pe.className = 'prodListEntry';
-
-    var peh = document.createElement('div');
-    peh.className = 'prodListEntryHeading';
-
-		var np = document.createElement('div');
-    if (plate.rating==1)
-    {
-      np.className = 'numberPlateSpe';
-    }
-    else
-    if (plate.rating==2)
-    {
-      	np.className = 'numberPlateSpe2';
-    }
-    else {
-    	np.className = 'numberPlateSpe3';
-    }
-		np.appendChild(document.createTextNode(plate.regNo));
-		peh.appendChild(np);
-
-    pe.appendChild(peh);
-    var pp = document.createElement('div');
-    pp.className = 'prodListEntryPrice';
-    var price = numberWithCommas(plate.listPrice);
-    pp.appendChild(document.createTextNode('RM'+price));
-    peh.appendChild(pp);
-		punter;
-		var sell = punter.plateSells[plate.regNo];
-		pp.appendChild(document.createElement('br'));
-		if (sell != null)
-		{
-			pp.appendChild(document.createTextNode("Offers : " + sell.offersDistinctCount));
-		}
-		else {
-			var offer = punter.offers[plate.regNo];
-			if (offer!=null)
+			if (i>0)
 			{
-			//	pp.appendChild(document.createTextNode("Offer : " + offer.offer));
-				var aTag = document.createElement('a');
-				aTag.setAttribute('href',"#");
-				funct = "return viewOffer('" + plate.regNo + "');"
-				aTag.setAttribute("onclick",funct);
-				if (offer.status == 'REJECTED')
-					aTag.style.color = 'RED';
-				else
-				if (offer.status == 'ACCEPTED')
-					aTag.style.color = 'GREEN';
-				else
-				if (offer.status == 'OFFERED')
-					aTag.style.color = 'ORANGE';
+		    var pe = document.createElement('div');
+		    pe.className = 'prodListEntry';
 
-				aTag.innerHTML = "Offer : " + offer.offer;
-				pp.appendChild(aTag);
+		    var peh = document.createElement('div');
+		    peh.className = 'prodListEntryHeading';
+
+				var np = document.createElement('div');
+		    if (plate.rating==1)
+		    {
+		      np.className = 'numberPlateSpe';
+		    }
+		    else
+		    if (plate.rating==2)
+		    {
+		      	np.className = 'numberPlateSpe2';
+		    }
+		    else {
+		    	np.className = 'numberPlateSpe3';
+		    }
+				np.appendChild(document.createTextNode(plate.regNo));
+				peh.appendChild(np);
+
+		    pe.appendChild(peh);
+		    var pp = document.createElement('div');
+		    pp.className = 'prodListEntryPrice';
+		    var price = numberWithCommas(plate.listPrice);
+		    pp.appendChild(document.createTextNode('RM'+price));
+		    peh.appendChild(pp);
+				punter;
+				var sell = punter.plateSells[plate.regNo];
+				pp.appendChild(document.createElement('br'));
+				if (sell != null)
+				{
+					pp.appendChild(document.createTextNode("Offers : " + sell.offersDistinctCount));
+				}
+				else {
+					var offer = punter.offers[plate.regNo];
+					if (offer!=null)
+					{
+					//	pp.appendChild(document.createTextNode("Offer : " + offer.offer));
+						var aTag = document.createElement('a');
+						aTag.setAttribute('href',"#");
+						funct = "return viewOffer('" + plate.regNo + "');"
+						aTag.setAttribute("onclick",funct);
+						if (offer.status == 'REJECTED')
+							aTag.style.color = 'RED';
+						else
+						if (offer.status == 'ACCEPTED')
+							aTag.style.color = 'GREEN';
+						else
+						if (offer.status == 'OFFERED')
+							aTag.style.color = 'ORANGE';
+
+						aTag.innerHTML = "Offer : " + offer.offer;
+						pp.appendChild(aTag);
+					}
+					else {
+					var aTag = document.createElement('a');
+					aTag.setAttribute('href',"#");
+					funct = "return makeOffer('" + plate.regNo + "',"
+										+ plate.id + "," + plate.listPrice + ");"
+					aTag.setAttribute("onclick",funct);
+					aTag.innerHTML = "Make An Offer";
+					pp.appendChild(aTag);
+				  }
+				}
+		    if (!(i % 5) && i>0) {
+		        pl = document.createElement('div');
+		        pl.className = 'prodList'
+		        document.getElementById('pc').appendChild(pl);
+		    }
+
+		    pl.appendChild(pe);
 			}
-			else {
-			var aTag = document.createElement('a');
-			aTag.setAttribute('href',"#");
-			funct = "return makeOffer('" + plate.regNo + "',"
-								+ plate.id + "," + plate.listPrice + ");"
-			aTag.setAttribute("onclick",funct);
-			aTag.innerHTML = "Make An Offer";
-			pp.appendChild(aTag);
-		  }
-		}
-    if (!(i % 5)) {
-        pl = document.createElement('div');
-        pl.className = 'prodList'
-        document.getElementById('pc').appendChild(pl);
-    }
-
-    pl.appendChild(pe);
-
-    });
+  });
 }
 
 
 
 </script>
 
-</script>
 
 <html>
 <head>
-</style>
+
 </head>
 <body>
 	<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
@@ -994,6 +1123,9 @@ function displayPlates()
 		</div>
 		<div class="headingPanelLogonHeaderCell">
 			<a id='editProfile' href="#">Edit Profile</a>
+		</div>
+		<div class="headingPanelLogonHeaderCell">
+			<a id='publishPlate' href="#">Publish Plate</a>
 		</div>
 		<div class="headingPanelLogonHeaderCell">
 			<a href="/platez/web/anon/getAllPlates">Home</a>
@@ -1060,9 +1192,97 @@ function displayPlates()
 								</div>
 							</div>  <!-- profileEntryPanel -->
 						</div>  <!-- topHiddenBar -->
-					</div>  <!-- topBar  -->
 				</div>  <!-- modal-content  -->
 			</div>  <!-- modalP  -->
+			<div id="myModalPublish" class="modal">
+					<div class="modal-publish-content">
+					<span class="closePublish">&times;</span>
+					<div id="#129c94r2PP" class="topHiddenPublishBar">
+						<div class="headingPublishPanel">
+									<div class="headingPanelMiddle">
+										<div class="headingPanelMiddleSearchHeader">
+					            <div class="headingPanelMiddleSearchHeaderCell">
+													Prefix
+											</div>
+					            <div class="headingPanelMiddleSearchHeaderCell">
+													Letter
+											</div>
+					            <div class="headingPanelMiddleSearchHeaderCell">
+													Letter
+											</div>
+					            <div class="headingPanelMiddleSearchHeaderCell">
+													Number
+											</div>
+					            <div class="headingPanelMiddleSearchHeaderCell">
+													Number
+											</div>
+					            <div class="headingPanelMiddleSearchHeaderCell">
+													Number
+											</div>
+					            <div class="headingPanelMiddleSearchHeaderCell">
+													Number
+											</div>
+					            <div class="headingPanelMiddleSearchHeaderCell">
+													Suffix
+											</div>
+					          	<div class="headingPanelMiddleSearchHeaderCell">
+					          	</div>
+											<div class="headingPanelMiddleSearchHeaderCell">
+					          	</div>
+								</div>  <!-- headingPanelMiddleSearchHeader -->
+
+							<div class="headingPanelMiddleSearch">
+											<div class="headingPanelMiddleSearchCell">
+												<select name='prefixdd' id='prefixP' style="width: 65px;
+																height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+												</select>
+											</div>
+					            <div class="headingPanelMiddleSearchCell">
+												<select name='letter1dd' id='letter1P' style="width: 65px;
+																height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+												</select>
+											</div>
+					            <div class="headingPanelMiddleSearchCell">
+												<select name='letter2dd' id='letter2P' style="width: 65px;
+																height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+												</select>
+											</div>
+					            <div class="headingPanelMiddleSearchCell">
+												<select name='number1dd' id='number1P' style="width: 65px;
+																height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+												</select>
+											</div>
+					            <div class="headingPanelMiddleSearchCell">
+												<select name='number2dd' id='number2P' style="width: 65px;
+																height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+												</select>
+											</div>
+					            <div class="headingPanelMiddleSearchCell">
+												<select name='number3dd' id='number3P' style="width: 65px;
+																height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+												</select>
+											</div>
+					            <div class="headingPanelMiddleSearchCell">
+												<select name='number4dd' id='number4P' style="width: 65px;
+																height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+												</select>
+											</div>
+					            <div class="headingPanelMiddleSearchCell">
+												<select name='suffix' id='suffixP' style="width: 65px;
+																height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+												</select>
+											</div>
+					          <div class="headingPanelMiddleSearchButton">
+					          <input name="publish1" value="Publish" type="button"
+					              onClick="return doPublish()" style=
+					              "font-family: myFont; color: green; font-size:20px; font-weight:700;"/>
+					          </div>
+					      </div>
+							</div>
+					  </div>
+					</div>
+					</div>  <!-- modal-publish-content  -->
+			</div>  <!-- myModalPublish  -->
   <div class="headingPanel">
 				<div class="headingPanelMiddle">
 					<div class="headingPanelMiddleSearchHeader">
@@ -1160,6 +1380,7 @@ function displayPlates()
               onClick="return doClearQuery()" style="
               font-family: myFont; color: green; font-size:20px; font-weight:700;"/>
           </div>
+
       </div>
 		</div>
   </div>
@@ -1170,5 +1391,6 @@ function displayPlates()
 	getPunter();
   getAllPlates();
   getQueryParams();
+	setUpPublishModal();
 </script>
 </html>

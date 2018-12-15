@@ -409,6 +409,147 @@
 				   font-size: 18px;
 				}
 
+				.modal-profile-content {
+					width: 544px;
+					height: 300px;
+					background-color: #fff;
+					/*margin: auto;*/
+					padding: 10px;
+					border: 1px solid #888;
+				}
+
+				.profileTopBar2 {
+				width: 500px;
+				height: 4px;
+				background-color: #129c94;
+				}
+
+				.profileTopBar {
+				width: 500px;
+				height: 44px;
+				background-color: #129c94;
+				color: #666;
+				font-size: 14px;
+				line-height: 16px;
+				font-weight: 900;
+				}
+
+				.profileTopBarMiddle {
+				float: left;
+				width: 495px;
+				height: 40px;
+				text-align: left;
+				padding-left: 5px;
+				}
+
+				.profileTopHiddenBar {
+				width: 500px;
+				height: 280px;
+				background-color: #129c94;
+				}
+
+				.profileEntryPanel{
+					float: left;
+					width: 475px;
+					height: 280px;
+					text-align: left;
+					line-height: 22px;
+					padding-left: 5px;
+				}
+
+				.profileEntryLine {
+					float: left;
+					width: 500px;
+					height: 28px;
+					padding-left: 0px;
+					margin-top: 10px;
+					margin-bottom: 5px;
+				}
+
+				.profileEntryPrompt {
+					float: left;
+					width: 180px;
+					height: 24px;
+					text-align: left;
+					font-family: myFont;
+					font-size: 14px;
+					font-weight: 700;
+					color: #fff;
+					text-shadow: 1px 1px 1px #666;
+					line-height: 28px;
+					padding-left: 0px;
+				}
+
+				.profileEntryInput {
+					float: left;
+					width: 280px;
+					height: 28px;
+					text-align: left;
+					padding-left: 5px;
+				}
+
+				.profileEntryPasswordLine {
+					float: left;
+					width: 500px;
+					height: 28px;
+					padding-left: 0px;
+				}
+
+				.profileEntryPasswordPrompt {
+					float: left;
+					width: 180px;
+					height: 24px;
+					text-align: left;
+					font-family: myFont;
+					font-size: 14px;
+					font-weight: 700;
+					color: #fff;
+					text-shadow: 1px 1px 1px #666;
+					line-height: 28px;
+				}
+
+				.profileEntryPasswordInput {
+					float: left;
+					width: 280px;
+					height: 28px;
+					text-align: left;
+					padding-left: 5px;
+					padding-right: 10px;
+				}
+
+				.profileEntrySubmitButton {
+					float: left;
+					width: 70px;
+					height: 26px;
+					text-align: left;
+					padding-left: 5px;
+				}
+
+				.profileEntryErrorMessage {
+					float: left;
+					width: 500px;
+					height: 20px;
+					text-align: left;
+					padding-left: 0px;
+					 font-size: 18px;
+				}
+
+				/* The Close Button */
+				.closePr {
+				color: #333;
+				float: right;
+				font-size: 28px;
+				font-weight: bold;
+				line-height: 20px;
+		}
+
+		.closePr:hover,
+		.closePr:focus {
+		    color: #000;
+		    text-decoration: none;
+		    cursor: pointer;
+		}
+
 </style>
 
 <script>
@@ -416,6 +557,57 @@
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+function registerProfile()
+{
+	err = document.getElementById('profileError');
+	err.innerHTML="";
+
+	var email = document.getElementById('email-input');
+	var contact = document.getElementById('contact-input');
+	var password = document.getElementById('password-input');
+	var vpassword = document.getElementById('vpassword-input');
+	var phone = document.getElementById('phone-input');
+
+	if (password.value != vpassword.value)
+	{
+			err.appendChild(document.createTextNode('Password/verify password should match'));
+			return;
+	}
+
+	var jsonData = {};
+	jsonData['email'] = email.value;
+	jsonData['contact'] = contact.value;
+	jsonData['phone'] = phone.value;
+	jsonData['password'] = password.value;
+
+	access_token = sessionStorage.getItem("access_token");
+	var bearerHeader = 'Bearer ' + access_token;
+
+
+	$.ajax({
+
+		type: "POST",
+			 url : "/platez/api/anon/register",
+			 cache: false,
+			 contentType: 'application/json;',
+			 dataType: "json",
+			 data:JSON.stringify(jsonData),
+				success: function(data) {
+					var result = $.parseJSON(JSON.stringify(data));
+
+					if (result.status != 'OK')
+					{
+						err = document.getElementById('profileError');
+						err.appendChild(document.createTextNode(result.message));
+						return;
+					}
+					err = document.getElementById('profileError');
+					err.appendChild(document.createTextNode(result.result));
+		}
+	});
+}
+
 
 function setUpModal()
 {
@@ -448,6 +640,37 @@ function setUpModal()
 		}
 	}
 }
+
+function setUpModalProfile()
+{
+	var modalPr = document.getElementById('myModalProfile');
+	var btnPr = document.getElementById("register");
+	var spanPr = document.getElementsByClassName("closePr")[0];
+// When the user clicks the button, open the modal
+
+	refreshOn = false;
+	modalPr.style.display = "none";
+
+	btnPr.onclick = function() {
+		refreshOn = false;
+		modalPr.style.display = "block";
+		return false;
+	}
+
+	spanPr.onclick = function() {
+		refreshOn = true;
+		modalPr.style.display = "none";
+		return false;
+	}
+
+	window.onclick = function(event) {
+			if (event.target == modalPr) {
+				refreshOn = true;
+				modalPr.style.display = "none";
+		}
+	}
+}
+
 
 function login() {
 
@@ -742,9 +965,6 @@ function displayPlates()
 </script>
 
 <html>
-<head>
-</style>
-</head>
 <body>
 	<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 	<div class="headingPanelLogonHeader">
@@ -752,9 +972,72 @@ function displayPlates()
 			Already a member?&nbsp&nbsp<a id='modalOpener' href="#">Sign in</a>
 		</div>
 		<div class="headingPanelLogonHeaderCell">
-			<a href="/platez/web/anon/register">Register to buy or sell</a>
+			<a id='register' href="#">Register to buy or sell</a>
 		</div>
 	</div>
+	<div id="myModalProfile" class="modal">
+			<div class="modal-profile-content">
+				<span class="closePr">&times;</span>
+						<div id="#129c94r2P" class="profileTopHiddenBar">
+							<div class="profileEntryPanel">
+								<div class="profileEntryLine">
+									<div class="profileEntryPrompt">
+										Email:
+									</div>
+									<div class="profileEntryInput">
+											<input id="email-input" type="text"
+																	value="" style="height: 26px; width: 240px; font-size: 14px; "/>
+									</div>
+								</div>
+								<div class="profileEntryLine">
+									<div class="profileEntryPrompt">
+										Contact:
+									</div>
+									<div class="profileEntryInput">
+											<input id="contact-input" type="text"
+																	value="" style="height: 26px; width: 240px; font-size: 14px; "/>
+									</div>
+								</div>
+								<div class="profileEntryPasswordLine">
+									<div class="profileEntryPasswordPrompt">
+													Password:
+									</div>
+									<div class="profileEntryPasswordInput">
+												<input id="password-input" type="password"
+													 style="height: 26px; width: 240px; font-size: 14px; "/>
+									</div>
+								</div>
+								<div class="profileEntryPasswordLine">
+									<div class="profileEntryPasswordPrompt">
+													Verify Password:
+									</div>
+									<div class="profileEntryPasswordInput">
+												<input id="vpassword-input" type="password"
+													 style="height: 26px; width: 240px; font-size: 14px; "/>
+									</div>
+								</div>
+								<div class="profileEntryLine">
+									<div class="profileEntryPrompt">
+										Phone:
+									</div>
+									<div class="profileEntryInput">
+											<input id="phone-input" type="text"
+																	value="" style="height: 26px; width: 240px; font-size: 14px; "/>
+									</div>
+								</div>
+								<div class="profileEntrySubmitButton">
+										<input type="button" id="profile" value="Save Profile"
+											onClick="return registerProfile();"
+											class="btn btn-primary"
+											style="height: 26px; line-height:0px; font-weight:700; text-shadow:1px 1px 1px #666;" />
+								</div>
+							</br>
+								<div class="profileEntryErrorMessage" id='profileError'>
+								</div>
+							</div>  <!-- profileEntryPanel -->
+						</div>  <!-- topHiddenBar -->
+				</div>  <!-- modal-content  -->
+			</div>  <!-- modalProfile  -->
 	<div id="myModalP" class="modal">
 			<div class="modal-content">
 				<span class="closeP">&times;</span>
@@ -896,6 +1179,7 @@ function displayPlates()
 </body>
 <script>
 	setUpModal();
+	setUpModalProfile();
   getAllPlates();
   getQueryParams();
 </script>

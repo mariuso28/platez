@@ -3,7 +3,7 @@ package org.plate.query;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.plate.json.QueryOnPlateParamsJson;
+import org.plate.json.PlateParamsJson;
 
 public class QueryMgr {
 	
@@ -11,7 +11,7 @@ public class QueryMgr {
 	{
 	}
 	
-	public void validate(QueryOnPlateParamsJson params) throws QueryException
+	public void validate(PlateParamsJson params) throws QueryException
 	{
 		List<String> invalid = new ArrayList<String>();
 		params.setPrefix(prepareChars(params.getPrefix()));

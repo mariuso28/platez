@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 import org.plate.json.PlateJson;
 import org.plate.json.ProfileJson;
 import org.plate.json.QueryOnDigitsParamsJson;
-import org.plate.json.QueryOnPlateParamsJson;
+import org.plate.json.PlateParamsJson;
 import org.plate.json.QueryParamsJson;
 import org.plate.json.ResultJson;
 import org.plate.rest.services.RestServices;
@@ -91,7 +91,7 @@ public class RestAnonControllerImpl implements RestAnonController {
 	@Override
 	@RequestMapping(value = "/queryPlate")
 	// PkfzResultJson contains List<PlateJson> if success, message if fail
-	public ResultJson queryPlate(@RequestBody() QueryOnPlateParamsJson params) {
+	public ResultJson queryPlate(@RequestBody() PlateParamsJson params) {
 		ResultJson result = new ResultJson();
 		log.info("in  queryPlate with : " + params);
 		try

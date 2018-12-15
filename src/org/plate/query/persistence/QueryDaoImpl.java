@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
 import org.plate.domain.plate.Plate;
 import org.plate.domain.plate.sell.persistence.PlateSellDao;
 import org.plate.json.QueryOnDigitsParamsJson;
-import org.plate.json.QueryOnPlateParamsJson;
+import org.plate.json.PlateParamsJson;
 import org.plate.persistence.PersistenceRuntimeException;
 import org.plate.query.QueryException;
 import org.plate.query.QueryMgr;
@@ -26,7 +26,7 @@ public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryD
 	private QueryMgr queryMgr = new QueryMgr();
 	
 	@Override
-	public List<Plate> QueryOnPlate(QueryOnPlateParamsJson params) throws PersistenceRuntimeException, QueryException{
+	public List<Plate> QueryOnPlate(PlateParamsJson params) throws PersistenceRuntimeException, QueryException{
 		
 		log.info("Performing QueryOnPlate with : " + params);
 		queryMgr.validate(params);
@@ -50,7 +50,7 @@ public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryD
 		}
 	}
 
-	private String buildWhereStr(QueryOnPlateParamsJson params) {
+	private String buildWhereStr(PlateParamsJson params) {
 		String whereStr = "";
 		whereStr += addParam(whereStr,"prefix",params.getPrefix());
 		whereStr += addParam(whereStr,"letter1",params.getLetter1());

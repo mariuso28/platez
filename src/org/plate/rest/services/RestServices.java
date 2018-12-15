@@ -19,7 +19,7 @@ import org.plate.json.PlateSellJson;
 import org.plate.json.ProfileJson;
 import org.plate.json.PunterJson;
 import org.plate.json.QueryOnDigitsParamsJson;
-import org.plate.json.QueryOnPlateParamsJson;
+import org.plate.json.PlateParamsJson;
 import org.plate.json.QueryParamsJson;
 import org.plate.json.SendPlateOfferJson;
 import org.plate.persistence.PersistenceDuplicateKeyException;
@@ -121,7 +121,8 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 		return pos;
 	}
 
-	public List<PlateJson> queryPlate(QueryOnPlateParamsJson params) {
+	public List<PlateJson> queryPlate(PlateParamsJson params) {
+		alignParams(params);
 		QueryDao qd = services.getHome().getQueryDao();
 		List<Plate> plates;
 		try
@@ -140,6 +141,27 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 		return pjs;
 	}
 
+	private void alignParams(PlateParamsJson params)
+	{
+		if (params.getLetter1().isEmpty() && !params.getLetter2().isEmpty())
+		{
+			params.setLetter1(params.getLetter2());
+			params.setLetter2("");
+		}
+		String number = params.getNumber1() + params.getNumber2() + params.getNumber3() + params.getNumber4();
+		number = number.trim();
+		if (number.length()==0 || number.length()==4)
+			return;
+		params.setNumber2("");
+		params.setNumber3("");
+		params.setNumber4("");
+		params.setNumber1("" + number.charAt(0));
+		if (number.length()>1)	
+			params.setNumber2("" + number.charAt(1));
+		if (number.length()>2)	
+			params.setNumber3("" + number.charAt(2));	
+	}
+	
 	public List<PlateJson> queryDigits(QueryOnDigitsParamsJson params) {
 		QueryDao qd = services.getHome().getQueryDao();
 		List<Plate> plates;

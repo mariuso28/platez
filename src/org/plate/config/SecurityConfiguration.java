@@ -83,7 +83,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 				"/web/anon/**",
 				"/css/**/**",
 				"/fonts/**",
-				"/images/**",
+				"/img/**",
 				"/js/**",
 				"/oauth/token"
 				)
@@ -95,7 +95,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		.access("hasRole('ROLE_AGENT')")
 		
 		.antMatchers(
-				"/web/agent/**"
+				"/web/punter/**"
 				)
 		.access("hasRole('ROLE_PUNTER')")
 		
