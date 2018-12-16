@@ -3,10 +3,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page trimDirectiveWhitespaces="true" %>
 
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <link rel="stylesheet" href="../../css/overlaystyle.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.1/css/foundation.min.css">
 <link rel="stylesheet" href="../../css/bootstrap.min.css" />
 <link rel="stylesheet" href="../../css/style.css" />
 
@@ -259,205 +262,405 @@
 
 /*-- Publish Plate Modal */
 
-				.modal-publish-content {
-					width: 730px;
-					height: 200px;
-					background-color: #fff;
-					/*margin: auto;*/
-					padding: 10px;
-					border: 1px solid #888;
-				}
+.modal-offer-content {
+		width: 730px;
+		height: 200px;
+		background-color: #fff;
+						/*margin: auto;*/
+		padding: 10px;
+		border: 1px solid #888;
+			}
 
-				/* The Close Button */
-				.closePublish {
-				color: #333;
-				float: right;
-				font-size: 28px;
-				font-weight: bold;
-				line-height: 20px;
-				}
+	/* The Close Button */
+	.closeOffer {
+	color: #333;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 20px;
+	}
 
-				.closePublish:hover,
-				.closePublish:focus {
-				color: #000;
-				text-decoration: none;
-				cursor: pointer;
-				}
+	.closeOffer:hover,
+	.closeOffer:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+	}
 
-				.headingPublishPanel {
-							float: left;
-							width: 710px;
-							height: 150px;
+	.offerPanel {
+				float: left;
+				width: 710px;
+				height: 175px;
+			}
 
-						}
+	.topHiddenOfferBar {
+			width: 710px;
+			height: 175px;
+			background-color: #129c94;
+			}
 
-				.topHiddenPublishBar {
-						width: 710px;
-						height: 150px;
-						background-color: #129c94;
-						}
+		.offerInfoLine {
+			float: left;
+			width: 680px;
+			height: 20px;
+			text-align: left;
+			padding-left: 0px;
+			font-size: 18px;
+		}
+
+	.offerErrorMessage {
+		float: left;
+		width: 500px;
+		height: 20px;
+		text-align: left;
+		padding-left: 0px;
+		 font-size: 18px;
+	}
+
+/*-- Publish Plate Modal */
+
+.modal-publish-content {
+width: 730px;
+height: 200px;
+background-color: #fff;
+/*margin: auto;*/
+padding: 10px;
+border: 1px solid #888;
+}
+
+/* The Close Button */
+.closePublish {
+color: #333;
+float: right;
+font-size: 28px;
+font-weight: bold;
+line-height: 20px;
+}
+
+.closePublish:hover,
+.closePublish:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+.headingPublishPanel {
+	float: left;
+	width: 710px;
+	height: 175px;
+}
+
+.topHiddenPublishBar {
+width: 710px;
+height: 175px;
+background-color: #129c94;
+}
+
+.headingPublishPanelMiddle {
+		float: left;
+		width: 680px;
+		height: 90px;
+		margin-left: 20px;
+		/*
+		margin-bottom: 20px;
+		*/
+}
+
+.headingPublishPanelMiddleSearchHeader {
+float: left;
+width: 710px;
+height: 20px;
+font-family: myFont;
+font-size: 120%;
+font-style: normal;
+font-weight: 500;
+line-height: 30px;
+color: #28166f;
+margin-left: 0px;
+margin-top: 0px;
+}
+
+.headingPublishPanelMiddleSearch{
+	float: left;
+	height: 60px;
+	width: 710px;
+	font-family: myFont;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 40px;
+	color: #d95c00;
+	vertical-align: middle;
+	margin-left: 0px;
+}
+
+.priceEntryPrompt {
+	float: left;
+	width: 100px;
+	height: 24px;
+	text-align: left;
+	font-family: myFont;
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+	text-shadow: 1px 1px 1px #666;
+	line-height: 28px;
+	padding-left: 20px;
+}
+
+.priceEntryInput {
+	float: left;
+	width: 140px;
+	height: 28px;
+	text-align: left;
+	padding-left: 5px;
+}
+
+.uploadEntryPrompt {
+			float: left;
+			width: 300px;
+			height: 24px;
+			text-align: left;
+			font-family: myFont;
+			font-size: 14px;
+			font-weight: 700;
+			color: #fff;
+			text-shadow: 1px 1px 1px #666;
+			line-height: 28px;
+			padding-left: 80px;
+		}
+
+.uploadEntryInput {
+	float: left;
+	width: 120px;
+	height: 28px;
+	text-align: left;
+	padding-left: 5px;
+}
+
+.publishErrorMessage {
+	float: left;
+	width: 500px;
+	height: 20px;
+	text-align: left;
+	padding-left: 0px;
+	 font-size: 18px;
+}
+
 /*-- End Publish Plate Modal */
 
-				.modal-content {
-					width: 544px;
-					height: 300px;
-					background-color: #fff;
-					/*margin: auto;*/
-					padding: 10px;
-					border: 1px solid #888;
-				}
+	.modal-profile-content {
+		width: 544px;
+		height: 300px;
+		background-color: #fff;
+		/*margin: auto;*/
+		padding: 10px;
+		border: 1px solid #888;
+	}
 
-				/* The Close Button */
-				.closeP {
-				color: #333;
-				float: right;
-				font-size: 28px;
-				font-weight: bold;
-				line-height: 20px;
-				}
+	/* The Close Button */
+	.closeP {
+	color: #333;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 20px;
+	}
 
-				.closeP:hover,
-				.closeP:focus {
-				color: #000;
-				text-decoration: none;
-				cursor: pointer;
-				}
+	.closeP:hover,
+	.closeP:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+	}
 
-				.topBar {
-						margin-left: auto;
-						margin-right: auto;
-						width: 600px;
-						height: 104px;
-					}
+	.topBar {
+			margin-left: auto;
+			margin-right: auto;
+			width: 600px;
+			height: 104px;
+		}
 
-				.profileLogon {
-					width: 500px;
-					height: 44px;
-					/*margin-left: auto;
-					margin-right: auto;*/
-				}
+	.profileLogon {
+		width: 500px;
+		height: 44px;
+		/*margin-left: auto;
+		margin-right: auto;*/
+	}
 
-				.profileTopBar2 {
-				width: 500px;
-				height: 4px;
-				background-color: #129c94;
-				}
+	.profileTopBar2 {
+	width: 500px;
+	height: 4px;
+	background-color: #129c94;
+	}
 
-				.profileTopBar {
-				width: 500px;
-				height: 44px;
-				background-color: #129c94;
-				color: #666;
-				font-size: 14px;
-				line-height: 16px;
-				font-weight: 900;
-				}
+	.profileTopBar {
+	width: 500px;
+	height: 44px;
+	background-color: #129c94;
+	color: #666;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 900;
+	}
 
-				.profileTopBarMiddle {
-				float: left;
-				width: 495px;
-				height: 40px;
-				text-align: left;
-				padding-left: 5px;
-				}
+	.profileTopBarMiddle {
+	float: left;
+	width: 495px;
+	height: 40px;
+	text-align: left;
+	padding-left: 5px;
+	}
 
-				.topHiddenBar {
-				width: 500px;
-				height: 280px;
-				background-color: #129c94;
-				}
+	.topHiddenBar {
+	width: 500px;
+	height: 280px;
+	background-color: #129c94;
+	}
 
-				.profileEntryPanel{
-					float: left;
-					width: 475px;
-					height: 280px;
-					text-align: left;
-					line-height: 22px;
-					padding-left: 5px;
-				}
+	.profileEntryPanel{
+		float: left;
+		width: 475px;
+		height: 280px;
+		text-align: left;
+		line-height: 22px;
+		padding-left: 5px;
+	}
 
-				.profileEntryLine {
-					float: left;
-					width: 500px;
-					height: 28px;
-					padding-left: 0px;
-					margin-top: 10px;
-					margin-bottom: 5px;
-				}
+	.profileEntryLine {
+		float: left;
+		width: 500px;
+		height: 28px;
+		padding-left: 0px;
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
 
-				.profileEntryPrompt {
-					float: left;
-					width: 180px;
-					height: 24px;
-					text-align: left;
-					font-family: myFont;
-					font-size: 14px;
-					font-weight: 700;
-					color: #fff;
-					text-shadow: 1px 1px 1px #666;
-					line-height: 28px;
-					padding-left: 0px;
-				}
+	.profileEntryPrompt {
+		float: left;
+		width: 180px;
+		height: 24px;
+		text-align: left;
+		font-family: myFont;
+		font-size: 14px;
+		font-weight: 700;
+		color: #fff;
+		text-shadow: 1px 1px 1px #666;
+		line-height: 28px;
+		padding-left: 0px;
+	}
 
-				.profileEntryInput {
-					float: left;
-					width: 280px;
-					height: 28px;
-					text-align: left;
-					padding-left: 5px;
-				}
+	.profileEntryInput {
+		float: left;
+		width: 280px;
+		height: 28px;
+		text-align: left;
+		padding-left: 5px;
+	}
 
-				.profileEntryPasswordLine {
-					float: left;
-					width: 500px;
-					height: 28px;
-					padding-left: 0px;
-				}
+	.profileEntryPasswordLine {
+		float: left;
+		width: 500px;
+		height: 28px;
+		padding-left: 0px;
+	}
 
-				.profileEntryPasswordPrompt {
-					float: left;
-					width: 180px;
-					height: 24px;
-					text-align: left;
-					font-family: myFont;
-					font-size: 14px;
-					font-weight: 700;
-					color: #fff;
-					text-shadow: 1px 1px 1px #666;
-					line-height: 28px;
-				}
+	.profileEntryPasswordPrompt {
+		float: left;
+		width: 180px;
+		height: 24px;
+		text-align: left;
+		font-family: myFont;
+		font-size: 14px;
+		font-weight: 700;
+		color: #fff;
+		text-shadow: 1px 1px 1px #666;
+		line-height: 28px;
+	}
 
-				.profileEntryPasswordInput {
-					float: left;
-					width: 280px;
-					height: 28px;
-					text-align: left;
-					padding-left: 5px;
-					padding-right: 10px;
-				}
+	.profileEntryPasswordInput {
+		float: left;
+		width: 280px;
+		height: 28px;
+		text-align: left;
+		padding-left: 5px;
+		padding-right: 10px;
+	}
 
-				.profileEntrySubmitButton {
-					float: left;
-					width: 70px;
-					height: 26px;
-					text-align: left;
-					padding-left: 5px;
-				}
+	.profileEntrySubmitButton {
+		float: left;
+		width: 70px;
+		height: 26px;
+		text-align: left;
+		padding-left: 5px;
+	}
 
-				.profileEntryErrorMessage {
-					float: left;
-					width: 500px;
-					height: 20px;
-					text-align: left;
-					padding-left: 0px;
-					 font-size: 18px;
-				}
+	.profileEntryErrorMessage {
+		float: left;
+		width: 500px;
+		height: 20px;
+		text-align: left;
+		padding-left: 0px;
+		 font-size: 18px;
+	}
 
 
 
 </style>
 
 <script>
+
+function doPublish()
+{
+	err = document.getElementById('publishError');
+	err.innerHTML="";
+
+  var prefix = document.getElementById('prefixP');
+	var letter1 = document.getElementById('letter1P');
+	var letter2 = document.getElementById('letter2P');
+	var number1 = document.getElementById('number1P');
+	var number2 = document.getElementById('number2P');
+	var number3 = document.getElementById('number3P');
+	var number4 = document.getElementById('number4P');
+	var suffix = document.getElementById('suffixP');
+	var price = document.getElementById('price-input');
+	var upload = document.getElementById('upload-input');
+
+	var jsonData = {};
+	jsonData['prefix'] = prefix.value;
+	jsonData['letter1'] = letter1.value;
+	jsonData['letter2'] = letter2.value;
+	jsonData['number1'] = number1.value;
+	jsonData['number2'] = number2.value;
+	jsonData['number3'] = number3.value;
+	jsonData['number4'] = number4.value;
+	jsonData['suffix'] = suffix.value;
+	jsonData['price'] = price.value;
+
+	access_token = sessionStorage.getItem("access_token");
+	var bearerHeader = 'Bearer ' + access_token;
+
+	$.ajax({
+
+		type: "POST",
+			 url : "/platez/api/punter/publishPlate",
+			 headers: { 'Authorization': bearerHeader },
+			 cache: false,
+			 contentType: 'application/json;',
+			 dataType: "json",
+			 data:JSON.stringify(jsonData),
+				success: function(data) {
+					var result = $.parseJSON(JSON.stringify(data));
+					if (result.status != 'OK')
+					{
+						err.appendChild(document.createTextNode(result.message));
+						return;
+					}
+					getPunter();
+					getAllPlates();
+		}
+	});
+}
 
 function saveProfile()
 {
@@ -510,34 +713,11 @@ function saveProfile()
 
 function setUpModal()
 {
-	var modalP = document.getElementById('myModalP');
-	var btnP = document.getElementById("editProfile");
-	var spanP = document.getElementsByClassName("closeP")[0];
-// When the user clicks the button, open the modal
-
-	refreshOn = false;
-	modalP.style.display = "none";
-
-	btnP.onclick = function() {
-		refreshOn = false;
-		modalP.style.display = "block";
-		return false;
-	}
-
-// When the user clicks on <span> (x), close the modal
-	spanP.onclick = function() {
-		refreshOn = true;
-		modalP.style.display = "none";
-		return false;
-	}
-
-// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-		if (event.target == modalP) {
-				refreshOn = true;
-				modalP.style.display = "none";
-		}
-	}
+	$(document).ready(function(){
+		$("#editProfile").click(function(){
+				$("#myModalP").modal();
+		});
+	});
 }
 
 function setUpPublishModal()
@@ -547,18 +727,18 @@ function setUpPublishModal()
 	var spanPP = document.getElementsByClassName("closePublish")[0];
 // When the user clicks the button, open the modal
 
-	refreshOn = false;
+	publishRefreshOn = false;
 	modalPP.style.display = "none";
 
 	btnPP.onclick = function() {
-		refreshOn = false;
+		publishRefreshOn = false;
 		modalPP.style.display = "block";
 		return false;
 	}
 
 // When the user clicks on <span> (x), close the modal
 	spanPP.onclick = function() {
-		refreshOn = true;
+		publishRefreshOn = true;
 		modalPP.style.display = "none";
 		return false;
 	}
@@ -566,7 +746,7 @@ function setUpPublishModal()
 // When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
 		if (event.target == modalPP) {
-				refreshOn = true;
+				publistRefreshOn = true;
 				modalPP.style.display = "none";
 		}
 	}
@@ -657,6 +837,7 @@ function displayPunterProfile()
 	document.getElementById('vpassword-input').value = 'Coco2828';
 
 	setUpModal();
+	setUpPublishModal();
 }
 
 function makeOffer(regNo,plateId,listPrice)
@@ -758,6 +939,34 @@ function cancelOffer(offerId)
 				getAllPlates();
 			}
 	})
+}
+
+function viewOffers(regNo)
+{
+	getPunter();
+	plateSell = punter.plateSells[regNo];
+	var ot = document.getElementById("offerTable");
+	plateSell.offers.forEach((offer,i) => {
+	  var tr = document.createElement('tr');
+		td = document.createElement('td');
+		var txt = document.createTextNode(offer.buyerEmail);
+  	td.appendChild(txt);
+		tr.appendChild(td);
+		td = document.createElement('td');
+		var txt = document.createTextNode(offer.offeredOn);
+  	td.appendChild(txt);
+		tr.appendChild(td);
+		td = document.createElement('td');
+		var txt = document.createTextNode(offer.offer.toString());
+  	td.appendChild(txt);
+		tr.appendChild(td);
+		td = document.createElement('td');
+		var txt = document.createTextNode(offer.status);
+  	td.appendChild(txt);
+		tr.appendChild(td);
+		ot.appendChild(tr);
+	});
+	$("#myModalOffer").modal();
 }
 
 function numberWithCommas(x) {
@@ -1007,7 +1216,7 @@ function createOption(choice)
 function displayPlates()
 {
     document.getElementById('pc').innerHTML="";
-
+/*
 		pl = document.createElement('div');
 		pl.className = 'prodList'
 		document.getElementById('pc').appendChild(pl);
@@ -1019,10 +1228,11 @@ function displayPlates()
 		aImg.setAttribute("onclick",funct);
 		pe.appendChild(aImg);
 		pl.appendChild(pe);
-
+*/
     plates.forEach((plate, i) => {
-			if (i>0)
+	/*		if (i>0)
 			{
+			*/
 		    var pe = document.createElement('div');
 		    pe.className = 'prodListEntry';
 
@@ -1051,12 +1261,22 @@ function displayPlates()
 		    var price = numberWithCommas(plate.listPrice);
 		    pp.appendChild(document.createTextNode('RM'+price));
 		    peh.appendChild(pp);
-				punter;
+
 				var sell = punter.plateSells[plate.regNo];
 				pp.appendChild(document.createElement('br'));
 				if (sell != null)
 				{
-					pp.appendChild(document.createTextNode("Offers : " + sell.offersDistinctCount));
+					if (sell.offersDistinctCount==0)
+						pp.appendChild(document.createTextNode("Offers : " + sell.offersDistinctCount));
+					else {
+						var aTag = document.createElement('a');
+						aTag.setAttribute('href',"#");
+						funct = "return viewOffers('" + plate.regNo + "');"
+						aTag.setAttribute("onclick",funct);
+						aTag.innerHTML = "Offers : " + sell.offersDistinctCount;
+						aTag.style.color = 'BLUE';
+						pp.appendChild(aTag);
+					}
 				}
 				else {
 					var offer = punter.offers[plate.regNo];
@@ -1089,18 +1309,16 @@ function displayPlates()
 					pp.appendChild(aTag);
 				  }
 				}
-		    if (!(i % 5) && i>0) {
+		    if (!(i % 5)) {
 		        pl = document.createElement('div');
 		        pl.className = 'prodList'
 		        document.getElementById('pc').appendChild(pl);
 		    }
 
 		    pl.appendChild(pe);
-			}
+	/*		} */
   });
 }
-
-
 
 </script>
 
@@ -1130,10 +1348,16 @@ function displayPlates()
 		<div class="headingPanelLogonHeaderCell">
 			<a href="/platez/web/anon/getAllPlates">Home</a>
 		</div>
-	</div>
-	<div id="myModalP" class="modal">
-			<div class="modal-content">
-				<span class="closeP">&times;</span>
+
+<div id="myModalP" class="modal fade" role="dialog">
+	<div class="modal-dialog" style="width=520px">
+			<div class="modal-content" style="width=520px">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title" style="width=520px">Edit Profile</h4>
+					</div>
+					<div class="modal-body" style="width=520px">
+<!--				<span class="closeP">&times;</span>  -->
 						<div id="#129c94r2P" class="topHiddenBar">
 							<div class="profileEntryPanel">
 								<div class="profileEntryLine">
@@ -1192,15 +1416,38 @@ function displayPlates()
 								</div>
 							</div>  <!-- profileEntryPanel -->
 						</div>  <!-- topHiddenBar -->
+					</div>
+			</div>
+		</div>
+	</div>
+</div>  <!-- modalP  -->
+<div id="myModalOffer" class="modal fade" role="dialog">
+	<div class="modal-dialog" style="width=740px">
+			<div class="modal-content" style="width=740px">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title" style="width=740px">Edit Profile</h4>
+					</div>
+					<div class="modal-body" style="width=740px">
+							<div id="#129c94r2P" class="topHiddenOfferBar">
+									<div class="offerPanel">
+										<table id="offerTable" style="overflow: auto;">
+										</table>
+										<div class="offerErrorMessage" id='offerError'>
+										</div>
+									</div>  <!-- offerPanel -->
+								</div>  <!-- topHiddenBar -->
+						</div>
 				</div>  <!-- modal-content  -->
-			</div>  <!-- modalP  -->
+			</div>
+</div>  <!-- myModalOffer  -->
 			<div id="myModalPublish" class="modal">
 					<div class="modal-publish-content">
 					<span class="closePublish">&times;</span>
 					<div id="#129c94r2PP" class="topHiddenPublishBar">
 						<div class="headingPublishPanel">
-									<div class="headingPanelMiddle">
-										<div class="headingPanelMiddleSearchHeader">
+									<div class="headingPublishPanelMiddle">
+										<div class="headingPublishPanelMiddleSearchHeader">
 					            <div class="headingPanelMiddleSearchHeaderCell">
 													Prefix
 											</div>
@@ -1229,9 +1476,9 @@ function displayPlates()
 					          	</div>
 											<div class="headingPanelMiddleSearchHeaderCell">
 					          	</div>
-								</div>  <!-- headingPanelMiddleSearchHeader -->
+								</div>  <!-- headingPublishPanelMiddleSearchHeader -->
 
-							<div class="headingPanelMiddleSearch">
+							<div class="headingPublishPanelMiddleSearch">
 											<div class="headingPanelMiddleSearchCell">
 												<select name='prefixdd' id='prefixP' style="width: 65px;
 																height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
@@ -1274,10 +1521,26 @@ function displayPlates()
 											</div>
 					          <div class="headingPanelMiddleSearchButton">
 					          <input name="publish1" value="Publish" type="button"
-					              onClick="return doPublish()" style=
+					              onClick="return doPublish();" style=
 					              "font-family: myFont; color: green; font-size:20px; font-weight:700;"/>
 					          </div>
 					      </div>
+							</div>
+							<div class="priceEntryPrompt">
+								Price:
+							</div>
+							<div class="priceEntryInput">
+									<input id="price-input" type="text"
+															value="" style="height: 26px; width: 140px; font-size: 14px; "/>
+							</div>
+							<div class="uploadEntryPrompt">
+								Upload proof of ownership:
+							</div>
+							<div class="uploadEntryInput">
+									<input id="upload-input" type="file"
+															value="" style="height: 28px; font-size: 14px; "/>
+							</div>
+							<div class="publishErrorMessage" id="publishError">
 							</div>
 					  </div>
 					</div>
@@ -1386,11 +1649,11 @@ function displayPlates()
   </div>
   <div id='pc' class='prodListContainer'>
   </div>
+</div>
 </body>
 <script>
 	getPunter();
   getAllPlates();
   getQueryParams();
-	setUpPublishModal();
 </script>
 </html>

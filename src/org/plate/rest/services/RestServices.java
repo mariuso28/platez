@@ -20,6 +20,7 @@ import org.plate.json.ProfileJson;
 import org.plate.json.PunterJson;
 import org.plate.json.QueryOnDigitsParamsJson;
 import org.plate.json.PlateParamsJson;
+import org.plate.json.PlatePublishJson;
 import org.plate.json.QueryParamsJson;
 import org.plate.json.SendPlateOfferJson;
 import org.plate.persistence.PersistenceDuplicateKeyException;
@@ -301,11 +302,70 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 		try
 		{
 			offerId = Long.parseLong(offerIdStr);
+			services.getHome().getPlateSellDao().setPlateOfferStatus(offerId,status);
 		}
 		catch (Exception e)
 		{
 			throw new RestServicesException("Invalid offerId - contact support");
 		}
-		services.getHome().getPlateSellDao().setPlateOfferStatus(offerId,status);
+		
+	}
+
+	public void publishPlate(PlatePublishJson platePublish,String email) {
+		double price;
+		try
+		{
+			price = Double.parseDouble(platePublish.getPrice().replace(",",""));
+			if (price<=0)
+				throw new RestServicesException("Invalid price - please resubmit");
+		}
+		catch (Exception e)
+		{
+			throw new RestServicesException("Invalid price - please resubmit");
+		}
+		alignParams(platePublish);
+		if (platePublish.getPrefix().isEmpty())
+			throw new RestServicesException("Missing prefix - please resubmit");
+		if (platePublish.getNumber1().isEmpty())
+			throw new RestServicesException("Missing number(s) - please resubmit");
+		try
+		{
+			Plate plate = createPlate(platePublish,price);
+			services.getHome().getPlateDao().store(plate);
+			PlateSell ps = new PlateSell();
+			ps.setPlate(plate);
+			ps.setSellDate((new GregorianCalendar()).getTime());
+			ps.setSellerEmail(email);
+			services.getHome().getPlateSellDao().storePlateSell(ps);
+			
+			log.info("Stored : " + plate.getRegNo() + " - " + plate.getListPrice());
+		}
+		catch (PersistenceDuplicateKeyException e)
+		{
+			log.warn(e.getMessage());
+			throw new RestServicesException(e.getMessage());
+		}
+		catch (Exception e)
+		{
+			log.error(e.getMessage(),e);
+			throw new RestServicesException("Unexpected error saving plate - contact support");
+		}
+			
+		
+	}
+
+	private Plate createPlate(PlatePublishJson platePublish,double price) {
+		Plate plate = new Plate();
+		plate.setPrefix(platePublish.getPrefix());
+		plate.setLetter1(platePublish.getLetter1());
+		plate.setLetter2(platePublish.getLetter2());
+		plate.setNumber1(platePublish.getNumber1());
+		plate.setNumber2(platePublish.getNumber2());
+		plate.setNumber3(platePublish.getNumber3());
+		plate.setNumber4(platePublish.getNumber4());
+		plate.setSuffix(platePublish.getSuffix());
+		plate.setListPrice(price);
+		plate.setSpecials();
+		return plate;
 	}
 }

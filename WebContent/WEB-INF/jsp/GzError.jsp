@@ -9,6 +9,3 @@
 Gz System Error
 </body>
 </html>
-
-","
-          + plate.regNo + "," + plate.listPrice +

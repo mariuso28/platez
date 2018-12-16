@@ -1,5 +1,6 @@
 package org.plate.rest.punter;
 
+import org.plate.json.PlatePublishJson;
 import org.plate.json.ProfileJson;
 import org.plate.json.ResultJson;
 import org.plate.json.SendPlateOfferJson;
@@ -32,5 +33,9 @@ public interface RestPunterController {
 	@RequestMapping(value = "/rejectOffer")
 	// PkfzResultJson contains nothing if success, message if fail
 	public ResultJson rejectOffer(OAuth2Authentication auth,@RequestParam("offerId") String offerId);
+	
+	@RequestMapping(value = "/publishPlate")
+	// PkfzResultJson contains nothing if success, message if fail
+	public ResultJson publishPlate(OAuth2Authentication auth,@RequestBody() PlatePublishJson platePublish);
 
 }

@@ -10,6 +10,7 @@ import org.plate.persistence.PersistenceDuplicateKeyException;
 import org.plate.persistence.PersistenceRuntimeException;
 import org.plate.user.BaseUser;
 import org.springframework.dao.DataAccessException;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcDaoSupport;
@@ -38,7 +39,7 @@ public class BaseUserDaoImpl extends NamedParameterJdbcDaoSupport implements Bas
 			    });
 			
 		}
-		catch (org.springframework.dao.DuplicateKeyException e)
+		catch (DuplicateKeyException e)
 		{
 			log.warn("Could not execute : " + e.getMessage());
 			throw new PersistenceDuplicateKeyException("User with email:" + bu.getEmail() + " already exists");

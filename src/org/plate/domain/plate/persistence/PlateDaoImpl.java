@@ -8,9 +8,11 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.plate.domain.plate.Plate;
 import org.plate.domain.plate.sell.persistence.PlateSellDao;
+import org.plate.persistence.PersistenceDuplicateKeyException;
 import org.plate.persistence.PersistenceRuntimeException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.PreparedStatementSetter;
@@ -68,6 +70,11 @@ public class PlateDaoImpl extends NamedParameterJdbcDaoSupport implements PlateD
 				final long id = keyHolder.getKey().longValue();
 				plate.setId(id);
 		}
+		catch (DuplicateKeyException e)
+		{
+			log.warn("Could not execute : " + e.getMessage());
+			throw new PersistenceDuplicateKeyException("Plate with registration number:" + plate.getRegNo() + " already exists on system.");
+		}	
 		catch (DataAccessException e)
 		{
 			log.error("Could not execute : " + e.getMessage(),e);

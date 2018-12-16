@@ -282,6 +282,8 @@ public class Plate implements Serializable{
 
 	public void setSpecials()
 	{
+		regNo = prefix + " " + letter1 + letter2 + number1 + number2 + number3 + number4 + " " + suffix;
+		regNo = regNo.trim();
 		digit1 = number2.isEmpty();
 		digit2 = !number2.isEmpty() && number3.isEmpty();
 		digit3 = !number2.isEmpty() && !number3.isEmpty() && number4.isEmpty();

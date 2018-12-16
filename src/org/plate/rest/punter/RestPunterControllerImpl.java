@@ -2,6 +2,7 @@ package org.plate.rest.punter;
 
 import org.apache.log4j.Logger;
 import org.plate.json.PlateOfferStatusJson;
+import org.plate.json.PlatePublishJson;
 import org.plate.json.ProfileJson;
 import org.plate.json.PunterJson;
 import org.plate.json.ResultJson;
@@ -136,6 +137,32 @@ public class RestPunterControllerImpl implements RestPunterController{
 		try
 		{
 			restServices.changeOfferStatus(offerId,status);
+			result.success();
+		}
+		catch (Exception e)
+		{
+			log.error(e.getMessage(),e);
+			if (e.getMessage()!=null)
+				result.fail(e.getMessage());
+			else
+				result.fail(e.toString());
+		}
+		return result;
+	}
+	
+	@RequestMapping(value = "/publishPlate")
+	// PkfzResultJson contains nothing if success, message if fail
+	public ResultJson publishPlate(OAuth2Authentication auth,@RequestBody() PlatePublishJson platePublish)
+	{
+		String email = ((User)auth.getPrincipal()).getUsername();
+		ResultJson result = new ResultJson();
+		PunterJson punter = getPunter(email,result);
+		if (punter==null)
+			return result;
+		
+		try
+		{
+			restServices.publishPlate(platePublish, punter.getProfile().getEmail());
 			result.success();
 		}
 		catch (Exception e)
