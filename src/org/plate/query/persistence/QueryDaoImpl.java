@@ -7,8 +7,8 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.plate.domain.plate.Plate;
 import org.plate.domain.plate.sell.persistence.PlateSellDao;
-import org.plate.json.QueryOnDigitsParamsJson;
 import org.plate.json.PlateParamsJson;
+import org.plate.json.QueryOnDigitsParamsJson;
 import org.plate.persistence.PersistenceRuntimeException;
 import org.plate.query.QueryException;
 import org.plate.query.QueryMgr;
@@ -33,7 +33,7 @@ public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryD
 		String whereStr = buildWhereStr(params);
 		if (whereStr.isEmpty())
 			throw new QueryException("Query has no parameters");
-		String sql = "SELECT * FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE " + whereStr + "ORDER BY ps.selldate DESC";
+		String sql = "SELECT p.* FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE " + whereStr + "ORDER BY ps.selldate DESC";
 		log.info("SQL : " + sql);
 		try
 		{
@@ -75,7 +75,7 @@ public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryD
 	public List<Plate> QueryOnDigits(QueryOnDigitsParamsJson params) throws PersistenceRuntimeException {
 		log.info("Performing QueryOnDigits with : " + params.getCombo());
 	
-		String sql = "SELECT * FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE " + params.getCombo() + " ORDER BY ps.selldate DESC";
+		String sql = "SELECT p.* FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE " + params.getCombo() + " ORDER BY ps.selldate DESC";
 		log.info("SQL : " + sql);
 		try
 		{
@@ -96,7 +96,7 @@ public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryD
 	public List<Plate> QueryOnListPrice(final double min, final double max) throws PersistenceRuntimeException {
 		log.info("Performing QueryOnListPrice with : " + min + " - " + max);
 		
-		String sql = "SELECT * FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE listprice>=? AND listprice<=? ORDER BY ps.selldate DESC";
+		String sql = "SELECT p.* FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE listprice>=? AND listprice<=? ORDER BY ps.selldate DESC";
 		try
 		{
 			List<Plate> plates = getJdbcTemplate().query(sql,new PreparedStatementSetter() {
@@ -120,7 +120,7 @@ public class QueryDaoImpl extends NamedParameterJdbcDaoSupport implements QueryD
 	public List<Plate> QueryOnRating(final int min,final int max) throws PersistenceRuntimeException {
 		log.info("Performing QueryOnRating with : " + min + " - " + max);
 		
-		String sql = "SELECT * FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE rating>=? AND rating<=? ORDER BY ps.selldate DESC";
+		String sql = "SELECT p.* FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE rating>=? AND rating<=? ORDER BY ps.selldate DESC";
 		try
 		{
 			List<Plate> plates = getJdbcTemplate().query(sql,new PreparedStatementSetter() {

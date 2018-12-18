@@ -3,8 +3,8 @@ package org.plate.query.persistence;
 import java.util.List;
 
 import org.plate.domain.plate.Plate;
-import org.plate.json.QueryOnDigitsParamsJson;
 import org.plate.json.PlateParamsJson;
+import org.plate.json.QueryOnDigitsParamsJson;
 import org.plate.persistence.PersistenceRuntimeException;
 import org.plate.query.QueryException;
 

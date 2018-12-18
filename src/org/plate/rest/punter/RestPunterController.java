@@ -8,6 +8,7 @@ import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 public interface RestPunterController {
 	@RequestMapping(value = "/getPunter")
@@ -35,7 +36,11 @@ public interface RestPunterController {
 	public ResultJson rejectOffer(OAuth2Authentication auth,@RequestParam("offerId") String offerId);
 	
 	@RequestMapping(value = "/publishPlate")
-	// PkfzResultJson contains nothing if success, message if fail
+	// PkfzResultJson contains plateId if success, message if fail
 	public ResultJson publishPlate(OAuth2Authentication auth,@RequestBody() PlatePublishJson platePublish);
 
+	@RequestMapping(value = "/publishProofOwnership")
+	// PkfzResultJson contains nothing if success, message if fail
+	public ResultJson publishProofOwnership(OAuth2Authentication auth,@RequestParam("uploadfile") MultipartFile uploadfile,@RequestParam("plateId") String plateId);
+	
 }

@@ -23,7 +23,8 @@ http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 		
 		<bean id="services"
 			class="org.plate.services.Services" init-method="initServices" >
-			<property name="home" ref="home" />			
+			<property name="home" ref="home" />
+			<property name="propertiesPath" value="/home/pmk/platez/platez.config"/>			
 		</bean>
 		
 		<bean id="restServices"

@@ -127,6 +127,36 @@ public class PlateDaoImpl extends NamedParameterJdbcDaoSupport implements PlateD
 			throw new PersistenceRuntimeException("Could not execute getById : " + e.getMessage());
 		}
 	}
+
+	@Override
+	public void delete(long id) {
+		try
+		{
+			final String sql = "DELETE * FROM plateoffer WHERE platesellid=(SELECT id FROM platesell WHERE plateid = ?";
+			getJdbcTemplate().update(sql,new PreparedStatementSetter() {
+				        public void setValues(PreparedStatement preparedStatement) throws SQLException {
+				          preparedStatement.setLong(1,id);
+				        }
+				      });
+			final String sql2 = "DELETE * FROM platesell WHERE plateid = ?";
+			getJdbcTemplate().update(sql2,new PreparedStatementSetter() {
+				        public void setValues(PreparedStatement preparedStatement) throws SQLException {
+				          preparedStatement.setLong(1,id);
+				        }
+				      });
+			final String sql3 = "DELETE * FROM plate WHERE id=?";
+			getJdbcTemplate().update(sql3,new PreparedStatementSetter() {
+				        public void setValues(PreparedStatement preparedStatement) throws SQLException {
+				          preparedStatement.setLong(1,id);
+				        }
+				      });
+		}
+		catch (DataAccessException e)
+		{
+			log.error("Could not execute : " + e.getMessage(),e);
+			throw new PersistenceRuntimeException("Could not execute getById : " + e.getMessage());
+		}
+	}
 	
 
 }

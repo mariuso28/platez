@@ -13,11 +13,18 @@ public class PlateSell {
 	private String sellerEmail;
 	private Date sellDate;
 	private List<PlateOffer> offers = new ArrayList<PlateOffer>();
+	private String proofOwnerStr;
+	private byte[] proofOwner;
 	
 	public PlateSell()
 	{
 	}
 
+	public String getPlateSellProofOwnerDocName()
+	{
+		return plate.getRegNo() + sellerEmail + ".zzz";
+	}
+	
 	public long getId() {
 		return id;
 	}
@@ -70,6 +77,24 @@ public class PlateSell {
 
 	public void setPlateId(long plateId) {
 		this.plateId = plateId;
+	}
+
+	
+
+	public String getProofOwnerStr() {
+		return proofOwnerStr;
+	}
+
+	public void setProofOwnerStr(String proofOwnerStr) {
+		this.proofOwnerStr = proofOwnerStr;
+	}
+
+	public byte[] getProofOwner() {
+		return proofOwner;
+	}
+
+	public void setProofOwner(byte[] proofOwner) {
+		this.proofOwner = proofOwner;
 	}
 	
 	

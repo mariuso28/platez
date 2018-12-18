@@ -1050,7 +1050,7 @@ function displayPlates()
 									</div>
 									<div class="headingLoginUsernameInput">
 											<input id="email" type="text"
-																	value="jpj@test.com" style="height: 26px; width: 240px; font-size: 14px; "/>
+																	value="koko@test.com" style="height: 26px; width: 240px; font-size: 14px; "/>
 									</div>
 								</div>
 								<div class="headingLoginPasswordLine">

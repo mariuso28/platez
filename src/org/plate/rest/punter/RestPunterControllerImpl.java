@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/api/punter")
@@ -122,7 +123,7 @@ public class RestPunterControllerImpl implements RestPunterController{
 	public ResultJson rejectOffer(OAuth2Authentication auth,@RequestParam("offerId") String offerId)
 	{
 		String email = ((User)auth.getPrincipal()).getUsername();
-		log.info("Received acceptOffer for : " + email);
+		log.info("Received rejectOffer for : " + email);
 		
 		return changeOfferStatus(email,offerId,PlateOfferStatusJson.REJECTED);
 	}
@@ -151,7 +152,7 @@ public class RestPunterControllerImpl implements RestPunterController{
 	}
 	
 	@RequestMapping(value = "/publishPlate")
-	// PkfzResultJson contains nothing if success, message if fail
+	// PkfzResultJson contains plateId if success, message if fail
 	public ResultJson publishPlate(OAuth2Authentication auth,@RequestBody() PlatePublishJson platePublish)
 	{
 		String email = ((User)auth.getPrincipal()).getUsername();
@@ -160,9 +161,38 @@ public class RestPunterControllerImpl implements RestPunterController{
 		if (punter==null)
 			return result;
 		
+		log.info("Received publishPlate for : " + email);
+		
 		try
 		{
-			restServices.publishPlate(platePublish, punter.getProfile().getEmail());
+			String plateId = restServices.publishPlate(platePublish, punter.getProfile().getEmail());
+			result.success(plateId);
+		}
+		catch (Exception e)
+		{
+			log.error(e.getMessage(),e);
+			if (e.getMessage()!=null)
+				result.fail(e.getMessage());
+			else
+				result.fail(e.toString());
+		}
+		return result;
+	}
+	
+	@RequestMapping(value = "/publishProofOwnership")
+	// PkfzResultJson contains nothing if success, message if fail
+	public ResultJson publishProofOwnership(OAuth2Authentication auth,@RequestParam("uploadfile") MultipartFile uploadfile,@RequestParam("plateId") String plateId)
+	{
+		String email = ((User)auth.getPrincipal()).getUsername();
+		ResultJson result = new ResultJson();
+		PunterJson punter = getPunter(email,result);
+		if (punter==null)
+			return result;
+		
+		log.info("Received publishProofOwnership for : " + email);
+		try
+		{
+			restServices.publishPlateProofOffer(uploadfile,plateId);
 			result.success();
 		}
 		catch (Exception e)

@@ -1,5 +1,6 @@
 package org.plate.rest.services;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
@@ -15,12 +16,12 @@ import org.plate.domain.plate.sell.PlateSell;
 import org.plate.json.PlateJson;
 import org.plate.json.PlateOfferJson;
 import org.plate.json.PlateOfferStatusJson;
+import org.plate.json.PlateParamsJson;
+import org.plate.json.PlatePublishJson;
 import org.plate.json.PlateSellJson;
 import org.plate.json.ProfileJson;
 import org.plate.json.PunterJson;
 import org.plate.json.QueryOnDigitsParamsJson;
-import org.plate.json.PlateParamsJson;
-import org.plate.json.PlatePublishJson;
 import org.plate.json.QueryParamsJson;
 import org.plate.json.SendPlateOfferJson;
 import org.plate.persistence.PersistenceDuplicateKeyException;
@@ -34,6 +35,7 @@ import org.plate.user.punter.Punter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.multipart.MultipartFile;
 
 public class RestServices {
 private static final Logger log = Logger.getLogger(RestServices.class);
@@ -311,7 +313,31 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 		
 	}
 
-	public void publishPlate(PlatePublishJson platePublish,String email) {
+	public void publishPlateProofOffer(MultipartFile file,String plateId)
+	{
+		long pid;
+		try
+		{
+			pid = Long.parseLong(plateId);
+		}
+		catch (Exception e)
+		{
+			throw new RestServicesException("Error on upload - invalid plateid - contact support");
+		}
+		try
+		{
+			byte[] bytes = file.getBytes();
+			services.getHome().getPlateSellDao().updatePlateSellProofOwner(bytes,pid);
+		}
+		catch (IOException e)
+		{
+			log.error(e.getMessage(),e);
+			services.getHome().getPlateDao().delete(pid);
+			throw new RestServicesException("Error on upload - please resubmit another file");
+		}
+	}
+	
+	public String publishPlate(PlatePublishJson platePublish,String email) {
 		double price;
 		try
 		{
@@ -339,6 +365,7 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 			services.getHome().getPlateSellDao().storePlateSell(ps);
 			
 			log.info("Stored : " + plate.getRegNo() + " - " + plate.getListPrice());
+			return Long.toString(plate.getId());
 		}
 		catch (PersistenceDuplicateKeyException e)
 		{

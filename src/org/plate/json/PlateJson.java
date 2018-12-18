@@ -56,6 +56,6 @@ public class PlateJson {
 	public void setPlateSell(PlateSellJson plateSell) {
 		this.plateSell = plateSell;
 	}
-	
+
 	
 }

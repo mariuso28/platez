@@ -13,6 +13,9 @@
 <link rel="stylesheet" href="../../css/bootstrap.min.css" />
 <link rel="stylesheet" href="../../css/style.css" />
 
+<html>
+
+
 <style>
 
 
@@ -124,7 +127,7 @@
 
   .headingPanelMiddleSearchButton {
 			float: left;
-			width: 100px;
+			width: 120px;
 			height: 50px;
 			margin-right: 5px;
 		}
@@ -294,14 +297,14 @@
 			}
 
 	.topHiddenOfferBar {
-			width: 710px;
+			width: 540px;
 			height: 175px;
 			background-color: #129c94;
 			}
 
 		.offerInfoLine {
 			float: left;
-			width: 680px;
+			width: 500px;
 			height: 20px;
 			text-align: left;
 			padding-left: 0px;
@@ -610,6 +613,40 @@ margin-top: 0px;
 
 <script>
 
+function doPublishProofOwnership(plateId)
+{
+	access_token = sessionStorage.getItem("access_token");
+  var bearerHeader = 'Bearer ' + access_token;
+
+	// Attach file
+	var uploadForm = document.getElementById('upload-form');
+	var formData = new FormData(uploadForm);
+	formData.append("plateId",plateId);
+
+	$.ajax({
+	    url: "/platez/api/punter/publishProofOwnership",
+			headers: { 'Authorization': bearerHeader },
+	//		enctype: 'multipart/form-data',
+	    data: formData,
+	    type: 'POST',
+			cache: false,
+	    contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+	    processData: false, // NEEDED, DON'T OMIT THIS
+			success: function(data) {
+				var result = $.parseJSON(JSON.stringify(data));
+				if (result.status != 'OK')
+				{
+					alert("Failed " + result.message);
+					return;
+				}
+				alert("OK");
+			},
+			error:function (e) {
+  			alert("doPublishProofOwnership ERROR : " + e.status + " - " + e.statusText);
+      }
+	});
+}
+
 function doPublish()
 {
 	err = document.getElementById('publishError');
@@ -624,7 +661,6 @@ function doPublish()
 	var number4 = document.getElementById('number4P');
 	var suffix = document.getElementById('suffixP');
 	var price = document.getElementById('price-input');
-	var upload = document.getElementById('upload-input');
 
 	var jsonData = {};
 	jsonData['prefix'] = prefix.value;
@@ -636,6 +672,7 @@ function doPublish()
 	jsonData['number4'] = number4.value;
 	jsonData['suffix'] = suffix.value;
 	jsonData['price'] = price.value;
+
 
 	access_token = sessionStorage.getItem("access_token");
 	var bearerHeader = 'Bearer ' + access_token;
@@ -656,8 +693,15 @@ function doPublish()
 						err.appendChild(document.createTextNode(result.message));
 						return;
 					}
+					alert('Publish plate with id : ' + result.result);
+					doPublishProofOwnership(result.result);
+
 					getPunter();
 					getAllPlates();
+		}
+		,
+		error:function (e) {
+			alert("doPublish ERROR : " + e.status + " - " + e.statusText);
 		}
 	});
 }
@@ -707,7 +751,10 @@ function saveProfile()
 						return;
 					}
 					getPunter();
-		}
+				},
+				error:function (e) {
+	  			alert("saveProfile ERROR : " + e.status + " - " + e.statusText);
+	      }
 	});
 }
 
@@ -783,7 +830,10 @@ function getPunter() {
 					}
 					punter = resultJson.result;
 					displayPunterProfile();
-        }
+        },
+				error:function (e) {
+	  			alert("getPunter ERROR : " + e.status + " - " + e.statusText);
+	      }
      });
  }
 
@@ -816,7 +866,10 @@ function getPunter() {
  					}
  					punter = resultJson.result;
  					displayPlates();
-         }
+         },
+	 				error:function (e) {
+	   			alert("displayPunterPlates ERROR : " + e.status + " - " + e.statusText);
+	       }
       });
   }
 
@@ -883,7 +936,10 @@ function sendOffer(plateId,offer)
 					}
 					getPunter();
 					getAllPlates();
-				}
+				},
+				error:function (e) {
+	  			alert("sendOffer ERROR : " + e.status + " - " + e.statusText);
+	      }
 		})
 }
 
@@ -937,15 +993,112 @@ function cancelOffer(offerId)
 				}
 				getPunter();
 				getAllPlates();
-			}
+			},
+			error:function (e) {
+  			alert("cancelOffer ERROR : " + e.status + " - " + e.statusText);
+      }
 	})
+}
+
+function acceptOffer(offerId)
+{
+	access_token = sessionStorage.getItem("access_token");
+	var bearerHeader = 'Bearer ' + access_token;
+
+	$.ajax({
+		type: "POST",
+		 url : "/platez/api/punter/acceptOffer?offerId="+offerId.toString(),
+		 headers: { 'Authorization': bearerHeader },
+		cache: false,
+		contentType: 'application/json;',
+		dataType: "text",
+//		data:JSON.stringify(jsonData),
+		 success: function(data) {
+		//    alert(JSON.stringify(data));
+				if (data == '')
+				{
+					 alert('Offer couldnt be accepted - contact support');
+					 return;
+				}
+				var result = $.parseJSON(data);
+				if (result.status != 'OK')
+				{
+					alert(result.message);
+					return;
+				}
+				getPunter();
+				getAllPlates();
+			},
+			error:function (e) {
+  			alert("acceptOffer ERROR : " + e.status + " - " + e.statusText);
+      }
+	})
+}
+
+function rejectOffer(offerId)
+{
+	access_token = sessionStorage.getItem("access_token");
+	var bearerHeader = 'Bearer ' + access_token;
+
+	$.ajax({
+		type: "POST",
+		 url : "/platez/api/punter/rejectOffer?offerId="+offerId.toString(),
+		 headers: { 'Authorization': bearerHeader },
+		cache: false,
+		contentType: 'application/json;',
+		dataType: "text",
+//		data:JSON.stringify(jsonData),
+		 success: function(data) {
+		//    alert(JSON.stringify(data));
+				if (data == '')
+				{
+					 alert('Offer couldnt be rejected - contact support');
+					 return;
+				}
+				var result = $.parseJSON(data);
+				if (result.status != 'OK')
+				{
+					alert(result.message);
+					return;
+				}
+				getPunter();
+				getAllPlates();
+			},
+			error:function (e) {
+  			alert("rejectOffer ERROR : " + e.status + " - " + e.statusText);
+      }
+	})
+}
+
+function formatDate(when)
+{
+    var date=new Date();
+    day=date.getDate();
+    month=date.getMonth();
+    month=month+1;
+    if((String(day)).length==1)
+    	day='0'+day;
+    if((String(month)).length==1)
+    	month='0'+month;
+
+    dateT=day+ '.' + month + '.' + date.getFullYear();
+  	return dateT;
 }
 
 function viewOffers(regNo)
 {
 	getPunter();
 	plateSell = punter.plateSells[regNo];
+	var title = document.getElementById("offerTitle");
+	var txt = document.createTextNode("Offers for plate " + regNo);
+	title.innerHTML = "";
+	title.appendChild(txt);
+
 	var ot = document.getElementById("offerTable");
+	var cnt = ot.rows.length-1;
+	if (cnt>0)
+		$('#offerTable tr').slice(cnt*-1).remove();
+
 	plateSell.offers.forEach((offer,i) => {
 	  var tr = document.createElement('tr');
 		td = document.createElement('td');
@@ -953,7 +1106,7 @@ function viewOffers(regNo)
   	td.appendChild(txt);
 		tr.appendChild(td);
 		td = document.createElement('td');
-		var txt = document.createTextNode(offer.offeredOn);
+		var txt = document.createTextNode(formatDate(offer.offeredOn));
   	td.appendChild(txt);
 		tr.appendChild(td);
 		td = document.createElement('td');
@@ -964,6 +1117,24 @@ function viewOffers(regNo)
 		var txt = document.createTextNode(offer.status);
   	td.appendChild(txt);
 		tr.appendChild(td);
+		td = document.createElement('td');
+		if (offer.status=="OFFERED")
+		{
+			td = document.createElement('td');
+			var button = document.createElement("button");
+    	button.innerHTML = "Accept";
+			funct = "return acceptOffer(" + offer.id + ");"
+			button.setAttribute("onclick",funct);
+    	td.appendChild(button);
+			tr.appendChild(td);
+			td = document.createElement('td');
+			var button = document.createElement("button");
+			funct = "return rejectOffer(" + offer.id + ");"
+			button.setAttribute("onclick",funct);
+    	button.innerHTML = "Reject";
+    	td.appendChild(button);
+			tr.appendChild(td);
+		}
 		ot.appendChild(tr);
 	});
 	$("#myModalOffer").modal();
@@ -1045,7 +1216,10 @@ function queryPlates(jsonData,targetUrl) {
             plates = result.result;
           //  alert('Plates # ' + plates.length);
             displayPunterPlates();
-          }
+          },
+					error:function (e) {
+		  			alert("queryPlates ERROR : " + e.status + " - " + e.statusText);
+		      }
       })
 }
 
@@ -1075,7 +1249,10 @@ function getAllPlates() {
             plates = result.result;
       //      alert('Plates # ' + plates.length);
             displayPunterPlates();
-          }
+          },
+					error:function (e) {
+		  			alert("getAllPlates ERROR : " + e.status + " - " + e.statusText);
+		      }
       })
 }
 
@@ -1107,7 +1284,10 @@ function getQueryParams() {
             }
             queryParams = result.result;
             displayQueryParams();
-          }
+          },
+					error:function (e) {
+		  			alert("getQueryParams ERROR : " + e.status + " - " + e.statusText);
+		      }
       })
 }
 
@@ -1323,11 +1503,11 @@ function displayPlates()
 </script>
 
 
-<html>
 <head>
 
 </head>
 <body>
+
 	<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 	<div class="headingPanelLogonHeader">
 		<div class="headingPanelLogonHeaderCell" id='contact'>
@@ -1422,19 +1602,38 @@ function displayPlates()
 	</div>
 </div>  <!-- modalP  -->
 <div id="myModalOffer" class="modal fade" role="dialog">
-	<div class="modal-dialog" style="width=740px">
-			<div class="modal-content" style="width=740px">
+	<div class="modal-dialog" style="width=520px">
+			<div class="modal-content" >
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title" style="width=740px">Edit Profile</h4>
+						<h4 class="modal-title" id='offerTitle'</h4>
 					</div>
-					<div class="modal-body" style="width=740px">
+					<div class="modal-body" >
 							<div id="#129c94r2P" class="topHiddenOfferBar">
 									<div class="offerPanel">
-										<table id="offerTable" style="overflow: auto;">
+										<div style="height:400px; overflow:auto">
+											<table id="offerTable" border="0"
+															style="width:520px;" align="left">
+	    								<colgroup>
+												<col span="1" style="width: 30%;">
+       									<col span="1" style="width: 20%;">
+       									<col span="1" style="width: 10%;">
+												<col span="1" style="width: 20%;">
+       									<col span="1" style="width: 15%;">
+												<col span="1" style="width: 15%;">
+	   								</colgroup>
+	    							<tr style="font-family:verdana; color:LightYellow;">
+											<td>Buyer</td>
+											<td>Date</td>
+											<td>Offer</td>
+											<td>Status</td>
+											<td></td>
+											<td></td>
+	    								</tr>
 										</table>
-										<div class="offerErrorMessage" id='offerError'>
-										</div>
+									</div>
+									<div class="offerErrorMessage" id='offerError'>
+									</div>
 									</div>  <!-- offerPanel -->
 								</div>  <!-- topHiddenBar -->
 						</div>
@@ -1537,8 +1736,11 @@ function displayPlates()
 								Upload proof of ownership:
 							</div>
 							<div class="uploadEntryInput">
+								<form id="upload-form" enctype="multipart/form-data"  method="post">
 									<input id="upload-input" type="file"
-															value="" style="height: 28px; font-size: 14px; "/>
+										required name="uploadfile"
+															style="height: 28px; font-size: 14px; "/>
+								</form>
 							</div>
 							<div class="publishErrorMessage" id="publishError">
 							</div>
@@ -1620,13 +1822,13 @@ function displayPlates()
 						</div>
             <div class="headingPanelMiddleSearchCell">
 							<select name='suffix' id='suffix' style="width: 65px;
-											height: 50px; font-family:myFont; font-size: 16px; padding-left: 15px;">
+											height: 50px; font-family:myFont; font-size: 16px; ">
 							</select>
 						</div>
           <div class="headingPanelMiddleSearchButton">
           <input name="query1" value="Search" type="button"
               onClick="return doParamQuery()" style=
-              "font-family: myFont; color: green; font-size:20px; font-weight:700;"/>
+              "font-family: myFont; color: green; font-size:20px; font-weight:700; "/>
           </div>
           <div class="headingPanelMiddleSearchSpecialCell">
             <select name='specialdd' id='special' style="width: 150px;
@@ -1636,12 +1838,12 @@ function displayPlates()
           <div class="headingPanelMiddleSearchButton">
           <input name="query2" value="Search" type="button"
               onClick="return doSpecialQuery()" style=
-              "font-family: myFont; color: green; font-size:20px; font-weight:700;"/>
+              "font-family: myFont; color: green; font-size:20px; font-weight:700; "/>
           </div>
           <div class="headingPanelMiddleSearchButton">
           <input name="clear" value="Clear" type="button"
               onClick="return doClearQuery()" style="
-              font-family: myFont; color: green; font-size:20px; font-weight:700;"/>
+              font-family: myFont; color: green; font-size:20px; font-weight:700; "/>
           </div>
 
       </div>

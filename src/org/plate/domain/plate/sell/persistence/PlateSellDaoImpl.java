@@ -1,5 +1,6 @@
 package org.plate.domain.plate.sell.persistence;
 
+import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -19,6 +20,7 @@ import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcDaoSupport;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.security.crypto.codec.Base64;
 
 public class PlateSellDaoImpl extends NamedParameterJdbcDaoSupport implements PlateSellDao {
 	private static Logger log = Logger.getLogger(PlateSellDaoImpl.class);
@@ -54,6 +56,27 @@ public class PlateSellDaoImpl extends NamedParameterJdbcDaoSupport implements Pl
 		}	
 	}
 	
+	@Override
+	public void updatePlateSellProofOwner(final byte[] bytes,final long plateId){
+		try
+		{
+			final String sql = "UPDATE platesell SET proofowner=? where plateId=?";
+					
+			getJdbcTemplate().update( sql, new PreparedStatementSetter() {
+				        public void setValues(PreparedStatement preparedStatement) throws SQLException {
+				        	  preparedStatement.setBytes(1, bytes);
+					          preparedStatement.setLong(2,plateId);
+					        }
+			    });
+				
+		}
+		catch (DataAccessException e)
+		{
+			log.error("Could not execute : " + e.getMessage(),e);
+			throw new PersistenceRuntimeException("Could not execute updateSellProofOwner : " + e.getMessage());
+		}	
+	}
+	
 	public void deletePlateSell(final PlateSell plateSell){
 		try
 		{
@@ -82,6 +105,7 @@ public class PlateSellDaoImpl extends NamedParameterJdbcDaoSupport implements Pl
 				return null;
 			PlateSell ps = pss.get(0);
 			getPlateOffers(ps);
+			convertProofOwner(ps);
 			ps.setPlate(plate);
 			return ps;
 		}
@@ -92,6 +116,21 @@ public class PlateSellDaoImpl extends NamedParameterJdbcDaoSupport implements Pl
 		}
 	}
 	
+	private void convertProofOwner(PlateSell ps) {
+		if (ps.getProofOwner()==null)
+		{
+			ps.setProofOwnerStr("NO PROOF OF OWNER FOR : " + ps.getSellerEmail());
+			return;
+		}
+		byte[] img = Base64.encode(ps.getProofOwner());
+		try {
+			ps.setProofOwnerStr(new String(img,"UTF-8"));
+			ps.setProofOwner(null);
+		} catch (UnsupportedEncodingException e) {
+			log.error(e.getMessage(),e);
+		}
+	}
+
 	public List<PlateSell> getPlateSells(final String sellerEmail){
 		try
 		{
