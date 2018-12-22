@@ -3,6 +3,7 @@ package org.plate.user.initialize;
 import org.apache.log4j.Logger;
 import org.plate.home.persistence.Home;
 import org.plate.user.BaseUser;
+import org.plate.user.agent.Agent;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -14,7 +15,7 @@ public class CreateSampleUsers
 	
 	private static BaseUser createAgent()
 	{
-		BaseUser bu = new BaseUser();
+		Agent bu = new Agent();
 		bu.setContact("des");
 		bu.setEmail("des88@test.com");
 		PasswordEncoder encoder = new BCryptPasswordEncoder();

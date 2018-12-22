@@ -11,6 +11,7 @@ public class PlateSellJson {
 	private Date sellDate;
 	private List<PlateOfferJson> offers = new ArrayList<PlateOfferJson>();
 	private int offersDistinctCount;
+	private PlateSellStatusJson status;
 	
 	public PlateSellJson()
 	{
@@ -63,6 +64,14 @@ public class PlateSellJson {
 
 	public void setOffersDistinctCount(int offersDistinctCount) {
 		this.offersDistinctCount = offersDistinctCount;
+	}
+
+	public PlateSellStatusJson getStatus() {
+		return status;
+	}
+
+	public void setStatus(PlateSellStatusJson status) {
+		this.status = status;
 	}
 	
 	

@@ -3,6 +3,7 @@ package org.plate.home.persistence;
 import org.plate.domain.plate.persistence.PlateDao;
 import org.plate.domain.plate.sell.persistence.PlateSellDao;
 import org.plate.query.persistence.QueryDao;
+import org.plate.user.agent.persistence.AgentDao;
 import org.plate.user.persistence.BaseUserDao;
 import org.plate.user.punter.persistence.PunterDao;
 
@@ -10,6 +11,7 @@ public class HomeImpl implements Home {
 
 	private BaseUserDao baseUserDao;
 	private PunterDao punterDao;
+	private AgentDao agentDao;
 	private PlateDao plateDao;
 	private PlateSellDao plateSellDao;
 	private QueryDao queryDao;
@@ -61,6 +63,15 @@ public class HomeImpl implements Home {
 
 	public void setPlateSellDao(PlateSellDao plateSellDao) {
 		this.plateSellDao = plateSellDao;
+	}
+
+	@Override
+	public AgentDao getAgentDao() {
+		return agentDao;
+	}
+
+	public void setAgentDao(AgentDao agentDao) {
+		this.agentDao = agentDao;
 	}
 
 	

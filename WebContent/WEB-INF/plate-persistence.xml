@@ -34,6 +34,11 @@ http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean>
 
+	<bean id="agentDao"
+		class="org.plate.user.agent.persistence.AgentDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+
 	<bean id="plateDao"
 		class="org.plate.domain.plate.persistence.PlateDaoImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
@@ -53,6 +58,7 @@ http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 		class="org.plate.home.persistence.HomeImpl"> 
 		<property name="baseUserDao" ref="baseUserDao" />
 		<property name="punterDao" ref="punterDao" />
+		<property name="agentDao" ref="agentDao" />
 		<property name="plateDao" ref="plateDao" />
 		<property name="plateSellDao" ref="plateSellDao" />
 		<property name="queryDao" ref="queryDao" />

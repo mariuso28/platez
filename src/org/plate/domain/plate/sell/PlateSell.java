@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.plate.domain.plate.Plate;
+import org.plate.json.PlateSellStatusJson;
 
 public class PlateSell {
 	private long id;
@@ -15,6 +16,7 @@ public class PlateSell {
 	private List<PlateOffer> offers = new ArrayList<PlateOffer>();
 	private String proofOwnerStr;
 	private byte[] proofOwner;
+	private PlateSellStatusJson status;
 	
 	public PlateSell()
 	{
@@ -95,6 +97,14 @@ public class PlateSell {
 
 	public void setProofOwner(byte[] proofOwner) {
 		this.proofOwner = proofOwner;
+	}
+
+	public PlateSellStatusJson getStatus() {
+		return status;
+	}
+
+	public void setStatus(PlateSellStatusJson status) {
+		this.status = status;
 	}
 	
 	

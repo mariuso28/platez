@@ -31,8 +31,8 @@ public class PlateSellDaoImpl extends NamedParameterJdbcDaoSupport implements Pl
 		try
 		{
 			KeyHolder keyHolder = new GeneratedKeyHolder();
-			final String sql = "INSERT INTO platesell (plateid,selleremail,selldate) "
-					+ "VALUES (?,?,?)";
+			final String sql = "INSERT INTO platesell (plateid,selleremail,selldate,status) "
+					+ "VALUES (?,?,?,?)";
 					
 				getJdbcTemplate().update( new PreparedStatementCreator() {
 			        public PreparedStatement createPreparedStatement(Connection connection) 
@@ -42,12 +42,33 @@ public class PlateSellDaoImpl extends NamedParameterJdbcDaoSupport implements Pl
 			    	  	ps.setLong(1, plateSell.getPlate().getId());
 						ps.setString(2, plateSell.getSellerEmail());
 						ps.setTimestamp(3,ts);
+						ps.setString(4, plateSell.getStatus().name());
 						return ps;
 			      }
 			    },keyHolder);
 				
 				final long id = keyHolder.getKey().longValue();
 				plateSell.setId(id);
+		}
+		catch (DataAccessException e)
+		{
+			log.error("Could not execute : " + e.getMessage(),e);
+			throw new PersistenceRuntimeException("Could not execute store : " + e.getMessage());
+		}	
+	}
+	
+	@Override
+	public void updatePlateSellStatus(final PlateSell plateSell){
+	try
+		{
+			final String sql = "UPDATE platesell SET status=? WHERE id=?";
+					
+			getJdbcTemplate().update( sql, new PreparedStatementSetter() {
+		        public void setValues(PreparedStatement preparedStatement) throws SQLException {
+		        	  preparedStatement.setString(1,plateSell.getStatus().name());
+			          preparedStatement.setLong(2,plateSell.getId());
+			        }
+	    });
 		}
 		catch (DataAccessException e)
 		{

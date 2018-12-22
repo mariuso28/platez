@@ -13,12 +13,14 @@ import org.apache.log4j.Logger;
 import org.plate.domain.plate.Plate;
 import org.plate.domain.plate.sell.PlateOffer;
 import org.plate.domain.plate.sell.PlateSell;
+import org.plate.json.AgentJson;
 import org.plate.json.PlateJson;
 import org.plate.json.PlateOfferJson;
 import org.plate.json.PlateOfferStatusJson;
 import org.plate.json.PlateParamsJson;
 import org.plate.json.PlatePublishJson;
 import org.plate.json.PlateSellJson;
+import org.plate.json.PlateSellStatusJson;
 import org.plate.json.ProfileJson;
 import org.plate.json.PunterJson;
 import org.plate.json.QueryOnDigitsParamsJson;
@@ -31,6 +33,7 @@ import org.plate.services.Services;
 import org.plate.services.validator.BaseUserValidator;
 import org.plate.services.validator.ValidatorException;
 import org.plate.user.BaseUser;
+import org.plate.user.agent.Agent;
 import org.plate.user.punter.Punter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -101,6 +104,7 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 		psl.setSellDate(plateSell.getSellDate());
 		psl.setSellerEmail(plateSell.getSellerEmail());
 		psl.setOffers(createPlateOffers(plateSell.getOffers(),psl));
+		psl.setStatus(plateSell.getStatus());
 		return psl;
 	}
 
@@ -116,8 +120,7 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 			poj.setRegNo(po.getRegNo());
 			poj.setStatus(po.getStatus());
 			pos.add(poj);
-			if (!distinct.contains(po.getRegNo()))
-				distinct.add(po.getRegNo());
+			distinct.add(po.getRegNo());
 		}
 		if (psj!=null)
 			psj.setOffersDistinctCount(distinct.size());
@@ -231,14 +234,16 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 		pj.setProfile(populateProfile(punter));
 		Map<String,PlateSellJson> plateSells = new HashMap<String,PlateSellJson>();
 		for (PlateSell ps : punter.getPlateSells())
+		{
 			plateSells.put(ps.getPlate().getRegNo(),createPlateSell(ps));
-		pj.setPlateSells(plateSells);
+		}
 		Map<String,PlateOfferJson> plateOffers = new HashMap<String,PlateOfferJson>();
 		List<PlateOfferJson> pos = createPlateOffers(punter.getOffers(),null);
 		for (PlateOfferJson po : pos)
 		{
 			plateOffers.put(po.getRegNo(),po);					// just get latest
 		}
+		pj.setPlateSells(plateSells);
 		pj.setOffers(plateOffers);
 		return pj;
 	}
@@ -362,6 +367,7 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 			ps.setPlate(plate);
 			ps.setSellDate((new GregorianCalendar()).getTime());
 			ps.setSellerEmail(email);
+			ps.setStatus(PlateSellStatusJson.APPROVED);			// change to SUBMITTED WHERE AGENT FINISH
 			services.getHome().getPlateSellDao().storePlateSell(ps);
 			
 			log.info("Stored : " + plate.getRegNo() + " - " + plate.getListPrice());
@@ -394,5 +400,18 @@ private static final Logger log = Logger.getLogger(RestServices.class);
 		plate.setListPrice(price);
 		plate.setSpecials();
 		return plate;
+	}
+
+	public AgentJson getAgent(String email) {
+		Agent agent = services.getHome().getAgentDao().getByEmail(email);
+		if (agent == null)
+			throw new RestServicesException("user " + email + " cannot be found");
+		return populateAgent(agent);
+	}
+
+	private AgentJson populateAgent(Agent agent) {
+		AgentJson aj = new AgentJson();
+		aj.setProfile(populateProfile(agent));
+		return aj;
 	}
 }

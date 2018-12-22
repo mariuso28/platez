@@ -1396,19 +1396,8 @@ function createOption(choice)
 function displayPlates()
 {
     document.getElementById('pc').innerHTML="";
-/*
-		pl = document.createElement('div');
-		pl.className = 'prodList'
-		document.getElementById('pc').appendChild(pl);
-		var pe = document.createElement('div');
-		pe.className = 'prodListEntry';
-		var aImg = document.createElement('img');
-		aImg.src = '../../img/add.png';
-		funct = "return publishPlate();";
-		aImg.setAttribute("onclick",funct);
-		pe.appendChild(aImg);
-		pl.appendChild(pe);
-*/
+
+		var cnt=0;
     plates.forEach((plate, i) => {
 	/*		if (i>0)
 			{
@@ -1444,24 +1433,47 @@ function displayPlates()
 
 				var sell = punter.plateSells[plate.regNo];
 				pp.appendChild(document.createElement('br'));
+				displayPlate = false;
 				if (sell != null)
 				{
-					if (sell.offersDistinctCount==0)
-						pp.appendChild(document.createTextNode("Offers : " + sell.offersDistinctCount));
-					else {
+					displayPlate = true;
+					if (sell.status == 'SUBMITTED')
+						pp.appendChild(document.createTextNode('PENDING'));
+					else
+					if (sell.status == 'RESUBMITPROOF')
+					{
 						var aTag = document.createElement('a');
 						aTag.setAttribute('href',"#");
-						funct = "return viewOffers('" + plate.regNo + "');"
+						funct = "return resubmitProof('" + plate.id + "');"
 						aTag.setAttribute("onclick",funct);
-						aTag.innerHTML = "Offers : " + sell.offersDistinctCount;
-						aTag.style.color = 'BLUE';
+						aTag.innerHTML = "RESUBMIT PROOF";
+						aTag.style.color = 'RED';
 						pp.appendChild(aTag);
+					}
+					else
+					if (sell.status == 'TRANSACT')
+						pp.appendChild(document.createTextNode('TRANSACTING'));
+					else
+					if (sell.status == 'APPROVED')
+					{
+						if (sell.offersDistinctCount==0)
+							pp.appendChild(document.createTextNode("Offers : " + sell.offersDistinctCount));
+						else {
+							var aTag = document.createElement('a');
+							aTag.setAttribute('href',"#");
+							funct = "return viewOffers('" + plate.regNo + "');"
+							aTag.setAttribute("onclick",funct);
+							aTag.innerHTML = "Offers : " + sell.offersDistinctCount;
+							aTag.style.color = 'BLUE';
+							pp.appendChild(aTag);
+						}
 					}
 				}
 				else {
 					var offer = punter.offers[plate.regNo];
 					if (offer!=null)
 					{
+						displayPlate = true;
 					//	pp.appendChild(document.createTextNode("Offer : " + offer.offer));
 						var aTag = document.createElement('a');
 						aTag.setAttribute('href',"#");
@@ -1479,24 +1491,17 @@ function displayPlates()
 						aTag.innerHTML = "Offer : " + offer.offer;
 						pp.appendChild(aTag);
 					}
-					else {
-					var aTag = document.createElement('a');
-					aTag.setAttribute('href',"#");
-					funct = "return makeOffer('" + plate.regNo + "',"
-										+ plate.id + "," + plate.listPrice + ");"
-					aTag.setAttribute("onclick",funct);
-					aTag.innerHTML = "Make An Offer";
-					pp.appendChild(aTag);
-				  }
 				}
-		    if (!(i % 5)) {
+				if (displayPlate)
+				{
+		    	if (!(cnt % 5)) {
 		        pl = document.createElement('div');
 		        pl.className = 'prodList'
 		        document.getElementById('pc').appendChild(pl);
-		    }
-
-		    pl.appendChild(pe);
-	/*		} */
+					}
+					cnt++;
+		    	pl.appendChild(pe);
+				}
   });
 }
 

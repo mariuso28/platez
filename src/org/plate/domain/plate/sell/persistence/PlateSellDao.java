@@ -16,4 +16,5 @@ public interface PlateSellDao {
 	public List<PlateOffer> getPlateOffers(String email);
 	public void setPlateOfferStatus(Long offerId, PlateOfferStatusJson status);
 	public void updatePlateSellProofOwner(byte[] bytes, long plateId);
+	public void updatePlateSellStatus(PlateSell plateSell);
 }
