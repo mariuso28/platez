@@ -1,5 +1,6 @@
 package org.plate.home.persistence;
 
+import org.plate.domain.auction.persistence.AuctionDao;
 import org.plate.domain.plate.persistence.PlateDao;
 import org.plate.domain.plate.sell.persistence.PlateSellDao;
 import org.plate.query.persistence.QueryDao;
@@ -11,6 +12,7 @@ public interface Home {
 	
 	public BaseUserDao getBaseUserDao();
 	public PlateDao getPlateDao();
+	public AuctionDao getAuctionDao();
 	public QueryDao getQueryDao();
 	public PunterDao getPunterDao();
 	public PlateSellDao getPlateSellDao();

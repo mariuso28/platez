@@ -5555,3 +5555,6 @@ Dec 22 16:26:37,156  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 -
 Dec 22 16:26:37,171  INFO RestPunterControllerImpl:33 - Received getPunter for : koko@test.com
 Dec 22 16:26:37,238  INFO RestServices:81 - Got Plates # 37
 Dec 22 16:26:37,250  INFO RestPunterControllerImpl:33 - Received getPunter for : koko@test.com
+Jan 04 11:12:59,706  INFO WebAnonController:29 - Received request to getAllPlates
+Jan 04 11:13:00,788  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Jan 04 11:13:01,478  INFO RestServices:81 - Got Plates # 37

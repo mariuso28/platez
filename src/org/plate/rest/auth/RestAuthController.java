@@ -76,7 +76,7 @@ public class RestAuthController {
 		
 		ResultJson result = new ResultJson();
 		String path;
-		path = "http://localhost:8080/platez/oauth/token";
+		path = "http://localhost:8080/platez/px4/oauth/token";
 		try
 		{
 			BaseUser baseUser = services.getHome().getBaseUserDao().getByEmail(username);
@@ -128,7 +128,7 @@ public class RestAuthController {
 			){
 		ResultJson result = new ResultJson();
 		String path;
-		path = "http://localhost:8080/platez/oauth/token";
+		path = "http://localhost:8080/platez/px4/oauth/token";
 		try {
 			HttpHeaders headers = new HttpHeaders();
 			headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);

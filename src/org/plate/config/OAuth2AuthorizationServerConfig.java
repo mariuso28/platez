@@ -41,7 +41,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
         oauthServer
         	.allowFormAuthenticationForClients()
-	        .authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/web/anon/getAllPlates"))
+	        .authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/px4/web/anon/getAllPlates"))
 	        .tokenKeyAccess("permitAll()")
 	        .checkTokenAccess("isAuthenticated()")
         ;
@@ -81,7 +81,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
 			.tokenEnhancer(tokenEnhancerChain)
 			.userDetailsService(customUserDetailsService)
 			.authenticationManager(authenticationManager)
-			.prefix("/")
+			.prefix("/px4")
 //			.accessTokenConverter(accessTokenConverter())
 //			.exceptionTranslator(webResponseExceptionTranslator())
 		;

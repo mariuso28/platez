@@ -588,7 +588,7 @@ function registerProfile()
 	$.ajax({
 
 		type: "POST",
-			 url : "/platez/api/anon/register",
+			 url : "/platez/px4/api/anon/register",
 			 cache: false,
 			 contentType: 'application/json;',
 			 dataType: "json",
@@ -685,7 +685,7 @@ function login() {
 	$.ajax({
 
      type: "POST",
-        url : "/platez/api/a/authorize1",
+        url : "/platez/px4/api/a/authorize1",
         cache: false,
         contentType: 'application/json;',
         dataType: "json",
@@ -755,7 +755,7 @@ function doParamQuery()
   jsonData['number4'] = number4.value;
   jsonData['suffix'] = suffix.value;
 
-  queryPlates(jsonData,'/platez/api/anon/queryPlate');
+  queryPlates(jsonData,'/platez/px4/api/anon/queryPlate');
 }
 
 var plates;
@@ -796,7 +796,7 @@ function getAllPlates() {
      $.ajax({
 
     type: "GET",
-         url : '/platez/api/anon/getAllPlates',
+         url : '/platez/px4/api/anon/getAllPlates',
     cache: false,
  	 contentType: 'application/json;',
          dataType: "json",
@@ -827,7 +827,7 @@ function getQueryParams() {
      $.ajax({
 
     type: "GET",
-         url : '/platez/api/anon/getQueryParams',
+         url : '/platez/px4/api/anon/getQueryParams',
     cache: false,
  	 contentType: 'application/json;',
          dataType: "json",

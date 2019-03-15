@@ -80,32 +80,32 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http
 		.authorizeRequests()
 		.antMatchers(
-				"/web/anon/**",
+				"/px4/web/anon/**",
 				"/css/**/**",
 				"/fonts/**",
 				"/img/**",
 				"/js/**",
-				"/oauth/token"
+				"/px4/oauth/token"
 				)
 		.permitAll()
 		
 		.antMatchers(
-				"/web/agent/**"
+				"/px4/web/agent/**"
 				)
 		.access("hasRole('ROLE_AGENT')")
 		
 		.antMatchers(
-				"/web/punter/**"
+				"/px4/web/punter/**"
 				)
 		.access("hasRole('ROLE_PUNTER')")
 		
 		.antMatchers(
-				"/web/auctioneer/**"
+				"/px4/web/auctioneer/**"
 				)
 		.access("hasRole('ROLE_AUCTIONEER')")
 		
 		.and().formLogin()
-		.loginPage("/web/anon/logon")
+		.loginPage("/px4/web/anon/logon")
 		.usernameParameter("email")
 		.passwordParameter("password")
 		.successHandler(customAuthenticationSuccessHandler)
@@ -118,9 +118,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 
 	
 		.and().sessionManagement()
-		.invalidSessionUrl("/web/anon/invalidSession")
+		.invalidSessionUrl("/px4/web/anon/invalidSession")
 		.and().exceptionHandling()
-		.accessDeniedPage("/web/anon/accessDenied")
+		.accessDeniedPage("/px4/web/anon/accessDenied")
 		.and().csrf().disable()
 		;
 	}

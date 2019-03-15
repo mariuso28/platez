@@ -49,6 +49,11 @@ http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean>
 
+	<bean id="auctionDao"
+		class="org.plate.domain.auction.persistence.AuctionDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+
 	<bean id="queryDao"
 		class="org.plate.query.persistence.QueryDaoImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
@@ -60,6 +65,7 @@ http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 		<property name="punterDao" ref="punterDao" />
 		<property name="agentDao" ref="agentDao" />
 		<property name="plateDao" ref="plateDao" />
+		<property name="auctionDao" ref="auctionDao" />
 		<property name="plateSellDao" ref="plateSellDao" />
 		<property name="queryDao" ref="queryDao" />
 	</bean>

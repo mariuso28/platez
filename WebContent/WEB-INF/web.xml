@@ -30,7 +30,7 @@
  
 <servlet-mapping>
  <servlet-name>platez</servlet-name>
- <url-pattern>/</url-pattern>
+ <url-pattern>/px4/*</url-pattern>
 </servlet-mapping>
 
 <listener>

@@ -206,16 +206,16 @@ public class RestPunterControllerImpl implements RestPunterController{
 		return result;
 	}
 	
-	private PunterJson getPunter(String email,ResultJson result)
-	{
-		PunterJson punter = null;
-		try {
-			punter = restServices.getPunter(email);
-		} catch (Exception e) {
-			log.error("Punter : " + email + " not found");
-			result.fail("Punter : " + email + " not found");	
+		private PunterJson getPunter(String email,ResultJson result)
+		{
+			PunterJson punter = null;
+			try {
+				punter = restServices.getPunter(email);
+			} catch (Exception e) {
+				log.error("Punter : " + email + " not found");
+				result.fail("Punter : " + email + " not found");	
+			}
+			return punter;
 		}
-		return punter;
-	}
 
 }

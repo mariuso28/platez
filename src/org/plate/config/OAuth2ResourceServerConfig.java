@@ -12,23 +12,23 @@ public class OAuth2ResourceServerConfig extends ResourceServerConfigurerAdapter 
 	@Override
     public void configure(HttpSecurity http) throws Exception {
 		http
-			.antMatcher("/api/**")
+			.antMatcher("/px4/api/**")
 			.authorizeRequests()
 			.antMatchers(
-					"/api/a/**",
-					"/api/anon/**"
+					"/px4/api/a/**",
+					"/px4/api/anon/**"
 					)
 			.permitAll()			
 			.antMatchers(
-					"/api/punter/**"
+					"/px4/api/punter/**"
 					)
 			.access("hasRole('ROLE_PUNTER')")
 			.antMatchers(
-					"/api/agent/**"
+					"/px4/api/agent/**"
 					)
 			.access("hasRole('ROLE_AGENT')")
 			.antMatchers(
-					"/api/auctioneer/**"
+					"/px4/api/auctioneer/**"
 					)
 			.access("hasRole('ROLE_AUCTIONEER')")
 		;

@@ -1,5 +1,6 @@
 package org.plate.home.persistence;
 
+import org.plate.domain.auction.persistence.AuctionDao;
 import org.plate.domain.plate.persistence.PlateDao;
 import org.plate.domain.plate.sell.persistence.PlateSellDao;
 import org.plate.query.persistence.QueryDao;
@@ -13,6 +14,7 @@ public class HomeImpl implements Home {
 	private PunterDao punterDao;
 	private AgentDao agentDao;
 	private PlateDao plateDao;
+	private AuctionDao auctionDao;
 	private PlateSellDao plateSellDao;
 	private QueryDao queryDao;
 	
@@ -72,6 +74,14 @@ public class HomeImpl implements Home {
 
 	public void setAgentDao(AgentDao agentDao) {
 		this.agentDao = agentDao;
+	}
+
+	public AuctionDao getAuctionDao() {
+		return auctionDao;
+	}
+
+	public void setAuctionDao(AuctionDao auctionDao) {
+		this.auctionDao = auctionDao;
 	}
 
 	

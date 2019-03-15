@@ -1194,7 +1194,7 @@ function displayPlates()
 				{
 					displayPlate = true;
 					if (sell.status == 'SUBMITTED')
-						pp.appendChild(document.createTextNode('PENDING');
+						pp.appendChild(document.createTextNode('PENDING'));
 					else
 					if (sell.status == 'RESUBMITPROOF')
 					{
@@ -1208,7 +1208,7 @@ function displayPlates()
 					}
 					else
 					if (sell.status == 'TRANSACT')
-						pp.appendChild(document.createTextNode('TRANSACTING');
+						pp.appendChild(document.createTextNode('TRANSACTING'));
 					else
 					if (sell.status == 'APPROVED')
 					{
