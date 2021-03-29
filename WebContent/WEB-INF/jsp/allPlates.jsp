@@ -704,13 +704,13 @@ function login() {
            at = sessionStorage.getItem("access_token");
   //         alert(at);
            if (authorized.role=='ROLE_AGENT')
-              window.location.replace("/platez/web/anon/goAgentHome");
+              window.location.replace("/platez/px4/web/anon/goAgentHome");
             else
 						if (authorized.role=='ROLE_AUCTIONEER')
-							 window.location.replace("/platez/web/anon/goActioneerHome");
+							 window.location.replace("/platez/px4/web/anon/goActioneerHome");
             else
 						if (authorized.role=='ROLE_PUNTER')
-              	window.location.replace("/platez/web/anon/goPunterHome");
+              	window.location.replace("/platez/px4/web/anon/goPunterHome");
         }
      });
  }
@@ -728,7 +728,7 @@ function doSpecialQuery()
   // alert("Cot special : " + special.value);
   jsonData['combo'] = special.value;
 
-  queryPlates(jsonData,'/platez/api/anon/queryDigits');
+  queryPlates(jsonData,'/platez/px4/api/anon/queryDigits');
 }
 
 function doParamQuery()

@@ -1,342 +1,117 @@
-Dec 13 08:34:43,431  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 08:34:45,085  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 08:34:45,552  INFO RestServices:60 - Got Plates # 19
-Dec 13 08:35:08,102  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 08:35:08,356  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 08:41:43,382  INFO EnableSampleUsers:23 - BaseUser [id=fefbcad7-4836-4b7f-bbfa-ba4b0bd896b7, contact=des, email=des88@test.com, phone=0102202006, password=$2a$10$Aj5xp8nNYIj4d9RNjAtD5.OBIDS/A8FAMx9i5PfHEuoDKbhxIsqlO, enabled=false]
-Dec 13 08:41:43,385  INFO EnableSampleUsers:26 - BaseUser [id=e8c9bd0a-bea8-4f6a-ad75-f4d227f0ebc2, contact=koko, email=koko@test.com, phone=0102202007, password=$2a$10$a12tWhqyv45AP2jvU0pkTu13B4ERBXMDQbQkkjF9GowNyVARmgUoe, enabled=false]
-Dec 13 08:41:43,409  INFO EnableSampleUsers:41 - Done
-Dec 13 08:42:33,507  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 08:42:34,448  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 08:42:34,945  INFO RestServices:60 - Got Plates # 19
-Dec 13 08:42:57,506  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 08:42:57,514  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 08:44:13,532  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 08:44:13,533  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 08:49:17,415  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 08:49:17,801  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 08:49:51,784  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 08:49:51,788  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 08:55:23,000  INFO WebAnonController:77 - Received invalidSession
-Dec 13 08:55:42,111  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 08:55:42,587  INFO RestServices:60 - Got Plates # 19
-Dec 13 08:56:10,814  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 08:56:10,959  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 08:56:10,974  INFO RestServices:60 - Got Plates # 19
-Dec 13 08:56:27,476  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 08:56:27,485  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 09:05:18,857  INFO WebAnonController:77 - Received invalidSession
-Dec 13 09:06:37,582  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 09:06:37,939  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:06:38,446  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:06:44,774  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 09:06:44,781  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 09:12:38,744  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 09:12:39,066  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 09:14:32,637  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 09:14:33,580  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:14:34,101  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:14:41,475  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 09:14:41,484  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 09:17:51,341  INFO WebAnonController:77 - Received invalidSession
-Dec 13 09:17:54,288  INFO WebAnonController:77 - Received invalidSession
-Dec 13 09:17:55,639  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:17:55,996  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:17:58,121  INFO WebAnonController:77 - Received invalidSession
-Dec 13 09:18:00,533  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:18:00,546  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:18:05,585  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:18:05,592  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:18:19,584  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 09:18:19,666  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:18:19,673  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:18:25,970  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 09:18:25,976  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 09:18:26,145  INFO CustomUserDetailsService:28 - loadUserByUsername email : des88@test.com
-Dec 13 09:18:26,147  INFO CustomUserDetailsService:43 - User : des88@test.com found with role :ROLE_AGENT
-Dec 13 09:18:26,149  INFO CustomUserDetailsService:49 - Using User : des88@test.com with authorities :[ROLE_AGENT]
-Dec 13 09:35:05,251  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 09:35:06,061  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:35:06,522  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:35:16,976  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
-Dec 13 09:35:16,982  INFO RestAuthController:83 - Got baseuser : koko@test.com
-Dec 13 09:35:17,234  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
-Dec 13 09:35:17,235  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
-Dec 13 09:35:17,236  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
-Dec 13 09:37:21,145  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 09:37:26,483  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:37:26,892  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:37:38,913  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 09:37:39,027  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:37:39,049  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:37:46,665  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
-Dec 13 09:37:46,670  INFO RestAuthController:83 - Got baseuser : koko@test.com
-Dec 13 09:37:46,951  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
-Dec 13 09:37:46,952  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
-Dec 13 09:37:46,953  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
-Dec 13 09:47:04,734  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 09:47:05,002  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:47:05,009  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:47:11,094  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
-Dec 13 09:47:11,099  INFO RestAuthController:83 - Got baseuser : koko@test.com
-Dec 13 09:47:11,107  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
-Dec 13 09:47:11,109  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
-Dec 13 09:47:11,109  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
-Dec 13 09:47:11,235  INFO WebAnonController:77 - Received goPunterHome
-Dec 13 09:47:13,452  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:47:13,462  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:49:57,481  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 09:49:57,558  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:49:57,567  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:50:02,330  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
-Dec 13 09:50:02,331  INFO RestAuthController:83 - Got baseuser : koko@test.com
-Dec 13 09:50:02,335  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
-Dec 13 09:50:02,336  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
-Dec 13 09:50:02,336  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
-Dec 13 09:50:02,468  INFO WebAnonController:77 - Received goPunterHome
-Dec 13 09:50:04,328  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:50:04,338  INFO RestPunterController:25 - Received getDetails for : koko@test.com
-Dec 13 09:50:04,338  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:52:37,210  INFO WebAnonController:77 - Received goPunterHome
-Dec 13 09:52:40,015  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:52:40,019  INFO RestPunterController:25 - Received getDetails for : koko@test.com
-Dec 13 09:52:40,026  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:54:30,029  INFO WebAnonController:77 - Received goPunterHome
-Dec 13 09:54:32,296  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:54:32,302  INFO RestPunterController:25 - Received getDetails for : koko@test.com
-Dec 13 09:54:32,309  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:56:32,255  INFO WebAnonController:77 - Received goPunterHome
-Dec 13 09:56:33,161  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:56:33,165  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:57:02,982  INFO WebAnonController:77 - Received goPunterHome
-Dec 13 09:57:03,955  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:57:03,955  INFO RestPunterController:25 - Received getDetails for : koko@test.com
-Dec 13 09:57:03,958  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:57:23,630  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 09:57:23,709  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:57:23,714  INFO RestServices:60 - Got Plates # 19
-Dec 13 09:57:30,967  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
-Dec 13 09:57:30,970  INFO RestAuthController:83 - Got baseuser : koko@test.com
-Dec 13 09:57:30,985  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
-Dec 13 09:57:30,988  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
-Dec 13 09:57:30,989  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
-Dec 13 09:57:31,136  INFO WebAnonController:77 - Received goPunterHome
-Dec 13 09:57:31,201  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 09:57:31,201  INFO RestPunterController:25 - Received getDetails for : koko@test.com
-Dec 13 09:57:31,203  INFO RestServices:60 - Got Plates # 19
-Dec 13 11:24:43,879  INFO CreateJpjUser:48 - BaseUser [id=e8c9bd0a-bea8-4f6a-ad75-f4d227f0ebc2, contact=koko, email=koko@test.com, phone=0102202007, password=$2a$10$a12tWhqyv45AP2jvU0pkTu13B4ERBXMDQbQkkjF9GowNyVARmgUoe, enabled=true]
-Dec 13 11:24:43,880  INFO CreateJpjUser:50 - Done
-Dec 13 12:15:38,783  INFO TestPlate:30 - Plate [id=0, prefix=W, letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=, regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0, listPrice=0.0, plateSell=null]
-Dec 13 12:15:38,913 ERROR PlateSellDaoImpl:126 - Could not execute : PreparedStatementCallback; bad SQL grammar [SELECT * FROM platesell WHERE platesellid=?]; nested exception is org.postgresql.util.PSQLException: ERROR: column "platesellid" does not exist
-  Position: 31
-org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [SELECT * FROM platesell WHERE platesellid=?]; nested exception is org.postgresql.util.PSQLException: ERROR: column "platesellid" does not exist
-  Position: 31
-	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:99)
-	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
-	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
-	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
-	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:645)
-	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:680)
-	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:712)
-	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:762)
-	at org.plate.domain.plate.sell.persistence.PlateSellDaoImpl.getPlateOffers(PlateSellDaoImpl.java:117)
-	at org.plate.domain.plate.sell.persistence.PlateSellDaoImpl.getPlateSell(PlateSellDaoImpl.java:82)
-	at org.plate.domain.plate.persistence.PlateDaoImpl.getByRegNo(PlateDaoImpl.java:91)
-	at org.plate.domain.plate.test.TestPlate.main(TestPlate.java:40)
-Caused by: org.postgresql.util.PSQLException: ERROR: column "platesellid" does not exist
-  Position: 31
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2284)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2003)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:200)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:424)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:161)
-	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
-	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
-	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
-	at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:688)
-	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:629)
-	... 7 more
-Dec 13 12:17:00,142  INFO TestPlate:30 - Plate [id=0, prefix=W, letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=, regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0, listPrice=0.0, plateSell=null]
-Dec 13 12:17:00,172  INFO TestPlate:42 - Plate [id=44, prefix=W  , letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=   , regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=3, listPrice=0.0, plateSell=PlateSell [id=1, plate=null, sellerEmail=jpj@test.com, sellDate=2018-12-13 12:15:38.783, offers=[]]]
-Dec 13 12:17:00,173  INFO TestPlate:44 - Done
-Dec 13 12:55:38,434  INFO WebAnonController:85 - Received invalidSession
-Dec 13 12:56:57,018  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 12:56:57,720  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 12:56:58,195  INFO RestServices:64 - Got Plates # 2
-Dec 13 12:58:54,701  INFO PlateParseRule:21 - Parsing : W MH 2 55000
-Dec 13 12:58:54,737  INFO PlateImporter:47 - WMH 2 - 55000.0
-Dec 13 12:58:54,737  INFO PlateParseRule:21 - Parsing : A GB 7 40000
-Dec 13 12:58:54,759  INFO PlateImporter:47 - AGB 7 - 40000.0
-Dec 13 12:58:54,760  INFO PlateParseRule:21 - Parsing : K BT 7 45000
-Dec 13 12:58:54,781  INFO PlateImporter:47 - KBT 7 - 45000.0
-Dec 13 12:58:54,782  INFO PlateParseRule:21 - Parsing : W HR 9 70000
-Dec 13 12:58:54,804  INFO PlateImporter:47 - WHR 9 - 70000.0
-Dec 13 12:58:54,804  INFO PlateParseRule:21 - Parsing : P FR 9 60000
-Dec 13 12:58:54,826  INFO PlateImporter:47 - PFR 9 - 60000.0
-Dec 13 12:58:54,826  INFO PlateParseRule:21 - Parsing : P EN 9 90000
-Dec 13 12:58:54,848  INFO PlateImporter:47 - PEN 9 - 90000.0
-Dec 13 12:58:54,848  INFO PlateParseRule:21 - Parsing : W E 88 120000
-Dec 13 12:58:54,870  INFO PlateImporter:47 - WE 88 - 120000.0
-Dec 13 12:58:54,871  INFO PlateParseRule:21 - Parsing : W X 88 100000
-Dec 13 12:58:54,893  INFO PlateImporter:47 - WX 88 - 100000.0
-Dec 13 12:58:54,894  INFO PlateParseRule:21 - Parsing : P FC 11 22000
-Dec 13 12:58:54,915  INFO PlateImporter:47 - PFC 11 - 22000.0
-Dec 13 12:58:54,915  INFO PlateParseRule:21 - Parsing : W W 54 25000
-Dec 13 12:58:54,937  INFO PlateImporter:47 - WW 54 - 25000.0
-Dec 13 12:58:54,937  INFO PlateParseRule:21 - Parsing : P ML 55 15000
-Dec 13 12:58:54,959  INFO PlateImporter:47 - PML 55 - 15000.0
-Dec 13 12:58:54,959  INFO PlateParseRule:21 - Parsing : P ME 63 5500
-Dec 13 12:58:54,981  INFO PlateImporter:47 - PME 63 - 5500.0
-Dec 13 12:58:54,982  INFO PlateParseRule:21 - Parsing : P KR 66 13000
-Dec 13 12:58:55,004  INFO PlateImporter:47 - PKR 66 - 13000.0
-Dec 13 12:58:55,004  INFO PlateParseRule:21 - Parsing : P LA 66 13000
-Dec 13 12:58:55,026  INFO PlateImporter:47 - PLA 66 - 13000.0
-Dec 13 12:58:55,027  INFO PlateParseRule:21 - Parsing : P LP 66 15000
-Dec 13 12:58:55,048  INFO PlateImporter:47 - PLP 66 - 15000.0
-Dec 13 12:58:55,049  INFO PlateParseRule:21 - Parsing : P HF 68 6000
-Dec 13 12:58:55,071  INFO PlateImporter:47 - PHF 68 - 6000.0
-Dec 13 12:58:55,071  INFO PlateParseRule:21 - Parsing : P LA 98 6000
-Dec 13 12:58:55,093  INFO PlateImporter:47 - PLA 98 - 6000.0
-Dec 13 12:58:55,094  INFO PlateParseRule:21 - Parsing : W HF 999 15000
-Dec 13 12:58:55,115  INFO PlateImporter:47 - WHF 999 - 15000.0
-Dec 13 12:58:55,116  INFO PlateParseRule:21 - Parsing : P AB 999 18000
-Dec 13 12:58:55,137  INFO PlateImporter:47 - PAB 999 - 18000.0
-Dec 13 12:58:55,138  INFO PlateImporter:56 - 19 plates imported for : /home/pmk/repo/JPJ/support/premium/0307116.txt
-Dec 13 12:58:55,138  INFO PlateImporter:71 -  file successfully imported
-Dec 13 12:59:13,951  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 12:59:14,758  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 12:59:15,225  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:00:24,146  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 13:00:25,016  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:00:25,035  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:00:29,675  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 13:00:29,680  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 13:00:29,853  INFO CustomUserDetailsService:28 - loadUserByUsername email : des88@test.com
-Dec 13 13:00:29,855  INFO CustomUserDetailsService:43 - User : des88@test.com found with role :ROLE_AGENT
-Dec 13 13:00:29,855  INFO CustomUserDetailsService:49 - Using User : des88@test.com with authorities :[ROLE_AGENT]
-Dec 13 13:00:30,043  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:01:56,644  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 13:01:56,936  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:01:56,945  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:02:11,204  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 13:02:11,207  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 13:02:11,218  INFO CustomUserDetailsService:28 - loadUserByUsername email : des88@test.com
-Dec 13 13:02:11,219  INFO CustomUserDetailsService:43 - User : des88@test.com found with role :ROLE_AGENT
-Dec 13 13:02:11,220  INFO CustomUserDetailsService:49 - Using User : des88@test.com with authorities :[ROLE_AGENT]
-Dec 13 13:02:11,344  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:02:20,937  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:03:48,069  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:05:16,224  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:05:17,213  INFO QueryDaoImpl:111 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:05:17,219  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:10:09,170  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 13:10:09,344  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:10:09,830  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:10:13,478  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 13:10:13,485  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 13:10:13,654  INFO CustomUserDetailsService:28 - loadUserByUsername email : des88@test.com
-Dec 13 13:10:13,656  INFO CustomUserDetailsService:43 - User : des88@test.com found with role :ROLE_AGENT
-Dec 13 13:10:13,657  INFO CustomUserDetailsService:49 - Using User : des88@test.com with authorities :[ROLE_AGENT]
-Dec 13 13:10:13,832  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:10:13,930  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:10:13,963  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:13:11,421  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 13:13:11,496  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:13:11,517  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:13:14,669  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 13:13:14,675  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 13:13:14,695  INFO CustomUserDetailsService:28 - loadUserByUsername email : des88@test.com
-Dec 13 13:13:14,699  INFO CustomUserDetailsService:43 - User : des88@test.com found with role :ROLE_AGENT
-Dec 13 13:13:14,700  INFO CustomUserDetailsService:49 - Using User : des88@test.com with authorities :[ROLE_AGENT]
-Dec 13 13:13:14,830  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:13:15,638  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:13:15,665  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:15:03,100  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:15:04,066  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:15:04,082  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:16:03,306  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 13:16:03,382  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:16:03,401  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:16:14,200  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 13:16:14,203  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 13:16:14,216  INFO CustomUserDetailsService:28 - loadUserByUsername email : des88@test.com
-Dec 13 13:16:14,218  INFO CustomUserDetailsService:43 - User : des88@test.com found with role :ROLE_AGENT
-Dec 13 13:16:14,219  INFO CustomUserDetailsService:49 - Using User : des88@test.com with authorities :[ROLE_AGENT]
-Dec 13 13:16:14,354  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:16:14,528  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:16:14,544  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:17:23,323  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 13:17:23,410  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:17:23,424  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:17:26,284  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 13:17:26,286  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 13:17:26,298  INFO CustomUserDetailsService:28 - loadUserByUsername email : des88@test.com
-Dec 13 13:17:26,301  INFO CustomUserDetailsService:43 - User : des88@test.com found with role :ROLE_AGENT
-Dec 13 13:17:26,301  INFO CustomUserDetailsService:49 - Using User : des88@test.com with authorities :[ROLE_AGENT]
-Dec 13 13:17:26,450  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:17:28,721  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:17:28,746  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:18:27,630  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:18:30,826  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:18:30,846  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:18:34,073  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 13:18:34,150  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:18:34,161  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:18:37,679  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 13:18:37,682  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 13:18:37,692  INFO CustomUserDetailsService:28 - loadUserByUsername email : des88@test.com
-Dec 13 13:18:37,694  INFO CustomUserDetailsService:43 - User : des88@test.com found with role :ROLE_AGENT
-Dec 13 13:18:37,695  INFO CustomUserDetailsService:49 - Using User : des88@test.com with authorities :[ROLE_AGENT]
-Dec 13 13:18:37,832  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:18:40,271  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:18:40,298  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:22:20,584  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 13:22:20,751  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:22:21,314  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:22:25,103  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 13:22:25,109  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 13:22:25,273  INFO CustomUserDetailsService:28 - loadUserByUsername email : des88@test.com
-Dec 13 13:22:25,274  INFO CustomUserDetailsService:43 - User : des88@test.com found with role :ROLE_AGENT
-Dec 13 13:22:25,275  INFO CustomUserDetailsService:49 - Using User : des88@test.com with authorities :[ROLE_AGENT]
-Dec 13 13:22:25,459  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:22:27,218  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:22:27,259  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:23:43,511  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 13:23:43,676  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:23:44,216  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:23:47,404  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 13:23:47,410  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 13:23:47,581  INFO CustomUserDetailsService:28 - loadUserByUsername email : des88@test.com
-Dec 13 13:23:47,582  INFO CustomUserDetailsService:43 - User : des88@test.com found with role :ROLE_AGENT
-Dec 13 13:23:47,582  INFO CustomUserDetailsService:49 - Using User : des88@test.com with authorities :[ROLE_AGENT]
-Dec 13 13:23:47,757  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:23:50,807  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:23:50,817  INFO RestAgentController:25 - Received getDetails for : des88@test.com
-Dec 13 13:23:50,845  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:26:51,023  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 13:26:51,106  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:26:51,131  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:26:54,478  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 13:26:54,481  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 13:26:54,487  INFO CustomUserDetailsService:28 - loadUserByUsername email : des88@test.com
-Dec 13 13:26:54,488  INFO CustomUserDetailsService:43 - User : des88@test.com found with role :ROLE_AGENT
-Dec 13 13:26:54,488  INFO CustomUserDetailsService:49 - Using User : des88@test.com with authorities :[ROLE_AGENT]
-Dec 13 13:26:54,611  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:26:56,536  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:26:56,541  INFO RestAgentController:25 - Received getDetails for : des88@test.com
-Dec 13 13:26:56,560  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:28:15,217  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 13:28:15,297  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:28:15,312  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:28:18,816  INFO RestAuthController:75 - Attempting to authorize : des88@test.com
-Dec 13 13:28:18,817  INFO RestAuthController:83 - Got baseuser : des88@test.com
-Dec 13 13:28:18,821  INFO CustomUserDetailsService:28 - loadUserByUsername email : des88@test.com
-Dec 13 13:28:18,822  INFO CustomUserDetailsService:43 - User : des88@test.com found with role :ROLE_AGENT
-Dec 13 13:28:18,823  INFO CustomUserDetailsService:49 - Using User : des88@test.com with authorities :[ROLE_AGENT]
-Dec 13 13:28:18,951  INFO WebAnonController:61 - Received goAgentHome
-Dec 13 13:28:20,743  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:28:20,745  INFO RestAgentController:25 - Received getDetails for : des88@test.com
-Dec 13 13:28:20,771  INFO RestServices:64 - Got Plates # 19
-Dec 13 13:30:30,130  INFO WebAnonController:29 - Received request to getAllPlates
-Dec 13 13:30:30,218  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
-Dec 13 13:30:30,234  INFO RestServices:64 - Got Plates # 19
+Mar 29 14:29:43,107  INFO WebAnonController:29 - Received request to getAllPlates
+Mar 29 14:29:43,264  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:29:43,827  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:29:55,543  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
+Mar 29 14:29:55,549  INFO RestAuthController:83 - Got baseuser : koko@test.com
+Mar 29 14:29:55,682  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
+Mar 29 14:29:55,683  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
+Mar 29 14:29:55,684  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
+Mar 29 14:34:34,874  INFO WebAnonController:29 - Received request to getAllPlates
+Mar 29 14:34:34,960  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:34:35,012  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:35:32,883  INFO WebAnonController:29 - Received request to getAllPlates
+Mar 29 14:35:34,083  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:35:34,115  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:35:38,705  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
+Mar 29 14:35:38,707  INFO RestAuthController:83 - Got baseuser : koko@test.com
+Mar 29 14:35:38,713  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
+Mar 29 14:35:38,715  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
+Mar 29 14:35:38,715  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
+Mar 29 14:35:38,842  INFO WebAnonController:77 - Received goPunterHome
+Mar 29 14:38:06,934  INFO WebAnonController:29 - Received request to getAllPlates
+Mar 29 14:38:06,996  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:38:07,034  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:38:11,811  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
+Mar 29 14:38:11,813  INFO RestAuthController:83 - Got baseuser : koko@test.com
+Mar 29 14:38:11,823  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
+Mar 29 14:38:11,825  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
+Mar 29 14:38:11,825  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
+Mar 29 14:38:11,962  INFO WebAnonController:77 - Received goPunterHome
+Mar 29 14:38:12,185  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:38:12,194  INFO RestPunterControllerImpl:33 - Received getPunter for : koko@test.com
+Mar 29 14:38:12,245  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:38:12,256  INFO RestPunterControllerImpl:33 - Received getPunter for : koko@test.com
+Mar 29 14:38:18,312  INFO WebAnonController:29 - Received request to getAllPlates
+Mar 29 14:38:18,382  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:38:18,422  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:38:24,862  INFO RestAuthController:75 - Attempting to authorize : koko@test.com
+Mar 29 14:38:24,864  INFO RestAuthController:83 - Got baseuser : koko@test.com
+Mar 29 14:38:24,875  INFO CustomUserDetailsService:28 - loadUserByUsername email : koko@test.com
+Mar 29 14:38:24,877  INFO CustomUserDetailsService:43 - User : koko@test.com found with role :ROLE_PUNTER
+Mar 29 14:38:24,878  INFO CustomUserDetailsService:49 - Using User : koko@test.com with authorities :[ROLE_PUNTER]
+Mar 29 14:38:25,044  INFO WebAnonController:77 - Received goPunterHome
+Mar 29 14:38:25,106  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:38:25,107  INFO RestPunterControllerImpl:33 - Received getPunter for : koko@test.com
+Mar 29 14:38:25,152  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:38:25,165  INFO RestPunterControllerImpl:33 - Received getPunter for : koko@test.com
+Mar 29 14:40:35,992  INFO WebAnonController:77 - Received goPunterHome
+Mar 29 14:40:36,190  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:40:36,192  INFO RestPunterControllerImpl:33 - Received getPunter for : koko@test.com
+Mar 29 14:40:36,233  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:40:36,257  INFO RestPunterControllerImpl:33 - Received getPunter for : koko@test.com
+Mar 29 14:41:52,385  INFO WebAnonController:77 - Received goPunterHome
+Mar 29 14:41:52,572  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:41:52,574  INFO RestPunterControllerImpl:33 - Received getPunter for : koko@test.com
+Mar 29 14:41:52,619  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:41:52,636  INFO RestPunterControllerImpl:33 - Received getPunter for : koko@test.com
+Mar 29 14:49:11,813  INFO RestAnonControllerImpl:114 - in queryDigits with : org.plate.json.QueryOnDigitsParamsJson@29a2ad9d
+Mar 29 14:49:11,814  INFO QueryDaoImpl:76 - Performing QueryOnDigits with : digit1
+Mar 29 14:49:11,815  INFO QueryDaoImpl:79 - SQL : SELECT p.* FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE digit1 AND ps.status != 'CANCELLED' ORDER BY ps.selldate DESC
+Mar 29 14:49:11,850  INFO RestServices:183 - Got Plates # 13
+Mar 29 14:49:11,861  INFO RestPunterControllerImpl:33 - Received getPunter for : koko@test.com
+Mar 29 14:49:14,097  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:49:14,128  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:49:14,138  INFO RestPunterControllerImpl:33 - Received getPunter for : koko@test.com
+Mar 29 14:49:15,810  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:49:15,832  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:49:15,840  INFO RestPunterControllerImpl:33 - Received getPunter for : koko@test.com
+Mar 29 14:49:19,078  INFO WebAnonController:29 - Received request to getAllPlates
+Mar 29 14:49:19,161  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:49:19,189  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:49:20,370  INFO RestAnonControllerImpl:114 - in queryDigits with : org.plate.json.QueryOnDigitsParamsJson@714908b3
+Mar 29 14:49:20,371  INFO QueryDaoImpl:76 - Performing QueryOnDigits with : digit1
+Mar 29 14:49:20,372  INFO QueryDaoImpl:79 - SQL : SELECT p.* FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE digit1 AND ps.status != 'CANCELLED' ORDER BY ps.selldate DESC
+Mar 29 14:49:20,391  INFO RestServices:183 - Got Plates # 13
+Mar 29 14:49:23,883  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:49:23,904  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:49:35,767  INFO RestAnonControllerImpl:114 - in queryDigits with : org.plate.json.QueryOnDigitsParamsJson@1613a419
+Mar 29 14:49:35,768  INFO QueryDaoImpl:76 - Performing QueryOnDigits with : digit1
+Mar 29 14:49:35,768  INFO QueryDaoImpl:79 - SQL : SELECT p.* FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE digit1 AND ps.status != 'CANCELLED' ORDER BY ps.selldate DESC
+Mar 29 14:49:35,786  INFO RestServices:183 - Got Plates # 13
+Mar 29 14:51:26,296  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:51:26,347  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:51:31,625  INFO RestAnonControllerImpl:114 - in queryDigits with : org.plate.json.QueryOnDigitsParamsJson@2b14d0f
+Mar 29 14:51:31,626  INFO QueryDaoImpl:76 - Performing QueryOnDigits with : digit1
+Mar 29 14:51:31,627  INFO QueryDaoImpl:79 - SQL : SELECT p.* FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE digit1 AND ps.status != 'CANCELLED' ORDER BY ps.selldate DESC
+Mar 29 14:51:31,649  INFO RestServices:183 - Got Plates # 13
+Mar 29 14:51:46,554  INFO WebAnonController:29 - Received request to getAllPlates
+Mar 29 14:53:53,643  INFO WebAnonController:29 - Received request to getAllPlates
+Mar 29 14:53:54,402  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:53:54,419  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:54:00,367  INFO RestAnonControllerImpl:96 - in  queryPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=, number2=, number3=, number4=, suffix=A]
+Mar 29 14:54:00,368  INFO QueryDaoImpl:31 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=, number2=, number3=, number4=, suffix=A]
+Mar 29 14:54:00,369  INFO QueryDaoImpl:37 - SQL : SELECT p.* FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE prefix = 'W'  AND suffix = 'A'  AND ps.status != 'CANCELLED' ORDER BY ps.selldate DESC
+Mar 29 14:54:00,372  INFO RestServices:143 - Got Plates # 0
+Mar 29 14:54:04,514  INFO RestAnonControllerImpl:96 - in  queryPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=, number2=, number3=, number4=, suffix=]
+Mar 29 14:54:04,515  INFO QueryDaoImpl:31 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=, number2=, number3=, number4=, suffix=]
+Mar 29 14:54:04,515  INFO QueryDaoImpl:37 - SQL : SELECT p.* FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE prefix = 'W'  AND ps.status != 'CANCELLED' ORDER BY ps.selldate DESC
+Mar 29 14:54:04,549  INFO RestServices:143 - Got Plates # 22
+Mar 29 14:54:07,786  INFO RestAnonControllerImpl:96 - in  queryPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=, number2=, number3=, number4=, suffix=]
+Mar 29 14:54:07,787  INFO QueryDaoImpl:31 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=, number2=, number3=, number4=, suffix=]
+Mar 29 14:54:07,787  INFO QueryDaoImpl:37 - SQL : SELECT p.* FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE prefix = 'W'  AND ps.status != 'CANCELLED' ORDER BY ps.selldate DESC
+Mar 29 14:54:07,819  INFO RestServices:143 - Got Plates # 22
+Mar 29 14:54:13,042  INFO RestAnonControllerImpl:96 - in  queryPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=, number2=, number3=, number4=, suffix=D]
+Mar 29 14:54:13,043  INFO QueryDaoImpl:31 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=, number2=, number3=, number4=, suffix=D]
+Mar 29 14:54:13,044  INFO QueryDaoImpl:37 - SQL : SELECT p.* FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE prefix = 'W'  AND suffix = 'D'  AND ps.status != 'CANCELLED' ORDER BY ps.selldate DESC
+Mar 29 14:54:13,046  INFO RestServices:143 - Got Plates # 0
+Mar 29 14:54:17,678  INFO RestAnonControllerImpl:96 - in  queryPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=, number2=, number3=, number4=, suffix=]
+Mar 29 14:54:17,679  INFO QueryDaoImpl:31 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=, number2=, number3=, number4=, suffix=]
+Mar 29 14:54:17,680  INFO QueryDaoImpl:37 - SQL : SELECT p.* FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE prefix = 'W'  AND ps.status != 'CANCELLED' ORDER BY ps.selldate DESC
+Mar 29 14:54:17,720  INFO RestServices:143 - Got Plates # 22
+Mar 29 14:57:31,634  INFO WebAnonController:29 - Received request to getAllPlates
+Mar 29 14:57:32,387  INFO QueryDaoImpl:121 - Performing QueryOnRating with : 0 - 3
+Mar 29 14:57:32,944  INFO RestServices:81 - Got Plates # 37
+Mar 29 14:57:38,383  INFO RestAnonControllerImpl:96 - in  queryPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=, number2=, number3=, number4=, suffix=A]
+Mar 29 14:57:38,383  INFO QueryDaoImpl:31 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=W, letter1=, letter2=, number1=, number2=, number3=, number4=, suffix=A]
+Mar 29 14:57:38,384  INFO QueryDaoImpl:37 - SQL : SELECT p.* FROM plate as p JOIN platesell AS ps ON ps.plateid = p.id WHERE prefix = 'W'  AND suffix = 'A'  AND ps.status != 'CANCELLED' ORDER BY ps.selldate DESC
+Mar 29 14:57:38,387  INFO RestServices:143 - Got Plates # 0

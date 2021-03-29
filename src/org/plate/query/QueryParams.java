@@ -71,7 +71,6 @@ public class QueryParams
 	public static List<String> getValidSuffix()
 	{
 		List<String> suffix = new ArrayList<String>();
-		suffix.add("");
 		suffix.addAll(getValidLetter());
 		return suffix;
 	}

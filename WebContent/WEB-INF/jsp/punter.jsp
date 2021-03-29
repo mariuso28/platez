@@ -15,6 +15,8 @@
 
 <html>
 
+<head>
+  <title>punter</title>
 
 <style>
 
@@ -607,9 +609,8 @@ margin-top: 0px;
 		 font-size: 18px;
 	}
 
-
-
 </style>
+</head>
 
 <script>
 
@@ -624,7 +625,7 @@ function doPublishProofOwnership(plateId)
 	formData.append("plateId",plateId);
 
 	$.ajax({
-	    url: "/platez/api/punter/publishProofOwnership",
+	    url: "/platez/px4/api/punter/publishProofOwnership",
 			headers: { 'Authorization': bearerHeader },
 	//		enctype: 'multipart/form-data',
 	    data: formData,
@@ -680,7 +681,7 @@ function doPublish()
 	$.ajax({
 
 		type: "POST",
-			 url : "/platez/api/punter/publishPlate",
+			 url : "/platez/px4/api/punter/publishPlate",
 			 headers: { 'Authorization': bearerHeader },
 			 cache: false,
 			 contentType: 'application/json;',
@@ -736,7 +737,7 @@ function saveProfile()
 	$.ajax({
 
 		type: "POST",
-			 url : "/platez/api/punter/updateProfile",
+			 url : "/platez/px4/api/punter/updateProfile",
 			 headers: { 'Authorization': bearerHeader },
 			 cache: false,
 			 contentType: 'application/json;',
@@ -810,7 +811,7 @@ function getPunter() {
      $.ajax({
 
     type: "GET",
-         url : '/platez/api/punter/getPunter',
+         url : '/platez/px4/api/punter/getPunter',
     headers: { 'Authorization': bearerHeader },
     cache: false,
     contentType: 'application/json;',
@@ -846,7 +847,7 @@ function getPunter() {
       $.ajax({
 
      type: "GET",
-          url : '/platez/api/punter/getPunter',
+          url : '/platez/px4/api/punter/getPunter',
      headers: { 'Authorization': bearerHeader },
      cache: false,
      contentType: 'application/json;',
@@ -915,7 +916,7 @@ function sendOffer(plateId,offer)
 
 	$.ajax({
 		type: "POST",
-			 url : "/platez/api/punter/makeOffer",
+			 url : "/platez/px4/api/punter/makeOffer",
 			 headers: { 'Authorization': bearerHeader },
 			cache: false,
 			contentType: 'application/json;',
@@ -972,7 +973,7 @@ function cancelOffer(offerId)
 
 	$.ajax({
 		type: "POST",
-		 url : "/platez/api/punter/cancelOffer?offerId="+offerId.toString(),
+		 url : "/platez/px4/api/punter/cancelOffer?offerId="+offerId.toString(),
 		 headers: { 'Authorization': bearerHeader },
 		cache: false,
 		contentType: 'application/json;',
@@ -1007,7 +1008,7 @@ function acceptOffer(offerId)
 
 	$.ajax({
 		type: "POST",
-		 url : "/platez/api/punter/acceptOffer?offerId="+offerId.toString(),
+		 url : "/platez/px4/api/punter/acceptOffer?offerId="+offerId.toString(),
 		 headers: { 'Authorization': bearerHeader },
 		cache: false,
 		contentType: 'application/json;',
@@ -1042,7 +1043,7 @@ function rejectOffer(offerId)
 
 	$.ajax({
 		type: "POST",
-		 url : "/platez/api/punter/rejectOffer?offerId="+offerId.toString(),
+		 url : "/platez/px4/api/punter/rejectOffer?offerId="+offerId.toString(),
 		 headers: { 'Authorization': bearerHeader },
 		cache: false,
 		contentType: 'application/json;',
@@ -1157,7 +1158,7 @@ function doSpecialQuery()
   // alert("Cot special : " + special.value);
   jsonData['combo'] = special.value;
 
-  queryPlates(jsonData,'/platez/api/anon/queryDigits');
+  queryPlates(jsonData,'/platez/px4/api/anon/queryDigits');
 }
 
 function doParamQuery()
@@ -1184,7 +1185,7 @@ function doParamQuery()
   jsonData['number4'] = number4.value;
   jsonData['suffix'] = suffix.value;
 
-  queryPlates(jsonData,'/platez/api/anon/queryPlate');
+  queryPlates(jsonData,'/platez/px4/api/anon/queryPlate');
 }
 
 var plates;
@@ -1229,7 +1230,7 @@ function getAllPlates() {
      $.ajax({
 
     type: "GET",
-         url : '/platez/api/anon/getAllPlates',
+         url : '/platez/px4/api/anon/getAllPlates',
     cache: false,
  	 contentType: 'application/json;',
          dataType: "json",
@@ -1263,7 +1264,7 @@ function getQueryParams() {
      $.ajax({
 
     type: "GET",
-         url : '/platez/api/anon/getQueryParams',
+         url : '/platez/px4/api/anon/getQueryParams',
     cache: false,
  	 contentType: 'application/json;',
          dataType: "json",
@@ -1531,7 +1532,7 @@ function displayPlates()
 			<a id='publishPlate' href="#">Publish Plate</a>
 		</div>
 		<div class="headingPanelLogonHeaderCell">
-			<a href="/platez/web/anon/getAllPlates">Home</a>
+			<a href="/platez/px4/web/anon/getAllPlates">Logoff</a>
 		</div>
 
 <div id="myModalP" class="modal fade" role="dialog">

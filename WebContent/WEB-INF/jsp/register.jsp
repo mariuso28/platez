@@ -207,7 +207,7 @@ function registerJson(jsonData) {
      $.ajax({
 
     type: "POST",
-        url : "/platez/api/anon/register",
+        url : "/platez/px4/api/anon/register",
         cache: false,
         contentType: 'application/json;',
         dataType: "json",
@@ -243,7 +243,7 @@ function registerJson(jsonData) {
               Register to Buy or Sell Plates
 
             <a style="font-family:inherit;font-size: 18px; color:green; font-weight: bold;"
-                                  href="/platez/web/anon/getAllPlates">Cancel</a>
+                                  href="/platez/px4/web/anon/getAllPlates">Cancel</a>
             <input id="register" value="Register" onClick="return doRegister();" type="button"
                   style="font-family:inherit;font-size: 18px; color:green; font-weight: bold;" />
       </div>

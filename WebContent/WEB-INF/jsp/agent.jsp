@@ -513,7 +513,7 @@ function saveProfile()
 	$.ajax({
 
 		type: "POST",
-			 url : "/platez/api/agent/updateProfile",
+			 url : "/platez/px4/api/agent/updateProfile",
 			 headers: { 'Authorization': bearerHeader },
 			 cache: false,
 			 contentType: 'application/json;',
@@ -555,7 +555,7 @@ function getAgent() {
      $.ajax({
 
     type: "GET",
-         url : '/platez/api/agent/getAgent',
+         url : '/platez/px4/api/agent/getAgent',
     headers: { 'Authorization': bearerHeader },
     cache: false,
     contentType: 'application/json;',
@@ -591,7 +591,7 @@ function getAgent() {
       $.ajax({
 
      type: "GET",
-          url : '/platez/api/agent/getAgent',
+          url : '/platez/px4/api/agent/getAgent',
      headers: { 'Authorization': bearerHeader },
      cache: false,
      contentType: 'application/json;',
@@ -660,7 +660,7 @@ function sendOffer(plateId,offer)
 
 	$.ajax({
 		type: "POST",
-			 url : "/platez/api/agent/makeOffer",
+			 url : "/platez/px4/api/agent/makeOffer",
 			 headers: { 'Authorization': bearerHeader },
 			cache: false,
 			contentType: 'application/json;',
@@ -717,7 +717,7 @@ function cancelOffer(offerId)
 
 	$.ajax({
 		type: "POST",
-		 url : "/platez/api/agent/cancelOffer?offerId="+offerId.toString(),
+		 url : "/platez/px4/api/agent/cancelOffer?offerId="+offerId.toString(),
 		 headers: { 'Authorization': bearerHeader },
 		cache: false,
 		contentType: 'application/json;',
@@ -752,7 +752,7 @@ function acceptOffer(offerId)
 
 	$.ajax({
 		type: "POST",
-		 url : "/platez/api/agent/acceptOffer?offerId="+offerId.toString(),
+		 url : "/platez/px4/api/agent/acceptOffer?offerId="+offerId.toString(),
 		 headers: { 'Authorization': bearerHeader },
 		cache: false,
 		contentType: 'application/json;',
@@ -787,7 +787,7 @@ function rejectOffer(offerId)
 
 	$.ajax({
 		type: "POST",
-		 url : "/platez/api/agent/rejectOffer?offerId="+offerId.toString(),
+		 url : "/platez/px4/api/agent/rejectOffer?offerId="+offerId.toString(),
 		 headers: { 'Authorization': bearerHeader },
 		cache: false,
 		contentType: 'application/json;',
@@ -902,7 +902,7 @@ function doSpecialQuery()
   // alert("Cot special : " + special.value);
   jsonData['combo'] = special.value;
 
-  queryPlates(jsonData,'/platez/api/anon/queryDigits');
+  queryPlates(jsonData,'/platez/px4/api/anon/queryDigits');
 }
 
 function doParamQuery()
@@ -929,7 +929,7 @@ function doParamQuery()
   jsonData['number4'] = number4.value;
   jsonData['suffix'] = suffix.value;
 
-  queryPlates(jsonData,'/platez/api/anon/queryPlate');
+  queryPlates(jsonData,'/platez/px4/api/anon/queryPlate');
 }
 
 var plates;
@@ -974,7 +974,7 @@ function getAllPlates() {
      $.ajax({
 
     type: "GET",
-         url : '/platez/api/anon/getAllPlates',
+         url : '/platez/px4/api/anon/getAllPlates',
     cache: false,
  	 contentType: 'application/json;',
          dataType: "json",
@@ -1008,7 +1008,7 @@ function getQueryParams() {
      $.ajax({
 
     type: "GET",
-         url : '/platez/api/anon/getQueryParams',
+         url : '/platez/px4/api/anon/getQueryParams',
     cache: false,
  	 contentType: 'application/json;',
          dataType: "json",
@@ -1299,7 +1299,7 @@ function displayPlates()
 			<a id='publishPlate' href="#">Publish Plate</a>
 		</div>
 		<div class="headingPanelLogonHeaderCell">
-			<a href="/platez/web/anon/getAllPlates">Home</a>
+			<a href="/platez/px4/web/anon/getAllPlates">Home</a>
 		</div>
 
 <div id="myModalP" class="modal fade" role="dialog">
